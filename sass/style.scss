@@ -100,3 +100,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+/* Homoioi
+--------------------------------------------- */
+@import "homoioi/entete";		// En-tête du site
+@import "homoioi/navigation";	// Navitation (burger menu, nav)
+
+@import "homoioi/miseenpage";	// Mise en page (.page, etc.)
+@import "homoioi/accueil";		// Style spécifique de l'accueil
+@import "homoioi/grillecours";	// Page contenant la grille des cours
+@import "homoioi/secondary";	// Section secondaire du site (#secondary)
+
+@import "homoioi/footer";		// Footer
+
+/* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;
+Groupe 00001, équipe #5 "Homoioi";
+Membres:
+	- Deslauriers, Pascal;
+	- Joseph, Nick Michelle;
+	- Leonard, Monica;
+	- Rioux, Maxime;
+	- St-Jacques, François.
+*/
