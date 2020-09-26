@@ -39,7 +39,7 @@
 			// else :
 			// 	?>
 			<!-- // 	<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
-			<!-- // 	<?php -->
+			<!-- // 	<?php
 			// endif;
 			// $homoioi_description = get_bloginfo( 'description', 'display' );
 			// if ( $homoioi_description || is_customize_preview() ) :
@@ -58,5 +58,5 @@
 			// 	)
 			// );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>#site-navigation
+	</header>#masthead
