@@ -5,23 +5,18 @@ html{
 
 body{
     /* background-image: radial-gradient(circle, darkgray 2.5%, gray 7.5%, black 15%); */
-    background-image: url("../media/accueil.png");
+    /* background-image: url("../media/accueil.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    font-family: 'Yantramanav', sans-serif, 'Questrial', sans-serif;
+    font-family: 'Yantramanav', sans-serif, 'Questrial', sans-serif; */
+    background-color: black;
 }
 
 img {
     width: 100%;
     height: auto;
 }
-
-/*hr {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-}*/
 
 #menu {
     padding-top: 2.5%;
