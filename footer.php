@@ -12,6 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+	<p title="Techniques d'intégration multimédia - Collège de Maisonneuve &copy;2020">Techniques d'intégration multimédia - Collège de Maisonneuve &copy;2020</p>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'homoioi' ) ); ?>">
 				<?php
