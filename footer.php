@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 	<p title="Techniques d'intégration multimédia - Collège de Maisonneuve &copy;2020">Techniques d'intégration multimédia - Collège de Maisonneuve &copy;2020</p>
-		<div class="site-info">
+		<!-- <div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'homoioi' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
@@ -24,8 +24,8 @@
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'homoioi' ), 'homoioi', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+				?> -->
+		<!-- </div>.site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
