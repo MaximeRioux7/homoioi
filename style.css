@@ -948,3 +948,145 @@ Membres:
 	- St-Jacques, François.
 */
 /*# sourceMappingURL=style.css.map */
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  /* background-image: radial-gradient(circle, darkgray 2.5%, gray 7.5%, black 15%); */
+  background-image: url("../media/accueil.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  font-family: 'Yantramanav', sans-serif, 'Questrial', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#menu {
+  padding-top: 2.5%;
+  cursor: pointer;
+}
+
+a {
+  color: darkslateblue;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 60px;
+  height: 12px;
+  background-color: cadetblue;
+  margin: 6px 0;
+  margin-left: 2.5%;
+}
+
+nav.logic {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+}
+
+nav.logic h1 {
+  color: cyan;
+  text-shadow: 1.5px 1.5px darkslateblue;
+  text-align: center;
+}
+
+nav.logic p {
+  color: white;
+}
+
+nav.creation {
+  margin: auto;
+  width: 50%;
+  padding-top: 20%;
+  text-align: justify;
+}
+
+nav.creation h1 {
+  color: magenta;
+  text-shadow: 1.5px 1.5px darkslateblue;
+  text-align: center;
+}
+
+nav.creation p {
+  color: white;
+}
+
+nav.choix {
+  margin-top: 17.5%;
+  font-size: 150%;
+  text-shadow: 1px 1px darkslateblue;
+  padding-top: 0;
+  clear: both;
+}
+
+nav.vEtudiante {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+}
+
+nav.vEtudiante h1 {
+  color: magenta;
+  text-shadow: 1.5px 1.5px darkslateblue;
+  text-align: center;
+}
+
+nav.vEtudiante p {
+  color: white;
+}
+
+nav.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+a {
+  text-decoration: none;
+}
+
+footer p {
+  font-family: 'Yantramanav', sans-serif;
+  display: inline-block;
+  text-align: left;
+  font-size: 200%;
+}
+
+#gauche {
+  padding-left: 2.75%;
+  float: left;
+}
+
+#droite {
+  margin: 0;
+  float: right;
+  padding-right: 2.75%;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  color: white;
+  font-size: 50%;
+}
