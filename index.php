@@ -24,7 +24,7 @@ get_header();
         </a>
     </nav>
     <nav class="logo">
-            <img src="wp-content/uploads/images/logo.png" alt="Logo TIM" title="Techniques d'intégration multimédia - Collège de Maisonneuve">
+            <img src="wp-content/themes/homoioi1/images/logo.png" alt="Logo TIM" title="Techniques d'intégration multimédia - Collège de Maisonneuve">
     </nav>
     <nav class="choix">
         <p id="gauche"><a href="cheminement.html" title="Cheminement"><b>Cheminement</b></a></p>
