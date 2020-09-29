@@ -12,7 +12,7 @@
  * @package Homoioi
  */
 
-// get_header();
+get_header();
 ?>
 
 	<main id="primary" class="site-main">
@@ -32,9 +32,9 @@
     </nav>
 <?php
 
-// get_sidebar();
+get_sidebar();
 ?>
 
 <?php
-// get_footer();
+get_footer();
 ?>
