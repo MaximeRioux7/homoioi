@@ -14,7 +14,6 @@
 
 get_header();
 ?>
-
 	<main id="primary" class="site-main">
 	<nav id="menu" title="Menu">
         <a href="#">
@@ -24,11 +23,11 @@ get_header();
         </a>
     </nav>
     <nav class="logo">
-            <img src="wp-content/themes/homoioi1/images/logo.png" alt="Logo TIM" title="Techniques d'intégration multimédia - Collège de Maisonneuve">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo TIM" title="Techniques d'intégration multimédia - Collège de Maisonneuve">
     </nav>
     <nav class="choix">
-        <p id="gauche"><a href="cheminement.html" title="Cheminement"><b>Cheminement</b></a></p>
-        <p id="droite"><a href="info.html" title="Autres infos"><b>Autres infos</b></a></p>
+        <p id="gauche"><a href="#" title="Cheminement"><b>Cheminement</b></a></p>
+        <p id="droite"><a href="#" title="Autres infos"><b>Autres infos</b></a></p>
     </nav>
 <?php
 
