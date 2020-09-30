@@ -938,6 +938,165 @@ textarea {
 
 /* Homoioi
 --------------------------------------------- */
+/* Modifié par Maxime */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* background-image: radial-gradient(circle, darkgray 2.5%, gray 7.5%, black 15%); */
+  background-image: url("./images/test_fond.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  font-family: 'Yantramanav', sans-serif, 'Questrial', sans-serif;
+}
+
+#page {
+  height: 100vh;
+  width: 100vw;
+}
+
+#page main {
+  height: 100vh;
+  width: 100vw;
+}
+
+#page img {
+  width: 100%;
+  height: auto;
+}
+
+#page #menu {
+  padding-top: 2.5%;
+  cursor: pointer;
+}
+
+#page a {
+  color: darkslateblue;
+}
+
+#page h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#page p {
+  margin: 0;
+  padding: 0;
+}
+
+#page div {
+  width: 60px;
+  height: 12px;
+  background-color: cadetblue;
+  margin: 6px 0;
+  margin-left: 2.5%;
+}
+
+#page nav.logic {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+}
+
+#page nav.logic h1 {
+  color: cyan;
+  text-shadow: 1.5px 1.5px darkslateblue;
+  text-align: center;
+}
+
+#page nav.logic p {
+  color: white;
+}
+
+#page nav.creation {
+  margin: auto;
+  width: 50%;
+  padding-top: 20%;
+  text-align: justify;
+}
+
+#page nav.creation h1 {
+  color: magenta;
+  text-shadow: 1.5px 1.5px darkslateblue;
+  text-align: center;
+}
+
+#page nav.creation p {
+  color: white;
+}
+
+#page nav.choix {
+  width: 100vw;
+  position: absolute;
+  /*margin-top: 17.5%;*/
+  top: 50%;
+  font-size: 150%;
+  text-shadow: 1px 1px darkslateblue;
+  padding-top: 0;
+  clear: both;
+  transform: translateY(-50%);
+}
+
+#page nav.vEtudiante {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+}
+
+#page nav.vEtudiante h1 {
+  color: magenta;
+  text-shadow: 1.5px 1.5px darkslateblue;
+  text-align: center;
+}
+
+#page nav.vEtudiante p {
+  color: white;
+}
+
+#page nav.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+#page a {
+  text-decoration: none;
+}
+
+#page footer p {
+  font-family: 'Yantramanav', sans-serif;
+  display: inline-block;
+  text-align: left;
+  font-size: 200%;
+}
+
+#page #gauche {
+  position: absolute;
+  margin-left: 2.75vw;
+  left: 0;
+}
+
+#page #droite {
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  margin-right: 2.75vw;
+}
+
+#page footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  color: white;
+  font-size: 50%;
+}
+
 /* Modifié par Nick */
 /* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;
 Groupe 00001, équipe #5 "Homoioi";
