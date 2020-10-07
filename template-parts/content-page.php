@@ -10,11 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<!-- <header class="entry-header">
+		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
+	</header> -->
+	<!-- .entry-header -->
 
-	<?php homoioi_post_thumbnail(); ?>
+	<?php /*homoioi_post_thumbnail();*/ ?>
 
 	<div class="entry-content">
 		<?php
@@ -29,7 +30,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+	<?php if ( get_edit_post_link() && false ) : ?>
 		<footer class="entry-footer">
 			<?php
 			edit_post_link(

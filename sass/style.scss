@@ -103,13 +103,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Homoioi
 --------------------------------------------- */
+@import "homoioi/general";		// Style général du site (liens, etc.)
+
 @import "homoioi/entete";		// En-tête du site
 @import "homoioi/navigation";	// Navitation (burger menu, nav)
 
 @import "homoioi/miseenpage";	// Mise en page (.page, etc.)
 @import "homoioi/accueil";		// Style spécifique de l'accueil
+@import "homoioi/cheminement";	// Section cheminement
 @import "homoioi/grillecours";	// Page contenant la grille des cours
-@import "homoioi/secondary";	// Section secondaire du site (#secondary)
 
 @import "homoioi/footer";		// Footer
 

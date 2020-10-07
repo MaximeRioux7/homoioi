@@ -6,26 +6,17 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Homoioi
+ * @package homoioi
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
-	<p title="Techniques d'intégration multimédia - Collège de Maisonneuve &copy;2020">Techniques d'intégration multimédia - Collège de Maisonneuve &copy;2020</p>
-		<!-- <div class="site-info">
-			<a href="<?php //echo esc_url( __( 'https://wordpress.org/', 'homoioi' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				//printf( esc_html__( 'Proudly powered by %s', 'homoioi' ), 'WordPress' );
-				?>
-			</a>
+		<div class="site-info">
+			<a href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
 			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				//printf( esc_html__( 'Theme: %1$s by %2$s.', 'homoioi' ), 'homoioi', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?> -->
-		<!-- </div>.site-info -->
+			<span title="Techniques d'intégration multimédia">Techniques d'intégration multimédia</span>
+		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
