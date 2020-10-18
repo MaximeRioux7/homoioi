@@ -1,0 +1,17 @@
+
+li .page_item {
+	display: hide;
+  }
+
+p {
+	color: aqua;
+  }
+
+  .img-prof-gallery {
+    mask-size: cover;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -o-border-radius: 50%;
+      //clip-path: circle(140px at center);
+  }
