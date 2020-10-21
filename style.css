@@ -965,6 +965,28 @@ main {
   position: relative;
 }
 
+#masthead nav {
+  display: inline-block;
+}
+
+.toggle-nav {
+  display: inline-block;
+  margin: 25;
+  margin: 25px;
+  font-size: 3em;
+  color: #009999;
+  color: #035858;
+  transition: color linear 0.15s;
+}
+
+.toggle-nav:link,
+.toggle-nav:visited,
+.toggle-nav:hover,
+.toggle-nav:active {
+  text-decoration: none;
+  color: #009999;
+}
+
 .entry-content {
   min-height: 100%;
   margin: 0;

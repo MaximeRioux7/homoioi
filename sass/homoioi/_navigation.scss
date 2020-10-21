@@ -1,4 +1,56 @@
 #masthead nav{
-    // Retirer 'display: none;' pour travailler sur la navigation
-    //display: none;
+    display: inline-block;
 }
+
+.toggle-nav{
+    display: inline-block;
+    // float: left;
+    margin: 25;
+    margin: 25px;
+    font-size: 3em;
+    color: #009999;
+    color: #035858;
+    transition: color linear 0.15s;
+}
+
+.toggle-nav:link, 
+.toggle-nav:visited,
+.toggle-nav:hover, 
+.toggle-nav:active {
+        text-decoration: none;
+        color: #009999;
+}
+
+// .main-navigation {
+//     display: inline-block;
+//     position: relative;
+//     background: #fff;
+//     text-align: left;
+// }
+
+// .main-navigation ul li{
+//     float: none;
+//     display: block;
+//     position: relative;
+//     top: 0px;
+//     right: 0px;
+//     min-width: 200px;
+//     background: #fff;
+//     text-align: right;
+// }
+
+// .main-navigation ul {
+//     display: none;
+//     position: absolute;
+//     overflow: auto;
+//     top: 0px;
+//     right: 0px;
+//     z-index: 999;
+//     padding-right: 15px;
+//     background: #fff;
+// }
+
+// .main-navigation li:after {
+//     display: block;
+//     float: none;
+// }

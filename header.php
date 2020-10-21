@@ -57,5 +57,6 @@
 				)
 			);
 			?>
+			<a class="toggle-nav" href="#">&#9776;</a>	
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
