@@ -1,0 +1,27 @@
+.entry-content{
+    min-height: 100%;
+    margin: 0;
+
+    h1{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    p{
+        margin: auto;
+        padding: 0;
+        max-width: 50%;
+        left: 25%;
+        text-align: justify;
+        color: orange;
+    }
+
+    #creation {
+        color: purple;
+    }
+
+    p:nth-child(4) {
+        color: green;
+    }
+}

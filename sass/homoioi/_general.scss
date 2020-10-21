@@ -1,0 +1,27 @@
+html, body{
+    min-height: 100%;
+    margin: 0;
+}
+
+html{
+    
+    font-family: 'Questrial', sans-serif;
+    /* font-family: 'Yantramanav', sans-serif; */
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+    background-image: url("./images/test_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+main{
+    position: relative;
+}
