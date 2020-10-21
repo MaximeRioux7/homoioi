@@ -46,10 +46,9 @@
 				<p class="site-description"><?php echo $homoioi_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; */?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'homoioi' ); ?></button>
-			<div id="menuToggle">
+		<nav id="site-navigation" class="main-navigation">		
+			<div id="menuToggle"> 
+				<!-- <div aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'homoioi' ); ?></div> -->
 				<input type="checkbox" />
 				<span></span>
 				<span></span>
