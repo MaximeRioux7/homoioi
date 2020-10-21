@@ -1,4 +1,6 @@
 #masthead nav{
-    // Retirer 'display: none;' pour travailler sur la navigation
-    //display: none;
+    /* Retirer "display: none;" pour travailler sur la navigation */
+    display: none;
+    position: absolute;
+    z-index: 1;
 }

@@ -1,0 +1,135 @@
+<?php
+/**
+ * Template part for displaying page content in page.php
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Homoioi
+ */
+
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<!-- <header class="entry-header">
+		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
+	</header> -->
+	<!-- .entry-header -->
+
+	<?php /*homoioi_post_thumbnail();*/ ?>
+
+	<div class="entry-content">
+		<?php
+		the_content();
+
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'homoioi' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->
+
+    <div id="requete-cours">
+        <?php
+			$args = array(
+				'post_type'      => 'post',
+				'cat'            => get_category_by_slug('cours')->term_id,
+				'posts_per_page' => -1
+			);
+			query_posts($args);
+			while ( have_posts() ) : the_post();
+				echo '<span>';
+
+				// Titre du cours
+				echo '<span class="cours-titre">';
+				the_title();
+				echo '</span>';
+
+				// Description du cours
+				echo '<span class="cours-description">';
+				the_content();
+				echo '</span>';
+
+				echo '</span>';
+			endwhile;
+			wp_reset_query();
+		?>
+    </div>
+
+	<script>
+		(function(){
+			let listeCours = [];
+			let tmpElm;
+			let elmListeCours, elmTitreCours, elmDescCours;
+
+			document.addEventListener("DOMContentLoaded", () => {
+				elmListeCours = document.getElementById("liste-cours");
+				elmTitreCours = document.getElementById("titre-cours");
+				elmDescCours = document.getElementById("desc-cours");
+				if(elmListeCours && elmTitreCours && elmDescCours){
+					recupererCours();
+					afficherListe();
+				}else console.error(`Impossible d'afficher la liste des cours,\nau moins un élément avec l'ID suivant est introuvable: "liste-cours", "titre-cours", "desc-cours".`);
+			});
+
+			// Récupère la liste des cours venant de la requête Wordpress
+			function recupererCours(){
+				let requete = document.getElementById("requete-cours").children;
+				for(let i = 0; i < requete.length; i++){
+					listeCours.push({
+						titre: requete[i].children[0].innerHTML,
+						description: requete[i].children[1].innerHTML
+					});
+				}
+				document.getElementById("requete-cours").remove();
+			}
+
+			function afficherListe(){
+				for(let i = 0; i < listeCours.length; i++){
+					// Créer un nouvel élément de la liste
+					tmpElm = document.createElement("li");
+					tmpElm.innerHTML = `<li>${listeCours[i].titre}</li>`;
+
+					// Ajouter l'interaction à la liste
+					tmpElm.addEventListener("click", () => {
+						elmTitreCours.innerHTML = listeCours[i].titre;
+						elmDescCours.innerHTML = listeCours[i].description;
+					});
+
+					// Ajouter l'élément de la liste à la page
+					elmListeCours.appendChild(tmpElm);
+
+					// Afficher le premier cours à l'arrivée sur la page
+					/*if(i == 0){
+						elmTitreCours.innerHTML = listeCours[i].titre;
+						elmDescCours.innerHTML = listeCours[i].description;
+					} */
+				}
+			}
+		})();
+	</script>
+
+	<?php if ( get_edit_post_link() && false ) : ?>
+		<footer class="entry-footer">
+			<?php
+			edit_post_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'homoioi' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post( get_the_title() )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+			?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
+</article><!-- #post-<?php the_ID(); ?> -->

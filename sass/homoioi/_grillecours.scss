@@ -1,0 +1,81 @@
+#requete-cours{
+    display: none !important;
+}
+
+.cheminement{
+    ul#choix-session{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    
+        > li{
+            padding: 10px;
+            display: inline-block;
+        }
+    }
+    
+    .grille{
+        background-color: rgba(#000, 0.4);
+        text-shadow: 0 0 5px black;
+        
+        display: grid;
+        grid-template-areas: "liste desc desc desc";
+    
+        div.liste-cours, div.desc-cours{
+            position: relative;
+            display: inline-block;
+        }
+    
+        div.desc-cours{
+            padding: 15px;
+            grid-area: desc;
+            width: 70vw;
+            h3{
+                color: white;
+            }
+        }
+    
+        ul#liste-cours{
+            position: relative;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none;
+            border-collapse: collapse;
+            max-width: 100%;
+
+            grid-area: liste;
+            box-shadow: inset 0 0 50px black;
+
+            width: 30vw;
+
+            max-height: 500px;
+            overflow-y: auto;
+    
+            > li{
+                color: #CCC;
+    
+                cursor: pointer;
+                user-select: none;
+    
+                min-height: 200%;
+    
+                border: 1px solid rgba(#FFF, 0.5);
+                border-collapse: collapse;
+    
+                line-height: 24px;
+                min-height: 48px;
+                box-sizing: content-box;
+                padding: 10px;
+    
+                transition: color 0.1s, border-color 0.1s;
+    
+                &:hover{
+                    color: white;
+                    border-color: rgba(#FFF, 1);
+                }
+            }
+        }
+    
+        /* @media ... */
+    }
+}

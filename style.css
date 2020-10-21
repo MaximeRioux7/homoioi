@@ -941,6 +941,7 @@ textarea {
 html, body {
   min-height: 100%;
   margin: 0;
+  color: #EEE;
 }
 
 html {
@@ -963,6 +964,37 @@ a {
 
 main {
   position: relative;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  margin: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #AAA;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+#masthead nav {
+  /* Retirer "display: none;" pour travailler sur la navigation */
+  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .entry-content {
@@ -1066,6 +1098,77 @@ nav.vEtudiante p {
     color: white;
 }
 */
+#requete-cours {
+  display: none !important;
+}
+
+.cheminement ul#choix-session {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cheminement ul#choix-session > li {
+  padding: 10px;
+  display: inline-block;
+}
+
+.cheminement .grille {
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 5px black;
+  display: grid;
+  grid-template-areas: "liste desc desc desc";
+  /* @media ... */
+}
+
+.cheminement .grille div.liste-cours, .cheminement .grille div.desc-cours {
+  position: relative;
+  display: inline-block;
+}
+
+.cheminement .grille div.desc-cours {
+  padding: 15px;
+  grid-area: desc;
+  width: 70vw;
+}
+
+.cheminement .grille div.desc-cours h3 {
+  color: white;
+}
+
+.cheminement .grille ul#liste-cours {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  border-collapse: collapse;
+  max-width: 100%;
+  grid-area: liste;
+  box-shadow: inset 0 0 50px black;
+  width: 30vw;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.cheminement .grille ul#liste-cours > li {
+  color: #CCC;
+  cursor: pointer;
+  user-select: none;
+  min-height: 200%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-collapse: collapse;
+  line-height: 24px;
+  min-height: 48px;
+  box-sizing: content-box;
+  padding: 10px;
+  transition: color 0.1s, border-color 0.1s;
+}
+
+.cheminement .grille ul#liste-cours > li:hover {
+  color: white;
+  border-color: white;
+}
+
 footer {
   position: fixed;
   left: 0;
