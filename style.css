@@ -1022,7 +1022,7 @@ main {
 }
 
 .entry-content a {
-  color: darkslateblue;
+  color: lightcoral;
 }
 
 .entry-content a.gauche {
@@ -1098,6 +1098,34 @@ nav.vEtudiante p {
     color: white;
 }
 */
+.entry-content {
+  min-height: 100%;
+  margin: 0;
+}
+
+.entry-content h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.entry-content p {
+  margin: auto;
+  padding: 0;
+  max-width: 50%;
+  left: 25%;
+  text-align: justify;
+  color: orange;
+}
+
+.entry-content #creation {
+  color: purple;
+}
+
+.entry-content p:nth-child(4) {
+  color: green;
+}
+
 #requete-cours {
   display: none !important;
 }
