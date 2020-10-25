@@ -10,6 +10,7 @@
         top: 50vh;
         left: 50vw;
         transform: translate(-50%, -50%) rotate(30deg);
+        z-index: -1;
     }
 
     span.choix {
@@ -23,7 +24,7 @@
         transform: translateY(-50%);
     }
 
-    a{
+    a {
         color: lightcoral;
 
         &.gauche {
@@ -39,7 +40,44 @@
             margin-right: 2.75vw;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        html {
+            font-size: 50%;
+        }
+    
+        section #lesChoix {
+            flex-direction: row;
+        }
+    
+        div.choix {
+            width: 25%;
+        }
+
+        span.choix {
+            top: 0;
+        }
+
+        a {
+            color: green;
+    
+            &.gauche {
+                position: absolute;
+                top: 0;
+                margin-left: 2.75vw;
+                left: 0;
+            }
+        
+            &.droite {
+                white-space: nowrap;
+                position: absolute;
+                right: 0;
+                margin-right: 2.75vw;
+            }
+        }
+    }
 }
+
 /*
 div {
     width: 60px;
