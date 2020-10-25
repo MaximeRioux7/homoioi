@@ -11,6 +11,13 @@
         > li{
             padding: 10px;
             display: inline-block;
+            border: 2px solid rgba(#EEE, 0.5);
+            cursor: pointer;
+        }
+
+        > li:hover{
+            color:white;
+            border-color: rgba(#FFF, 0.75);
         }
     }
     

@@ -57,59 +57,6 @@
 		?>
     </div>
 
-	<script>
-		(function(){
-			let listeCours = [];
-			let tmpElm;
-			let elmListeCours, elmTitreCours, elmDescCours;
-
-			document.addEventListener("DOMContentLoaded", () => {
-				elmListeCours = document.getElementById("liste-cours");
-				elmTitreCours = document.getElementById("titre-cours");
-				elmDescCours = document.getElementById("desc-cours");
-				if(elmListeCours && elmTitreCours && elmDescCours){
-					recupererCours();
-					afficherListe();
-				}else console.error(`Impossible d'afficher la liste des cours,\nau moins un élément avec l'ID suivant est introuvable: "liste-cours", "titre-cours", "desc-cours".`);
-			});
-
-			// Récupère la liste des cours venant de la requête Wordpress
-			function recupererCours(){
-				let requete = document.getElementById("requete-cours").children;
-				for(let i = 0; i < requete.length; i++){
-					listeCours.push({
-						titre: requete[i].children[0].innerHTML,
-						description: requete[i].children[1].innerHTML
-					});
-				}
-				document.getElementById("requete-cours").remove();
-			}
-
-			function afficherListe(){
-				for(let i = 0; i < listeCours.length; i++){
-					// Créer un nouvel élément de la liste
-					tmpElm = document.createElement("li");
-					tmpElm.innerHTML = `<li>${listeCours[i].titre}</li>`;
-
-					// Ajouter l'interaction à la liste
-					tmpElm.addEventListener("click", () => {
-						elmTitreCours.innerHTML = listeCours[i].titre;
-						elmDescCours.innerHTML = listeCours[i].description;
-					});
-
-					// Ajouter l'élément de la liste à la page
-					elmListeCours.appendChild(tmpElm);
-
-					// Afficher le premier cours à l'arrivée sur la page
-					/*if(i == 0){
-						elmTitreCours.innerHTML = listeCours[i].titre;
-						elmDescCours.innerHTML = listeCours[i].description;
-					} */
-				}
-			}
-		})();
-	</script>
-
 	<?php if ( get_edit_post_link() && false ) : ?>
 		<footer class="entry-footer">
 			<?php

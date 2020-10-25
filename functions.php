@@ -177,3 +177,10 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function theme_homioi_script_grille() {
+	if(is_page_template('templates/grille_cheminement.php')){
+		wp_enqueue_script( 'grille-cheminement', get_template_directory_uri() . '/js/grille-cheminement.js', array(), '1.0', true);
+	}
+}
+add_action( 'wp_enqueue_scripts', 'theme_homioi_script_grille' );

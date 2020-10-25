@@ -1022,7 +1022,7 @@ main {
 }
 
 .entry-content a {
-  color: darkslateblue;
+  color: lightcoral;
 }
 
 .entry-content a.gauche {
@@ -1098,6 +1098,33 @@ nav.vEtudiante p {
     color: white;
 }
 */
+/*.entry-content{
+    min-height: 100%;
+    margin: 0;
+
+    h1{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    p{
+        margin: auto;
+        padding: 0;
+        max-width: 50%;
+        left: 25%;
+        text-align: justify;
+        color: orange;
+    }
+
+    #creation {
+        color: purple;
+    }
+
+    p:nth-child(4) {
+        color: green;
+    }
+}*/
 #requete-cours {
   display: none !important;
 }
@@ -1111,6 +1138,13 @@ nav.vEtudiante p {
 .cheminement ul#choix-session > li {
   padding: 10px;
   display: inline-block;
+  border: 2px solid rgba(238, 238, 238, 0.5);
+  cursor: pointer;
+}
+
+.cheminement ul#choix-session > li:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.75);
 }
 
 .cheminement .grille {
