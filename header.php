@@ -46,23 +46,24 @@
 				<p class="site-description"><?php echo $homoioi_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; */?>
 		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation">		
-			<div id="menuToggle"> 
-				<!-- <div aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'homoioi' ); ?></div> -->
-				<input type="checkbox" />
+		<nav id="site-navigation">				
+			<div id="menu-toggle" > 				
+				<input type="checkbox"/>
 				<span></span>
 				<span></span>
-				<span></span>			
-				<ul id="menu">
+				<span></span>
+				<ul id="menu-ul">
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
-					);
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'menu',
+							)
+						);
 					?>
-				</ul>
+					<p>Technique d'Intégration Multimédia <br>Collège de Maisonneuve</p>
+				</ul>																
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

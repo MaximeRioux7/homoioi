@@ -1,8 +1,13 @@
 #masthead nav{
     display: inline-block;
+    font-family: 'Questrial';
 }
 
-#menuToggle
+
+/**
+* Style du layout du div menu-toggle
+*/
+#menu-toggle
 {
   display: block;
   position: relative;
@@ -11,9 +16,9 @@
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
-}
+} 
 
-#menuToggle input
+#menu-toggle input
 {
   display: block;
   width: 40px;
@@ -22,19 +27,22 @@
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
+  opacity: 0; // Cacher le input 
+  z-index: 2; // Le placer sur le burger
+ }
+ 
 
-#menuToggle span
+/**
+* Création du menu burger
+*/
+#menu-toggle span
 {
   display: block;
-  width: 42px;
-  height: 8px;
-  margin-bottom: 5px;
+  width: 48px;
+  height: 10px;
+  margin-bottom: 7px;
   position: relative;
-  background: #028f9c;
+  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
   z-index: 1;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -42,55 +50,91 @@
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+#menu-toggle span:first-child
 {
   transform-origin: 0% 0%;
 }
-#menuToggle span:nth-last-child(2)
+#menu-toggle span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
+/**
+* Transformation des niveaux du burger
+*/
+#menu-toggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #028f9c;
+  transform: rotate(45deg) translate(-2px, -2px);
+  background: linear-gradient(to left, #008080 0%, #12b9b9  100%);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
+#menu-toggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
+#menu-toggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(6px, -5px);
 }
 
-#menu
+/**
+* Style des items du menu
+*/
+#menu-ul
 {
   position: absolute;
   width: 370px;
   height: 100vh;
   margin: -100px 0 0 -50px;
-  padding: 50px;
+  padding-left: 5px;
   padding-top: 125px;
-  background: #252740;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
+
+#menu-ul li {
+  padding: 15px 0;
+  font-size: 24px;
+  list-style-type: none;
 }
 
-#menuToggle input:checked ~ ul
-{
+
+/**
+* Slide à partir de la gauche
+*/
+#menu-toggle input:checked ~ ul {
   transform: none;
+}
+
+
+/**
+* Style du texte dans le menu
+*/
+ul a {
+  color:#E6E6E6;
+  text-transform: uppercase;
+  text-shadow:0px 0px 5px #E6E6E6;
+}
+
+ul a:visited {
+  color: #ffffff;
+}
+
+ul a:hover {
+  color:#ffffff;
+  text-shadow:0px 0px 10px #ffffff;
+  transition: all 0.2s ease-in;
+}
+
+p{
+  padding-left: 85px;
+  padding-top: 75%;
+  color:#E6E6E6;
+  text-shadow:0px 0px 3px #E6E6E6;
+  transition: all 0.2s ease-in;
 }
