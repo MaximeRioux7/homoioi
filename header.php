@@ -62,6 +62,20 @@
 							)
 						);
 					?>
+					<div id="icon">
+						<a href="https://www.facebook.com/maisonneuvetim/" target="_blank">
+							<img src="http://127.0.0.1/wp-homoioi/wp-content/uploads/2020/10/f_logo_RGB-White_58.png" alt="Facebook">
+						</a>
+						<a href="https://www.youtube.com/user/TIMaisonneuve" target="_blank">
+							<img src="http://127.0.0.1/wp-homoioi/wp-content/uploads/2020/10/yt_logo_mono_light.png" alt="Youtube">	
+						</a>
+						<a href="https://www.instagram.com/maisonneuvetim/" target="_blank">
+							<img src="http://127.0.0.1/wp-homoioi/wp-content/uploads/2020/10/glyph-logo_May2016-Light.png" alt="Instagram">
+						</a>
+						<a href=" https://discord.gg/53vFvr9" target="_blank">
+							<img src="http://127.0.0.1/wp-homoioi/wp-content/uploads/2020/10/Discord-Logo-Light.png" alt="Discord">
+						</a>					
+					</div>					
 					<p>Technique d'Intégration Multimédia <br>Collège de Maisonneuve</p>
 				</ul>																
 			</div>
