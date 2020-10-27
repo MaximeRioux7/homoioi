@@ -1128,36 +1128,6 @@ nav.vEtudiante p {
     color: white;
 }
 */
-<<<<<<< HEAD
-.entry-content {
-  min-height: 100%;
-  margin: 0;
-}
-
-.entry-content h1 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.entry-content p {
-  margin: auto;
-  padding: 0;
-  max-width: 50%;
-  left: 25%;
-  text-align: justify;
-  color: orange;
-}
-
-.entry-content #creation {
-  color: purple;
-}
-
-.entry-content p:nth-child(4) {
-  color: green;
-}
-
-=======
 /*.entry-content{
     min-height: 100%;
     margin: 0;
@@ -1185,7 +1155,6 @@ nav.vEtudiante p {
         color: green;
     }
 }*/
->>>>>>> maxime
 #requete-cours {
   display: none !important;
 }
