@@ -965,6 +965,9 @@ main {
   position: relative;
 }
 
+/** 
+* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
+*/
 #masthead nav {
   display: inline-block;
   font-family: 'Questrial';
@@ -984,14 +987,14 @@ main {
 
 #menu-toggle input {
   display: block;
+  position: absolute;
   width: 40px;
   height: 32px;
-  position: absolute;
   top: -7px;
   left: -5px;
-  cursor: pointer;
   opacity: 0;
   z-index: 2;
+  cursor: pointer;
 }
 
 /**
@@ -1058,7 +1061,7 @@ main {
 }
 
 /**
-* Slide à partir de la gauche
+* Basculer à partir de la gauche
 */
 #menu-toggle input:checked ~ ul {
   transform: none;

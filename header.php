@@ -46,6 +46,8 @@
 				<p class="site-description"><?php echo $homoioi_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; */?>
 		</div><!-- .site-branding -->
+		
+		<!-- La programmation de menu de navigation à été inspiré de plusieurs exemples sur Internet -->
 		<nav id="site-navigation">				
 			<div id="menu-toggle" > 				
 				<input type="checkbox"/>
