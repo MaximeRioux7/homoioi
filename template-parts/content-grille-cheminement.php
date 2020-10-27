@@ -18,16 +18,35 @@
 	<?php /*homoioi_post_thumbnail();*/ ?>
 
 	<div class="entry-content">
-		<?php
-		the_content();
+		<div class="cheminement">
+			<!-- En-tête de la grille -->
+			<h1>Grille de cheminement</h1>
+			<div>
+				<ul id="choix-session"><li>Session 1</li><li>Session 2</li><li>Session 3</li><li>Session 4</li><li>Session 5</li><li>Session 6</li></ul>
+			</div>
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'homoioi' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+			<!-- Début de la grille -->
+			<div class="grille"><!-- Contenu de la grille -->
+				<ul id="liste-cours"><!-- Gauche de la grille -->
+				</ul>
+
+				<div class="desc-cours"><!-- Droite de la grille -->
+					<h2 id="titre-cours"><?php echo get_the_title(); ?></h2>
+					<span id="desc-cours">
+						<?php
+							the_content();
+
+							wp_link_pages(
+								array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'homoioi' ),
+									'after'  => '</div>',
+								)
+							);
+						?>
+					</span>
+				</div>
+			</div><!-- Fin de la grille -->
+		</div><!-- Fin de la page -->
 	</div><!-- .entry-content -->
 
     <div id="requete-cours">

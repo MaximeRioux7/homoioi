@@ -184,3 +184,10 @@ function theme_homioi_script_grille() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_homioi_script_grille' );
+
+function theme_homioi_gallerie() {
+	if(is_page_template('templates/vie-tim.php')){
+		wp_enqueue_script( 'gallerie', get_template_directory_uri() . '/js/gallerie.js', array(), '1.0', true);
+	}
+}
+add_action( 'wp_enqueue_scripts', 'theme_homioi_gallerie' );
