@@ -940,22 +940,52 @@ textarea {
 --------------------------------------------- */
 html, body {
   min-height: 100%;
-  margin: 0;
+  height: 100%;
+  margin: 0 !important;
   color: #EEE;
+  box-sizing: border-box;
 }
 
-html {
+#page, #primary, #primary > article.page {
+  height: 100% !important;
   font-family: 'Questrial', sans-serif;
-  /* font-family: 'Yantramanav', sans-serif; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div, p, h1, h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1, h2 {
+  font-family: "Yantramanav";
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 body {
   min-height: 100%;
   margin: 0;
-  background-image: url("./images/test_fond.jpg");
+}
+
+#page {
+  background-image: url("./images/accueil.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+}
+
+#page.cheminement {
+  background-image: url("./images/generique.jpg");
 }
 
 a {
@@ -1098,6 +1128,7 @@ nav.vEtudiante p {
     color: white;
 }
 */
+<<<<<<< HEAD
 .entry-content {
   min-height: 100%;
   margin: 0;
@@ -1126,26 +1157,100 @@ nav.vEtudiante p {
   color: green;
 }
 
+=======
+/*.entry-content{
+    min-height: 100%;
+    margin: 0;
+
+    h1{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    p{
+        margin: auto;
+        padding: 0;
+        max-width: 50%;
+        left: 25%;
+        text-align: justify;
+        color: orange;
+    }
+
+    #creation {
+        color: purple;
+    }
+
+    p:nth-child(4) {
+        color: green;
+    }
+}*/
+>>>>>>> maxime
 #requete-cours {
   display: none !important;
 }
 
+#titre-cours {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.entry-content {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cheminement {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cheminement > h1 {
+  margin: initial auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 .cheminement ul#choix-session {
+  height: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 10px 0;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  padding-top: 10px !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .cheminement ul#choix-session > li {
+  font-family: "Yantramanav";
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
   padding: 10px;
   display: inline-block;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: color 0.1s, border-color 0.1s;
+}
+
+.cheminement ul#choix-session > li:hover {
+  font-weight: 900;
+  color: white;
+  border-color: white;
 }
 
 .cheminement .grille {
+  flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 5px black;
-  display: grid;
-  grid-template-areas: "liste desc desc desc";
+  display: flex;
   /* @media ... */
 }
 
@@ -1156,8 +1261,8 @@ nav.vEtudiante p {
 
 .cheminement .grille div.desc-cours {
   padding: 15px;
-  grid-area: desc;
   width: 70vw;
+  flex-grow: 1;
 }
 
 .cheminement .grille div.desc-cours h3 {
@@ -1168,41 +1273,87 @@ nav.vEtudiante p {
   position: relative;
   margin: 0 !important;
   padding: 0 !important;
+  flex-shrink: 1;
   list-style: none;
   border-collapse: collapse;
-  max-width: 100%;
-  grid-area: liste;
   box-shadow: inset 0 0 50px black;
+  max-width: 315px !important;
   width: 30vw;
-  max-height: 500px;
   overflow-y: auto;
+  border-right: 2px solid white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
 .cheminement .grille ul#liste-cours > li {
+  text-align: center;
+  font-size: 16px;
   color: #CCC;
   cursor: pointer;
   user-select: none;
-  min-height: 200%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-collapse: collapse;
+  margin: 10px 0;
+  padding: 5px;
+  border-left: 2px solid rgba(255, 255, 255, 0);
+  /*border: 1px solid rgba(#FFF, 0.5);
+                border-collapse: collapse;*/
   line-height: 24px;
-  min-height: 48px;
+  /*min-height: 48px;*/
+  max-width: 315px !important;
   box-sizing: content-box;
   padding: 10px;
   transition: color 0.1s, border-color 0.1s;
 }
 
 .cheminement .grille ul#liste-cours > li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   border-color: white;
 }
 
+#desc-cours {
+  display: block;
+}
+
+@media screen and (min-width: 960px) {
+  ul#choix-session {
+    padding: 0 15vw !important;
+  }
+  ul#liste-cours, ul#liste-cours > li {
+    width: auto;
+  }
+  ul#liste-cours {
+    flex-grow: 1;
+  }
+  .grille div.desc-cours {
+    flex-grow: 0 !important;
+    padding: 3% 5% !important;
+  }
+  .grille div.desc-cours #titre-cours {
+    font-size: 32px;
+  }
+  .grille div.desc-cours > * {
+    margin: 10px;
+  }
+  .grille div.desc-cours > * > * {
+    margin: 15px 0;
+  }
+}
+
 footer {
   position: fixed;
-  left: 0;
-  bottom: 0;
+  left: 10px;
+  bottom: 3px;
   color: white;
   font-family: 'Yantramanav', sans-serif;
+  text-shadow: 0 0 10px black;
+  pointer-events: none;
+}
+
+footer a {
+  color: white !important;
+  font-weight: 900;
+  letter-spacing: 1px;
+  pointer-events: initial;
 }
 
 /* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;
