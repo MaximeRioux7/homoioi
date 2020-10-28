@@ -143,7 +143,7 @@ function homoioi_scripts() {
 	wp_enqueue_style( 'homoioi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'homoioi-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'homoioi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'homoioi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
