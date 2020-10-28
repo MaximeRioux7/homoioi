@@ -1530,6 +1530,7 @@ li .page_item {
 }*/
 .img-parent {
   height: 100%;
+  padding-top: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1540,6 +1541,7 @@ li .page_item {
   flex: 0 1 150px;
   margin: 5px;
   overflow: hidden;
+  height: 500px;
 }
 
 .img-parent .img-enfants img {
