@@ -1160,13 +1160,13 @@ main {
   padding-left: 70px;
 }
 
-div img {
+#icon img {
   height: 30px;
   padding-left: 15px;
   transition: transform .5s;
 }
 
-div img:hover {
+#icon img:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
