@@ -4,51 +4,57 @@ li .page_item {
 	display: hide;
   }
 
-p {
+/*p {
 	color: aqua;
-  display: grid;
-  place-items: center;
-  }
+    display: grid;
+    place-items: center;
+}*/
 
-  .img-parent {
+.img-parent {
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .img-enfants {
-    flex: 0 1 150px;
-    margin: 5px;
-    overflow: hidden;
-  }
-  .img-enfants img {
-    transition: transform 0.5s ease;
-  }
-  .img-enfants img:hover {
-    transform: scale(1.5); 
-  }
+    overflow-y: auto;
 
-  .gallerie-img-etudiante {
-    object-fit: none;
-    height: 100%;
-    //clip-path: inset(10px 100px);
-    //mask-size: cover;
-      //border-radius: 100%;
-      //-moz-border-radius: 100%;
-      //-webkit-border-radius: 100%;
-      //-o-border-radius: 100%;
-      //clip-path: circle(140px at center);
-      filter: grayscale(100%);
-  }
-  .gallerie-img-etudiante:hover {
-    filter: grayscale(0%);
-  }
-  .gallerie-img-etudiante:active {
-    filter: grayscale(100%);
-  }
+    .img-enfants {
+        flex: 0 1 150px;
+        margin: 5px;
+        overflow: hidden;
+
+        img {
+            transition: transform 0.5s ease;
+            &:hover{
+                transform: scale(1.5); 
+            }
+        }
+    }
+
+    .gallerie-img-etudiante {
+      object-fit: none;
+      height: 100%;
+      //clip-path: inset(10px 100px);
+      //mask-size: cover;
+        //border-radius: 100%;
+        //-moz-border-radius: 100%;
+        //-webkit-border-radius: 100%;
+        //-o-border-radius: 100%;
+        //clip-path: circle(140px at center);
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+
+        &:active {
+            filter: grayscale(100%);
+        }
+    }
+}
 
   /******************** LIGHTBOX *************************/
  
-  .lightbox {
+.lightbox {
     /** Default lightbox to hidden */
     opacity: 0;
     z-index: -100;
@@ -60,12 +66,12 @@ p {
     top: 0;
     left: 0;
     background: rgba(63, 1, 50, 0.4);
-  }
+}
   
-  .lightbox:target {
+.lightbox:target {
     opacity: 1;
     z-index: 999;
-  }
+}
 
 /*
   <figure class="wp-block-gallery columns-3 is-cropped">
