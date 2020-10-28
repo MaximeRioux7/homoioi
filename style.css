@@ -1009,6 +1009,7 @@ main {
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%) rotate(30deg);
+  z-index: -1;
 }
 
 .entry-content span.choix {
@@ -1022,7 +1023,7 @@ main {
 }
 
 .entry-content a {
-  color: lightcoral;
+  color: white;
 }
 
 .entry-content a.gauche {
@@ -1036,6 +1037,37 @@ main {
   position: absolute;
   right: 0;
   margin-right: 2.75vw;
+}
+
+@media screen and (max-width: 768px) {
+  .entry-content html {
+    font-size: 50%;
+  }
+  .entry-content section #lesChoix {
+    flex-direction: row;
+  }
+  .entry-content div.choix {
+    width: 25%;
+  }
+  .entry-content span.choix {
+    height: 100%;
+    top: 0;
+  }
+  .entry-content a.gauche {
+    color: white;
+    position: absolute;
+    top: 15vh;
+    margin-left: 2.75vw;
+    left: 0;
+  }
+  .entry-content a.droite {
+    color: white;
+    white-space: nowrap;
+    position: absolute;
+    top: 76.5vh;
+    right: 0;
+    margin-right: 2.75vw;
+  }
 }
 
 /*
@@ -1119,84 +1151,122 @@ nav.vEtudiante p {
 }
 
 .entry-content #creation {
-  color: purple;
+  color: #F08080;
 }
 
 .entry-content p:nth-child(4) {
-  color: green;
+  color: orange;
 }
 
-#requete-cours {
-  display: none !important;
+@media screen and (max-width: 768px) {
+  .entry-content a {
+    color: #F08080;
+  }
+  .entry-content p {
+    color: orange;
+  }
+  .entry-content #creation a {
+    color: orange;
+  }
 }
 
-.cheminement ul#choix-session {
-  padding: 0;
+/*#requete-cours{
+    display: none !important;
+}
+
+.cheminement{
+    ul#choix-session{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    
+        > li{
+            padding: 10px;
+            display: inline-block;
+        }
+    }
+    
+    .grille{
+        background-color: rgba(#000, 0.4);
+        text-shadow: 0 0 5px black;
+        
+        display: grid;
+        grid-template-areas: "liste desc desc desc";
+    
+        div.liste-cours, div.desc-cours{
+            position: relative;
+            display: inline-block;
+        }
+    
+        div.desc-cours{
+            padding: 15px;
+            grid-area: desc;
+            width: 70vw;
+            h3{
+                color: white;
+            }
+        }
+    
+        ul#liste-cours{
+            position: relative;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none;
+            border-collapse: collapse;
+            max-width: 100%;
+
+            grid-area: liste;
+            box-shadow: inset 0 0 50px black;
+
+            width: 30vw;
+
+            max-height: 500px;
+            overflow-y: auto;
+    
+            > li{
+                color: #CCC;
+    
+                cursor: pointer;
+                user-select: none;
+    
+                min-height: 200%;
+    
+                border: 1px solid rgba(#FFF, 0.5);
+                border-collapse: collapse;
+    
+                line-height: 24px;
+                min-height: 48px;
+                box-sizing: content-box;
+                padding: 10px;
+    
+                transition: color 0.1s, border-color 0.1s;
+    
+                &:hover{
+                    color: white;
+                    border-color: rgba(#FFF, 1);
+                }
+            }
+        }*/
+.entry-content {
+  min-height: 100%;
   margin: 0;
-  list-style: none;
 }
 
-.cheminement ul#choix-session > li {
-  padding: 10px;
-  display: inline-block;
+.entry-content td {
+  color: purple;
 }
 
-.cheminement .grille {
-  background-color: rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 5px black;
-  display: grid;
-  grid-template-areas: "liste desc desc desc";
-  /* @media ... */
+@media screen and (max-width: 768px) {
+  .entry-content html {
+    font-size: 100%;
+  }
+  .entry-content td {
+    width: 50%;
+    color: purple;
+  }
 }
 
-.cheminement .grille div.liste-cours, .cheminement .grille div.desc-cours {
-  position: relative;
-  display: inline-block;
-}
-
-.cheminement .grille div.desc-cours {
-  padding: 15px;
-  grid-area: desc;
-  width: 70vw;
-}
-
-.cheminement .grille div.desc-cours h3 {
-  color: white;
-}
-
-.cheminement .grille ul#liste-cours {
-  position: relative;
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none;
-  border-collapse: collapse;
-  max-width: 100%;
-  grid-area: liste;
-  box-shadow: inset 0 0 50px black;
-  width: 30vw;
-  max-height: 500px;
-  overflow-y: auto;
-}
-
-.cheminement .grille ul#liste-cours > li {
-  color: #CCC;
-  cursor: pointer;
-  user-select: none;
-  min-height: 200%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-collapse: collapse;
-  line-height: 24px;
-  min-height: 48px;
-  box-sizing: content-box;
-  padding: 10px;
-  transition: color 0.1s, border-color 0.1s;
-}
-
-.cheminement .grille ul#liste-cours > li:hover {
-  color: white;
-  border-color: white;
-}
-
+/* @media ... */
 footer {
   position: fixed;
   left: 0;

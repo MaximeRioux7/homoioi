@@ -25,7 +25,7 @@
     }
 
     a {
-        color: lightcoral;
+        color: white;
 
         &.gauche {
             position: absolute;
@@ -55,22 +55,26 @@
         }
 
         span.choix {
+            height: 100%;
             top: 0;
         }
 
         a {
-            color: green;
+            // color: green;
     
             &.gauche {
+                color: white;
                 position: absolute;
-                top: 0;
+                top: 15vh;
                 margin-left: 2.75vw;
                 left: 0;
             }
         
             &.droite {
+                color: white;
                 white-space: nowrap;
                 position: absolute;
+                top: 76.5vh;
                 right: 0;
                 margin-right: 2.75vw;
             }

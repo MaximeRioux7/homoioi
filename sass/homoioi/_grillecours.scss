@@ -1,4 +1,4 @@
-#requete-cours{
+/*#requete-cours{
     display: none !important;
 }
 
@@ -74,8 +74,28 @@
                     border-color: rgba(#FFF, 1);
                 }
             }
-        }
+        }*/
     
+        .entry-content{
+            min-height: 100%;
+            margin: 0;
+        
+            td {
+                color: purple;
+            }
+        
+            @media screen and (max-width: 768px) {
+                html {
+                    font-size: 100%;
+                }
+            
+                td {
+                    width: 50%;
+                    color: purple;
+                }
+            }
+        }
+
         /* @media ... */
-    }
-}
+    // }
+// }

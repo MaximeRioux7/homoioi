@@ -18,16 +18,24 @@
     }
 
     #creation {
-        color: purple;
+        color: #F08080;
     }
 
     p:nth-child(4) {
-        color: green;
+        color: orange;
     }
 
     @media screen and (max-width: 768px) {
         a {
             color: #F08080;
+        }
+
+        p {
+            color: orange;
+        }
+
+        #creation a {
+            color: orange;
         }
     }
 }
