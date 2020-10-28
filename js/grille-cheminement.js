@@ -41,11 +41,7 @@
         for(let i = 0; i < listeCours[session-1].length; i++){
             // Créer un nouvel élément de la liste
             tmpElm = document.createElement("li");
-<<<<<<< HEAD
             tmpElm.innerHTML = `<li>${listeCours[session-1][i].titre.substring(7)}</li>`;
-=======
-            tmpElm.innerHTML = `<li>${listeCours[session-1][i].titre}</li>`;
->>>>>>> origin/monica
 
             // Ajouter l'interaction à la liste
             tmpElm.addEventListener("click", () => {

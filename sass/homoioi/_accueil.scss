@@ -3,10 +3,11 @@
     margin: 0;
 
     img.logo-site {
-        width: initial;
+        width: 300px;
         height: auto;
 
         position: absolute;
+        padding: 0;
         top: 50vh;
         left: 50vw;
         transform: translate(-50%, -50%) rotate(30deg);
@@ -15,31 +16,65 @@
     span.choix {
         width: 100%;
         position: absolute;
-        // margin-top: 17.5%;
         top: 50vh;
         font-size: 150%;
         text-shadow: 1px 1px darkslateblue;
         padding-top: 0;
         transform: translateY(-50%);
+
+        a {
+            color: white;
+            letter-spacing: 1px;
+    
+            &.gauche {
+                position: absolute;
+                margin-left: 2.75vw;
+                left: 0;
+            }
+        
+            &.droite {
+                white-space: nowrap;
+                position: absolute;
+                right: 0;
+                margin-right: 2.75vw;
+            }
+        }
     }
 
-    a{
-        color: lightcoral;
-
-        &.gauche {
-            position: absolute;
-            margin-left: 2.75vw;
-            left: 0;
+    @media screen and (max-width: 768px) {
+        section #lesChoix {
+            flex-direction: row;
         }
-    
-        &.droite {
-            white-space: nowrap;
-            position: absolute;
-            right: 0;
-            margin-right: 2.75vw;
+
+        img.logo-site{
+            width: 60%;
+            height: auto;
+        }
+
+        span.choix {
+            top: 0;
+            a {
+                margin: 0 !important;
+
+                &.gauche {
+                    position: absolute;
+                    top: 15vh;
+                    left: 50;
+                    transform: translateX(50%);
+                }
+            
+                &.droite {
+                    position: absolute;
+                    white-space: nowrap;
+                    top: 85vh;
+                    transform: translateX(50%) translateY(-100%);
+                    right: 50%;
+                }
+            }
         }
     }
 }
+
 /*
 div {
     width: 60px;

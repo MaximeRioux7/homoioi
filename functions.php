@@ -191,3 +191,12 @@ function theme_homioi_gallerie() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_homioi_gallerie' );
+
+function collectiveray_load_js_script() {
+    if( is_front_page() ) {
+      wp_enqueue_script('parallax', get_template_directory_uri() . '/js/parallax.js', array('jquery'), '', false);
+      //or use the version below if you know exactly where the file is
+      //wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/myscript.js');
+    }
+  }
+add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
