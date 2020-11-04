@@ -11,12 +11,10 @@ li .page_item {
 }*/
 
 .img-parent {
-    height: 100%;
     padding-top: 75px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: auto;
 
     .img-enfants {
         flex: 0 1 150px;

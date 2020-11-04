@@ -104,6 +104,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Homoioi
 --------------------------------------------- */
 @import "homoioi/general";		// Style général du site (liens, etc.)
+@import "homoioi/fonds";		// Fonds des différentes pages du site
 
 @import "homoioi/entete";		// En-tête du site
 @import "homoioi/navigation";	// Navitation (burger menu, nav)

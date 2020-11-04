@@ -1,0 +1,12 @@
+/* Positionnement */
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body{
+    background-image: url("./images/accueil.jpg");                          // Fond de base
+    &.cheminement{ background-image: url("./images/generique.jpg"); }       // Cheminement
+}
+

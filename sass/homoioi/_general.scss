@@ -11,6 +11,7 @@ html, body{
     font-family: 'Questrial', sans-serif;
     margin: 0;
     box-sizing: border-box;
+    background: none;
 }
 
 div, p, h1, h2{
@@ -35,17 +36,6 @@ h2{
 body{
     min-height: 100%;
     margin: 0;
-}
-
-#page{
-    background-image: url("./images/accueil.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#page.cheminement{
-    background-image: url("./images/generique.jpg");
 }
 
 a {
