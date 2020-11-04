@@ -47,7 +47,7 @@
         }
 
         img.logo-site{
-            width: 60%;
+            width: 55%;
             height: auto;
         }
 
@@ -59,7 +59,7 @@
                 &.gauche {
                     position: absolute;
                     top: 15vh;
-                    left: 50;
+                    left: 50 !important;
                     transform: translateX(50%);
                 }
             

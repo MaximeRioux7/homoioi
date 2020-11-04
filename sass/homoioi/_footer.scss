@@ -14,3 +14,10 @@ footer {
         pointer-events: initial;
     }
 }
+
+@media screen and (max-width: 768px) {
+    footer {
+        left: 8px;
+        bottom: 2px;
+    }  
+}

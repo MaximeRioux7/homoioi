@@ -1179,8 +1179,8 @@ main {
   * Modification du style des items du menu
   */
   #menu-ul {
-    width: 100vmax;
-    height: 100vh;
+    width: 370px;
+    height: 600px;
     margin: -100px 0 0 -50px;
     padding-left: 5px;
     padding-top: 110px;
@@ -1198,7 +1198,7 @@ main {
   * Modification des icons
   */
   #icon {
-    padding-top: 25%;
+    padding-top: 35%;
   }
   #icon img {
     height: 25px;
@@ -1254,7 +1254,7 @@ main {
     flex-direction: row;
   }
   .entry-content img.logo-site {
-    width: 60%;
+    width: 55%;
     height: auto;
   }
   .entry-content span.choix {
@@ -1266,7 +1266,7 @@ main {
   .entry-content span.choix a.gauche {
     position: absolute;
     top: 15vh;
-    left: 50;
+    left: 50 !important;
     transform: translateX(50%);
   }
   .entry-content span.choix a.droite {
@@ -1703,6 +1703,13 @@ footer a {
   font-weight: 900;
   letter-spacing: 1px;
   pointer-events: initial;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    left: 8px;
+    bottom: 2px;
+  }
 }
 
 /* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;
