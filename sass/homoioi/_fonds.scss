@@ -1,3 +1,6 @@
+$fond-par-defaut: url("./images/AccueilAlterSombre.jpg");
+$fond-cheminement: url("./images/GeneriqueAlterSombre.jpg");
+
 /* Positionnement */
 body{
     background-repeat: no-repeat;
@@ -6,7 +9,7 @@ body{
 }
 
 body{
-    background-image: url("./images/accueil.jpg");                          // Fond de base
-    &.cheminement{ background-image: url("./images/generique.jpg"); }       // Cheminement
+    background-image: $fond-par-defaut;
+    &.cheminement{ background-image: $fond-cheminement; }
 }
 

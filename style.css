@@ -1018,11 +1018,11 @@ body {
 }
 
 body {
-  background-image: url("./images/accueil.jpg");
+  background-image: url("./images/AccueilAlterSombre.jpg");
 }
 
 body.cheminement {
-  background-image: url("./images/generique.jpg");
+  background-image: url("./images/GeneriqueAlterSombre.jpg");
 }
 
 /** 
