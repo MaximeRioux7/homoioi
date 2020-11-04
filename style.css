@@ -1578,7 +1578,8 @@ li .page_item {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(63, 1, 50, 0.4);
+  background: rgba(44, 1, 35, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 .lightbox:target {
