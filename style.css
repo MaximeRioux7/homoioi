@@ -1021,7 +1021,8 @@ main {
 }
 
 /** 
-* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
+* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet
+* Par Nick Michelle Joseph 
 */
 #masthead {
   position: absolute;
@@ -1032,6 +1033,7 @@ main {
   font-family: 'Questrial';
 }
 
+/************************************************************* Version Desktop ***********************************************************/
 /**
 * Style du layout du div menu-toggle
 */
@@ -1169,6 +1171,39 @@ main {
 #icon img:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+/************************************************************* Version Mobile ***********************************************************/
+@media screen and (max-width: 768px) {
+  /**
+  * Modification du style des items du menu
+  */
+  #menu-ul {
+    width: 100vmax;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding-left: 5px;
+    padding-top: 110px;
+    /**
+    * Modification du style du texte dans le menu
+    */
+  }
+  #menu-ul li.page_item {
+    font-size: 28px;
+  }
+  #menu-ul p {
+    font-size: 14px;
+  }
+  /**
+  * Modification des icons
+  */
+  #icon {
+    padding-top: 25%;
+  }
+  #icon img {
+    height: 25px;
+    padding-left: 15px;
+  }
 }
 
 .entry-content {
@@ -1586,8 +1621,31 @@ li .page_item {
   z-index: 999;
 }
 
-/*
-  <figure class="wp-block-gallery columns-3 is-cropped">
+@media screen and (max-width: 768px) {
+  .img-parent {
+    height: 100%;
+    padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .img-parent .img-enfants {
+    flex: 0 1 150px;
+    margin: 5px;
+    overflow: hidden;
+    height: 500px;
+  }
+  .img-parent .img-enfants img {
+    transition: transform 0.5s ease;
+  }
+  .img-parent .img-enfants img:hover {
+    transform: scale(1.5);
+  }
+}
+
+/* 
+<figure class="wp-block-gallery columns-3 is-cropped">
   <ul class="img-parent blocks-gallery-grid">
   <li class="blocks-gallery-item">
   <figure>

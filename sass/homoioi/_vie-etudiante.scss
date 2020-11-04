@@ -75,8 +75,34 @@ li .page_item {
     z-index: 999;
 }
 
-/*
-  <figure class="wp-block-gallery columns-3 is-cropped">
+
+@media screen and (max-width: 768px) {
+    .img-parent {
+        height: 100%;
+        padding-top: 75px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-y: auto;
+    
+        .img-enfants {
+            flex: 0 1 150px;
+            margin: 5px;
+            overflow: hidden;
+            height: 500px;
+    
+            img {
+                transition: transform 0.5s ease;
+                &:hover{
+                    transform: scale(1.5); 
+                }
+            }
+        }
+    }
+}
+
+/* 
+<figure class="wp-block-gallery columns-3 is-cropped">
   <ul class="img-parent blocks-gallery-grid">
   <li class="blocks-gallery-item">
   <figure>

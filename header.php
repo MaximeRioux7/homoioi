@@ -47,7 +47,9 @@
 			<?php endif; */?>
 		</div><!-- .site-branding -->
 		
-		<!-- La programmation de menu de navigation à été inspiré de plusieurs exemples sur Internet -->
+		<!-- La programmation de menu de navigation à été inspiré de plusieurs exemples sur Internet
+			 Par Nick Michelle Joseph
+		-->
 		<nav id="site-navigation">				
 			<div id="menu-toggle" > 				
 				<input type="checkbox"/>
