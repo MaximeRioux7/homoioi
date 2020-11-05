@@ -13,4 +13,10 @@ footer {
         letter-spacing: 1px;
         pointer-events: initial;
     }
+
+    @media screen and (max-width: 768px) {
+        a {
+            font-weight: 600;
+        }
+    }
 }

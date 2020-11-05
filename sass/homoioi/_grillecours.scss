@@ -140,16 +140,29 @@
                 color: purple;
             }
         
-            @media screen and (max-width: 768px) {
+            /*@media screen and (max-width: 768px) {
                 html {
                     font-size: 100%;
+                    // height: 100%;
+                }
+
+                .grille {
+                    color: yellow;
+                }
+
+                .entry-content{
+                    min-height: 100%;
                 }
             
                 td {
                     width: 50%;
                     color: purple;
                 }
-            }
+
+                #desc-cours{
+                    color: red;
+                }
+            }*/
         }
 
         /* @media ... */
@@ -188,4 +201,58 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    /*html {
+        font-size: 100%;
+        height: 100%;
+        background-size: auto;
+    }*/
+
+    .cheminement > h1 {
+        font-weight: normal;
+        // margin-top: 25%;
+        padding-top: 15%;
+        padding-bottom: 0;
+    }
+
+    .cheminement ul#choix-session > li {
+        font-size: 65%;
+        // color: yellow;
+        // font-weight: normal;
+    }
+
+    .cheminement .grille ul#liste-cours > li {
+        // color: purple;
+        margin: 0;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        font-size: 65%;
+    }
+
+    .cheminement .grille div.desc-cours h3 {
+        // color: green;
+        margin: 0;
+        padding-top: 5%;
+    }
+
+    .cheminement .grille div.desc-cours p {
+        // color: red;
+        font-size: 75%;
+    }
+
+    /*.entry-content{
+        min-height: 100%;
+    }*/
+
+    td {
+        width: 50%;
+        color: purple;
+    }
+
+    /*#desc-cours{
+        color: red;
+        font-size: 250%;
+    }*/
 }

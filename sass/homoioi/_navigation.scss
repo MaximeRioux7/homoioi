@@ -88,7 +88,8 @@
     position: absolute;
     width: 370px;
     height: 100vh;
-    margin: -100px 0 0 -50px;
+    margin: -71px 0 0 -20px;
+    // margin: -100px 0 0 -50px;
     padding-left: 5px;
     padding-top: 125px;
     background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
@@ -153,3 +154,10 @@
     } 
   }
 }
+
+/*@media screen and (max-width: 768px) {
+  #menu-ul{
+    height: 100%;
+    background-color: yellow;
+  }
+}*/
