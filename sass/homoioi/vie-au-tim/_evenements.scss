@@ -1,0 +1,52 @@
+#ve-evenements{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto;
+    max-width: 1280px;
+    margin: 40px auto;
+
+    > h1:first-child{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    > div{
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .evenement-premier{
+        margin: 40px;
+        .parent-image{
+            border-radius: 15px;
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-bottom: 60%;
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            h1{
+                width: 100%;
+                position: absolute;
+                display: block;
+                text-align: center;
+                bottom: 0;
+                background-color: rgba(#000, 0.75);
+                padding: 5px;
+                font-size: calc(12px + 1vw);
+                text-shadow: 0 0 10px rgba(#000, 0.5);
+
+                border-top: 2px solid white;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(to left, rgba(#FFF, 0.25), rgba(#FFF, 0.75), rgba(#FFF, 0.25));
+            }
+        }
+    }
+
+    .autres-evenements{
+        margin: 40px 0;
+    }
+}

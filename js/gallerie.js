@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*(function(){
     // Code JS de la gallerie
     //alert(`Test gallerie`);
@@ -9,7 +7,6 @@
         light.classList.toggle("hide");
     })
 })();*/
->>>>>>> origin/monica
 (function(){
     // Code JS de la gallerie
     //alert(`Test gallerie`);
