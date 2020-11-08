@@ -1025,6 +1025,10 @@ body.cheminement {
   background-image: url("./images/GeneriqueAlterSombre.jpg");
 }
 
+body.la-vie-au-tim {
+  background-image: url("./images/CreationAlterSombre.jpg");
+}
+
 /** 
 * La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
 */
@@ -1045,7 +1049,7 @@ body.cheminement {
   position: relative;
   top: 20px;
   left: 20px;
-  z-index: 1;
+  z-index: 100;
   user-select: none;
 }
 
@@ -1057,7 +1061,7 @@ body.cheminement {
   top: -7px;
   left: -5px;
   opacity: 0;
-  z-index: 2;
+  z-index: 101;
   cursor: pointer;
 }
 
@@ -1071,7 +1075,7 @@ body.cheminement {
   margin-bottom: 7px;
   position: relative;
   background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
-  z-index: 1;
+  z-index: 100;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
@@ -1637,8 +1641,6 @@ li .page_item {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: auto auto;
-  max-width: 1280px;
-  margin: 40px auto;
 }
 
 #ve-evenements > h1:first-child {
@@ -1656,7 +1658,7 @@ li .page_item {
 }
 
 #ve-evenements .evenement-premier .parent-image {
-  border-radius: 15px;
+  border-radius: 7px;
   position: relative;
   display: block;
   width: 100%;
@@ -1676,13 +1678,66 @@ li .page_item {
   padding: 5px;
   font-size: calc(12px + 1vw);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-top: 2px solid white;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 #ve-evenements .autres-evenements {
   margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#ve-evenements .autres-evenements > * {
+  position: relative;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 7px;
+  cursor: default;
+  transition: transform 0.25s;
+}
+
+#ve-evenements .autres-evenements > *:after {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(204, 204, 204, 0.2));
+  border-radius: 7px;
+}
+
+#ve-evenements .autres-evenements > *:hover {
+  transform: scale(1.07);
+}
+
+#ve-evenements .autres-evenements > * > * {
+  z-index: 1;
+  vertical-align: middle;
+  margin: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.vie-au-tim {
+  overflow: auto;
+}
+
+.vie-au-tim > div {
+  max-width: 1280px;
+  margin: 40px auto;
+}
+
+.vie-au-tim > div > h1 {
+  font-size: 46px;
 }
 
 footer {

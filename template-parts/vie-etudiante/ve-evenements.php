@@ -20,7 +20,7 @@
                 echo "</div>";
                 echo "<div class='autres-evenements'>";
             } else {
-                echo "<div>";
+                echo "<div style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
                     echo "<h2>";
                         the_title();
                     echo "</h2>";

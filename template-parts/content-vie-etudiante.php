@@ -18,20 +18,22 @@
 	<?php /*homoioi_post_thumbnail();*/ ?>
 
 	<div class="entry-content">
-		<?php
-		the_content();
+		<div class="vie-au-tim">
+			<?php
+			the_content();
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'homoioi' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'homoioi' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 
-        <!-- Ajouter toutes les parties à la page de la vie étudiante -->
-        <div id="ve-evenements">
-			<?php include 'vie-etudiante/ve-evenements.php'; ?>
+			<!-- Ajouter toutes les parties à la page de la vie étudiante -->
+			<div id="ve-evenements">
+				<?php include 'vie-etudiante/ve-evenements.php'; ?>
+			</div>
 		</div>
 	</div><!-- .entry-content -->
 

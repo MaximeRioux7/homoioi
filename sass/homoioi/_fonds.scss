@@ -1,5 +1,6 @@
 $fond-par-defaut: url("./images/AccueilAlterSombre.jpg");
 $fond-cheminement: url("./images/GeneriqueAlterSombre.jpg");
+$font-vie-au-tim: url("./images/CreationAlterSombre.jpg");
 
 /* Positionnement */
 body{
@@ -11,5 +12,6 @@ body{
 body{
     background-image: $fond-par-defaut;
     &.cheminement{ background-image: $fond-cheminement; }
+    &.la-vie-au-tim{ background-image: $font-vie-au-tim; }
 }
 
