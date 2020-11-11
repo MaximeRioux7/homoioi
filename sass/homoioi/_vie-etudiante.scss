@@ -73,6 +73,12 @@ li .page_item {
     z-index: 999;
 }
 
+/*@media screen and (max-width: 768px) {
+    img {
+        max-width: 75%;
+    }
+}*/
+
 /*
   <figure class="wp-block-gallery columns-3 is-cropped">
   <ul class="img-parent blocks-gallery-grid">
