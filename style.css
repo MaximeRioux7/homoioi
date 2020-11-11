@@ -1113,7 +1113,7 @@ body.la-vie-au-tim {
   position: absolute;
   width: 370px;
   height: 100vh;
-  margin: -100px 0 0 -50px;
+  margin: -71px 0 0 -20px;
   padding-left: 5px;
   padding-top: 125px;
   background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
@@ -1180,6 +1180,12 @@ body.la-vie-au-tim {
   cursor: pointer;
 }
 
+/*@media screen and (max-width: 768px) {
+  #menu-ul{
+    height: 100%;
+    background-color: yellow;
+  }
+}*/
 .entry-content {
   min-height: 100%;
   margin: 0;
@@ -1313,7 +1319,7 @@ nav.vEtudiante p {
 }
 */
 /*.entry-content{
-    min-height: 100%;
+    height: 100%;
     margin: 0;
 
     h1{
@@ -1338,21 +1344,19 @@ nav.vEtudiante p {
     p:nth-child(4) {
         color: orange;
     }
+}
 
-    @media screen and (max-width: 768px) {
-        a {
-            color: #F08080;
-        }
-
-        p {
-            color: orange;
-        }
-
-        #creation a {
-            color: orange;
-        }
+entry-content{
+    #menu-ul{
+        color: yellow;
+        background-color: yellow;
     }
 }*/
+/*@media screen and (max-width: 768px) {
+    .cheminement{
+        height: 100%;
+    }
+  }*/
 #requete-cours {
   display: none !important;
 }
@@ -1482,20 +1486,33 @@ nav.vEtudiante p {
 .cheminement .grille .entry-content {
   min-height: 100%;
   margin: 0;
+  /*@media screen and (max-width: 768px) {
+                html {
+                    font-size: 100%;
+                    // height: 100%;
+                }
+
+                .grille {
+                    color: yellow;
+                }
+
+                .entry-content{
+                    min-height: 100%;
+                }
+            
+                td {
+                    width: 50%;
+                    color: purple;
+                }
+
+                #desc-cours{
+                    color: red;
+                }
+            }*/
 }
 
 .cheminement .grille .entry-content td {
   color: purple;
-}
-
-@media screen and (max-width: 768px) {
-  .cheminement .grille .entry-content html {
-    font-size: 100%;
-  }
-  .cheminement .grille .entry-content td {
-    width: 50%;
-    color: purple;
-  }
 }
 
 #desc-cours {
@@ -1525,6 +1542,46 @@ nav.vEtudiante p {
   .grille div.desc-cours > * > * {
     margin: 15px 0;
   }
+}
+
+@media screen and (max-width: 768px) {
+  /*html {
+        font-size: 100%;
+        height: 100%;
+        background-size: auto;
+    }*/
+  .cheminement > h1 {
+    font-weight: normal;
+    padding-top: 15%;
+    padding-bottom: 0;
+  }
+  .cheminement ul#choix-session > li {
+    font-size: 65%;
+  }
+  .cheminement .grille ul#liste-cours > li {
+    margin: 0;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: 65%;
+  }
+  .cheminement .grille div.desc-cours h3 {
+    margin: 0;
+    padding-top: 5%;
+  }
+  .cheminement .grille div.desc-cours p {
+    font-size: 75%;
+  }
+  /*.entry-content{
+        min-height: 100%;
+    }*/
+  td {
+    width: 50%;
+    color: purple;
+  }
+  /*#desc-cours{
+        color: red;
+        font-size: 250%;
+    }*/
 }
 
 /*********************** TERRITOIRE DE MONICA *************************/
@@ -1768,6 +1825,12 @@ footer a {
   font-weight: 900;
   letter-spacing: 1px;
   pointer-events: initial;
+}
+
+@media screen and (max-width: 768px) {
+  footer a {
+    font-weight: 300;
+  }
 }
 
 /* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;
