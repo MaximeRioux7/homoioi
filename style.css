@@ -1643,7 +1643,7 @@ li .page_item {
     padding-top: 100px;
   }
   .img-parent .img-enfants {
-    height: 250px;
+    height: 200px;
     flex: 40%;
   }
   .img-parent .img-enfants img {
