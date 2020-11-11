@@ -8,13 +8,20 @@
         grid-row-end: 1;
     }
 
-    > div{
+    > div, > a{
         grid-row-start: 2;
         grid-row-end: 2;
     }
 
     .evenement-premier{
         margin: 40px;
+
+        color: white !important;
+        
+        &:hover{
+            color: white !important;
+        }
+
         .parent-image{
             border-radius: 7px;
             position: relative;
@@ -50,6 +57,13 @@
         display: flex;
         flex-direction: column;
 
+        a{
+            color: white !important;
+            &:hover{
+                color: white !important;
+            }
+        }
+
         > * {
             position: relative;
             flex: 1 0 auto;
@@ -65,10 +79,10 @@
 
             border-radius: 7px;
 
-            cursor: default;
             transition: transform 0.25s;
 
             &:after{
+                z-index: 0;
                 position: absolute;
                 content: " ";
                 width: 100%;
@@ -81,11 +95,12 @@
                 transform: scale(1.07);
             }
 
-            > * {
-                z-index: 1;
+            h2{
+                z-index: 2;
                 vertical-align: middle;
                 margin: 20px;
                 text-shadow: 0 0 10px rgba(#000, 0.5);
+
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;

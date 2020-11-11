@@ -1648,13 +1648,18 @@ li .page_item {
   grid-row-end: 1;
 }
 
-#ve-evenements > div {
+#ve-evenements > div, #ve-evenements > a {
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
 #ve-evenements .evenement-premier {
   margin: 40px;
+  color: white !important;
+}
+
+#ve-evenements .evenement-premier:hover {
+  color: white !important;
 }
 
 #ve-evenements .evenement-premier .parent-image {
@@ -1689,6 +1694,14 @@ li .page_item {
   flex-direction: column;
 }
 
+#ve-evenements .autres-evenements a {
+  color: white !important;
+}
+
+#ve-evenements .autres-evenements a:hover {
+  color: white !important;
+}
+
 #ve-evenements .autres-evenements > * {
   position: relative;
   flex: 1 0 auto;
@@ -1700,11 +1713,11 @@ li .page_item {
   margin: 10px 0;
   box-sizing: border-box;
   border-radius: 7px;
-  cursor: default;
   transition: transform 0.25s;
 }
 
 #ve-evenements .autres-evenements > *:after {
+  z-index: 0;
   position: absolute;
   content: " ";
   width: 100%;
@@ -1717,8 +1730,8 @@ li .page_item {
   transform: scale(1.07);
 }
 
-#ve-evenements .autres-evenements > * > * {
-  z-index: 1;
+#ve-evenements .autres-evenements > * h2 {
+  z-index: 2;
   vertical-align: middle;
   margin: 20px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

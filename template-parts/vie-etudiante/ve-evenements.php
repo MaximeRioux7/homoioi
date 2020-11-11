@@ -11,20 +11,20 @@
         while ( have_posts() ) : the_post();
             $i++;
             if($i == 1){
-                echo "<div class='evenement-premier'>";
+                echo ("<a href='".get_post_permalink()."' class='evenement-premier'>");
                     echo "<span class='parent-image' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
                         echo "<h1>";
                         the_title();
                         echo "</h1>";
                     echo "</span>";
-                echo "</div>";
+                echo "</a>";
                 echo "<div class='autres-evenements'>";
             } else {
-                echo "<div style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                echo "<a href='".get_post_permalink()."' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
                     echo "<h2>";
                         the_title();
                     echo "</h2>";
-                echo "</div>";
+                echo "</a>";
             }
         endwhile;
         echo "</div>";
