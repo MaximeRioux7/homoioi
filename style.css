@@ -1706,7 +1706,7 @@ footer a {
 
 @media screen and (max-width: 768px) {
   footer a {
-    font-weight: 600;
+    font-weight: 300;
   }
 }
 
