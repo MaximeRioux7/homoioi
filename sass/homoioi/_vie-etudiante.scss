@@ -78,25 +78,11 @@ li .page_item {
 
 @media screen and (max-width: 768px) {
     .img-parent {
-        height: 100%;
-        padding-top: 75px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow-y: auto;
-    
+        padding-top: 100px;
+
         .img-enfants {
-            flex: 0 1 150px;
-            margin: 5px;
-            overflow: hidden;
-            height: 500px;
-    
-            img {
-                transition: transform 0.5s ease;
-                &:hover{
-                    transform: scale(1.5); 
-                }
-            }
+            height: 250px;
+            flex: 40%;
         }
     }
 }

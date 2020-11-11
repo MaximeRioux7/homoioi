@@ -1281,14 +1281,14 @@ main {
   }
   .entry-content span.choix a.gauche {
     position: absolute;
-    top: 15vh;
+    top: 20vh;
     left: 50 !important;
     transform: translateX(50%);
   }
   .entry-content span.choix a.droite {
     position: absolute;
     white-space: nowrap;
-    top: 85vh;
+    top: 80vh;
     transform: translateX(50%) translateY(-100%);
     right: 50%;
   }
@@ -1639,24 +1639,11 @@ li .page_item {
 
 @media screen and (max-width: 768px) {
   .img-parent {
-    height: 100%;
-    padding-top: 75px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow-y: auto;
+    padding-top: 100px;
   }
   .img-parent .img-enfants {
-    flex: 0 1 150px;
-    margin: 5px;
-    overflow: hidden;
-    height: 500px;
-  }
-  .img-parent .img-enfants img {
-    transition: transform 0.5s ease;
-  }
-  .img-parent .img-enfants img:hover {
-    transform: scale(1.5);
+    height: 250px;
+    flex: 40%;
   }
 }
 
