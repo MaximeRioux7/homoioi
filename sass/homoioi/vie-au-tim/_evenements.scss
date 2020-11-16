@@ -1,0 +1,110 @@
+#ve-evenements{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto;
+
+    > h1:first-child{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    > div, > a{
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .evenement-premier{
+        margin: 40px;
+
+        color: white !important;
+        
+        &:hover{
+            color: white !important;
+        }
+
+        .parent-image{
+            border-radius: 7px;
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-bottom: 60%;
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            h1{
+                width: 100%;
+                position: absolute;
+                display: block;
+                text-align: center;
+                bottom: 0;
+                background-color: rgba(#000, 0.75);
+                padding: 5px;
+                font-size: calc(12px + 1vw);
+                text-shadow: 0 0 10px rgba(#000, 0.5);
+
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .autres-evenements{
+        margin: 40px 0;
+
+        display: flex;
+        flex-direction: column;
+
+        a{
+            color: white !important;
+            &:hover{
+                color: white !important;
+            }
+        }
+
+        > * {
+            position: relative;
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            margin: 10px 0;
+            box-sizing: border-box;
+
+            border-radius: 7px;
+
+            transition: transform 0.25s;
+
+            &:after{
+                z-index: 0;
+                position: absolute;
+                content: " ";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, rgba(#000, 0.85), rgba(#CCC, 0.2));
+                border-radius: 7px;
+            }
+
+            &:hover{
+                transform: scale(1.07);
+            }
+
+            h2{
+                z-index: 2;
+                vertical-align: middle;
+                margin: 20px;
+                text-shadow: 0 0 10px rgba(#000, 0.5);
+
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

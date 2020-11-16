@@ -939,9 +939,9 @@ textarea {
 /* Homoioi
 --------------------------------------------- */
 html, body {
-  min-height: 100%;
   height: 100%;
   margin: 0 !important;
+  max-height: none;
   color: #EEE;
   box-sizing: border-box;
 }
@@ -951,6 +951,7 @@ html, body {
   font-family: 'Questrial', sans-serif;
   margin: 0;
   box-sizing: border-box;
+  background: none;
 }
 
 div, p, h1, h2 {
@@ -975,17 +976,6 @@ h2 {
 body {
   min-height: 100%;
   margin: 0;
-}
-
-#page {
-  background-image: url("./images/accueil.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-#page.cheminement {
-  background-image: url("./images/generique.jpg");
 }
 
 a {
@@ -1020,22 +1010,192 @@ main {
   background-color: #888;
 }
 
-#masthead nav {
-  /* Retirer "display: none;" pour travailler sur la navigation */
-  display: none;
-  position: absolute;
-  z-index: 1;
+/* Positionnement */
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
+body {
+  background-image: url("./images/AccueilAlterSombre.jpg");
+}
+
+body.cheminement {
+  background-image: url("./images/GeneriqueAlterSombre.jpg");
+}
+
+body.la-vie-au-tim {
+  background-image: url("./images/CreationAlterSombre.jpg");
+}
+
+/** 
+* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
+*/
+#masthead {
+  position: absolute;
+}
+
+#masthead nav {
+  display: inline-block;
+  font-family: 'Questrial';
+}
+
+/**
+* Style du layout du div menu-toggle
+*/
+#menu-toggle {
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  user-select: none;
+}
+
+#menu-toggle input {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 32px;
+  top: -7px;
+  left: -5px;
+  opacity: 0;
+  z-index: 101;
+  cursor: pointer;
+}
+
+/**
+* Création du menu burger
+*/
+#menu-toggle span {
+  display: block;
+  width: 48px;
+  height: 10px;
+  margin-bottom: 7px;
+  position: relative;
+  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  z-index: 100;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menu-toggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/**
+* Transformation des niveaux du burger
+*/
+#menu-toggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -2px);
+  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+}
+
+#menu-toggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menu-toggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+
+/**
+* Style des items du menu
+*/
+#menu-ul {
+  position: absolute;
+  width: 370px;
+  height: 100vh;
+  margin: -71px 0 0 -20px;
+  padding-left: 5px;
+  padding-top: 125px;
+  background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  /**
+    * Style du texte dans le menu
+    */
+}
+
+#menu-ul a {
+  color: #E6E6E6;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px #E6E6E6;
+}
+
+#menu-ul a:visited {
+  color: #ffffff;
+}
+
+#menu-ul a:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
+  transition: all 0.2s ease-in;
+}
+
+#menu-ul p {
+  padding-left: 85px;
+  color: #E6E6E6;
+  text-shadow: 0px 0px 3px #E6E6E6;
+  transition: all 0.2s ease-in;
+}
+
+#menu-ul li {
+  padding: 15px 0;
+  font-size: 24px;
+  list-style-type: none;
+}
+
+/**
+* Basculer à partir de la gauche
+*/
+#menu-toggle input:checked ~ ul {
+  transform: none;
+}
+
+/**
+* Icons
+*/
+#icon {
+  padding-top: 45%;
+  padding-left: 70px;
+}
+
+#icon img {
+  height: 30px;
+  padding-left: 15px;
+  transition: transform .5s;
+}
+
+#icon img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/*@media screen and (max-width: 768px) {
+  #menu-ul{
+    height: 100%;
+    background-color: yellow;
+  }
+}*/
 .entry-content {
   min-height: 100%;
   margin: 0;
 }
 
 .entry-content img.logo-site {
-  width: initial;
+  width: 300px;
   height: auto;
   position: absolute;
+  padding: 0;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%) rotate(30deg);
@@ -1051,21 +1211,51 @@ main {
   transform: translateY(-50%);
 }
 
-.entry-content a {
-  color: lightcoral;
+.entry-content span.choix a {
+  color: white;
+  letter-spacing: 1px;
 }
 
-.entry-content a.gauche {
+.entry-content span.choix a.gauche {
   position: absolute;
   margin-left: 2.75vw;
   left: 0;
 }
 
-.entry-content a.droite {
+.entry-content span.choix a.droite {
   white-space: nowrap;
   position: absolute;
   right: 0;
   margin-right: 2.75vw;
+}
+
+@media screen and (max-width: 768px) {
+  .entry-content section #lesChoix {
+    flex-direction: row;
+  }
+  .entry-content img.logo-site {
+    width: 60%;
+    height: auto;
+  }
+  .entry-content span.choix {
+    top: 0;
+  }
+  .entry-content span.choix a {
+    margin: 0 !important;
+  }
+  .entry-content span.choix a.gauche {
+    position: absolute;
+    top: 15vh;
+    left: 50;
+    transform: translateX(50%);
+  }
+  .entry-content span.choix a.droite {
+    position: absolute;
+    white-space: nowrap;
+    top: 85vh;
+    transform: translateX(50%) translateY(-100%);
+    right: 50%;
+  }
 }
 
 /*
@@ -1128,38 +1318,8 @@ nav.vEtudiante p {
     color: white;
 }
 */
-<<<<<<< HEAD
-.entry-content {
-  min-height: 100%;
-  margin: 0;
-}
-
-.entry-content h1 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.entry-content p {
-  margin: auto;
-  padding: 0;
-  max-width: 50%;
-  left: 25%;
-  text-align: justify;
-  color: orange;
-}
-
-.entry-content #creation {
-  color: purple;
-}
-
-.entry-content p:nth-child(4) {
-  color: green;
-}
-
-=======
 /*.entry-content{
-    min-height: 100%;
+    height: 100%;
     margin: 0;
 
     h1{
@@ -1178,14 +1338,25 @@ nav.vEtudiante p {
     }
 
     #creation {
-        color: purple;
+        color: #F08080;
     }
 
     p:nth-child(4) {
-        color: green;
+        color: orange;
+    }
+}
+
+entry-content{
+    #menu-ul{
+        color: yellow;
+        background-color: yellow;
     }
 }*/
->>>>>>> maxime
+/*@media screen and (max-width: 768px) {
+    .cheminement{
+        height: 100%;
+    }
+  }*/
 #requete-cours {
   display: none !important;
 }
@@ -1260,6 +1431,8 @@ nav.vEtudiante p {
 }
 
 .cheminement .grille div.desc-cours {
+  text-align: justify;
+  text-justify: inter-word;
   padding: 15px;
   width: 70vw;
   flex-grow: 1;
@@ -1301,13 +1474,45 @@ nav.vEtudiante p {
   max-width: 315px !important;
   box-sizing: content-box;
   padding: 10px;
-  transition: color 0.1s, border-color 0.1s;
+  transition: color 0.1s, border-color 0.1s, background-color 0.1s;
 }
 
 .cheminement .grille ul#liste-cours > li:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   border-color: white;
+}
+
+.cheminement .grille .entry-content {
+  min-height: 100%;
+  margin: 0;
+  /*@media screen and (max-width: 768px) {
+                html {
+                    font-size: 100%;
+                    // height: 100%;
+                }
+
+                .grille {
+                    color: yellow;
+                }
+
+                .entry-content{
+                    min-height: 100%;
+                }
+            
+                td {
+                    width: 50%;
+                    color: purple;
+                }
+
+                #desc-cours{
+                    color: red;
+                }
+            }*/
+}
+
+.cheminement .grille .entry-content td {
+  color: purple;
 }
 
 #desc-cours {
@@ -1339,6 +1544,272 @@ nav.vEtudiante p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  /*html {
+        font-size: 100%;
+        height: 100%;
+        background-size: auto;
+    }*/
+  .cheminement > h1 {
+    font-weight: normal;
+    padding-top: 15%;
+    padding-bottom: 0;
+  }
+  .cheminement ul#choix-session > li {
+    font-size: 65%;
+  }
+  .cheminement .grille ul#liste-cours > li {
+    margin: 0;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: 65%;
+  }
+  .cheminement .grille div.desc-cours h3 {
+    margin: 0;
+    padding-top: 5%;
+  }
+  .cheminement .grille div.desc-cours p {
+    font-size: 75%;
+  }
+  /*.entry-content{
+        min-height: 100%;
+    }*/
+  td {
+    width: 50%;
+    color: purple;
+  }
+  /*#desc-cours{
+        color: red;
+        font-size: 250%;
+    }*/
+}
+
+/*********************** TERRITOIRE DE MONICA *************************/
+li .page_item {
+  display: hide;
+}
+
+/*p {
+	color: aqua;
+    display: grid;
+    place-items: center;
+}*/
+.img-parent {
+  padding-top: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-parent .img-enfants {
+  flex: 0 1 150px;
+  margin: 5px;
+  overflow: hidden;
+  height: 500px;
+}
+
+.img-parent .img-enfants img {
+  transition: transform 0.5s ease;
+}
+
+.img-parent .img-enfants img:hover {
+  transform: scale(1.5);
+}
+
+.img-parent .gallerie-img-etudiante {
+  object-fit: none;
+  height: 100%;
+  filter: grayscale(100%);
+}
+
+.img-parent .gallerie-img-etudiante:hover {
+  filter: grayscale(0%);
+}
+
+.img-parent .gallerie-img-etudiante:active {
+  filter: grayscale(100%);
+}
+
+/******************** LIGHTBOX *************************/
+.lightbox {
+  /** Default lightbox to hidden */
+  opacity: 0;
+  z-index: -100;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(63, 1, 50, 0.4);
+}
+
+.lightbox:target {
+  opacity: 1;
+  z-index: 999;
+}
+
+/*
+  <figure class="wp-block-gallery columns-3 is-cropped">
+  <ul class="img-parent blocks-gallery-grid">
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/008.png" alt="" data-id="110" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/008.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/008/" class="img-enfants gallerie-img-etudiante img-01"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/007.png" alt="" data-id="111" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/007.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/007/" class="img-enfants gallerie-img-etudiante img-02"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/006.png" alt="" data-id="112" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/006.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/006/" class="img-enfants gallerie-img-etudiante img-03"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/005.png" alt="" data-id="113" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/005.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/005/" class="img-enfants gallerie-img-etudiante img-04"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/004.png" alt="" data-id="114" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/004.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/004/" class="img-enfants gallerie-img-etudiante img-05"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/003.png" alt="" data-id="115" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/003.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/003/" class="img-enfants gallerie-img-etudiante img-06"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/002.png" alt="" data-id="116" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/002.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/002/" class="img-enfants gallerie-img-etudiante img-07"/>
+  </figure>
+  </li>
+  <li class="blocks-gallery-item">
+  <figure>
+  <img src="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/001.png" alt="" data-id="117" data-full-url="http://127.0.0.1/wordpress/wp-content/uploads/2020/10/001.png" data-link="http://127.0.0.1/wordpress/accueil/vie-etudiante/attachment/001/" class="img-enfants gallerie-img-etudiante img-08"/>
+  </figure></li></ul></figure>
+<!-- /wp:gallery -->
+*/
+#ve-evenements {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto auto;
+}
+
+#ve-evenements > h1:first-child {
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+#ve-evenements > div, #ve-evenements > a {
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+#ve-evenements .evenement-premier {
+  margin: 40px;
+  color: white !important;
+}
+
+#ve-evenements .evenement-premier:hover {
+  color: white !important;
+}
+
+#ve-evenements .evenement-premier .parent-image {
+  border-radius: 7px;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#ve-evenements .evenement-premier .parent-image h1 {
+  width: 100%;
+  position: absolute;
+  display: block;
+  text-align: center;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5px;
+  font-size: calc(12px + 1vw);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#ve-evenements .autres-evenements {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#ve-evenements .autres-evenements a {
+  color: white !important;
+}
+
+#ve-evenements .autres-evenements a:hover {
+  color: white !important;
+}
+
+#ve-evenements .autres-evenements > * {
+  position: relative;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 7px;
+  transition: transform 0.25s;
+}
+
+#ve-evenements .autres-evenements > *:after {
+  z-index: 0;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(204, 204, 204, 0.2));
+  border-radius: 7px;
+}
+
+#ve-evenements .autres-evenements > *:hover {
+  transform: scale(1.07);
+}
+
+#ve-evenements .autres-evenements > * h2 {
+  z-index: 2;
+  vertical-align: middle;
+  margin: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.vie-au-tim {
+  overflow: auto;
+}
+
+.vie-au-tim > div {
+  max-width: 1280px;
+  margin: 40px auto;
+}
+
+.vie-au-tim > div > h1 {
+  font-size: 46px;
+}
+
 footer {
   position: fixed;
   left: 10px;
@@ -1354,6 +1825,12 @@ footer a {
   font-weight: 900;
   letter-spacing: 1px;
   pointer-events: initial;
+}
+
+@media screen and (max-width: 768px) {
+  footer a {
+    font-weight: 300;
+  }
 }
 
 /* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;

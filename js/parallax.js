@@ -4,7 +4,7 @@
         let selecteur = ".logo-site";// insert logo class or id here
         // "Multiplicateur" pour le déplacement de l'élément
         let facteur1 = 0.04;
-        let facteur2 = 0.02;
+        let facteur2 = 0.04;
         let diffX, diffY, transform;
         let elements = document.querySelectorAll(selecteur);
         function offsetObjects(mouseEvent){
@@ -25,5 +25,4 @@
         if(elements) document.addEventListener("mousemove", offsetObjects);
         else console.warn(`Aucun élément répondant au sélecteur ${selecteur} n'a été trouvé.`);
     }, false);
-
 })();

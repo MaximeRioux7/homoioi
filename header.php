@@ -22,9 +22,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(array($pagename)); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site <?php echo(" ".$pagename); ?>">
+<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'homoioi' ); ?></a>
 
 	<header id="masthead" class="site-header">
@@ -46,16 +46,40 @@
 				<p class="site-description"><?php echo $homoioi_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; */?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'homoioi' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+		
+		<!-- La programmation de menu de navigation à été inspiré de plusieurs exemples sur Internet -->
+		<nav id="site-navigation">				
+			<div id="menu-toggle" > 				
+				<input type="checkbox"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu-ul">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'menu',
+							)
+						);
+					?>
+					<div id="icon">
+						<a href="https://www.facebook.com/maisonneuvetim/" target="_blank">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/f_logo_RGB-White_58.png" alt="Facebook">
+						</a>
+						<a href="https://www.youtube.com/user/TIMaisonneuve" target="_blank">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/yt_logo_mono_light.png" alt="Youtube">	
+						</a>
+						<a href="https://www.instagram.com/maisonneuvetim/" target="_blank">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/glyph-logo_May2016-Light.png" alt="Instagram">
+						</a>
+						<a href=" https://discord.gg/53vFvr9" target="_blank">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/Discord-Logo-Light.png" alt="Discord">
+						</a>					
+					</div>					
+					<p>Technique d'Intégration Multimédia <br>Collège de Maisonneuve</p>
+				</ul>																
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

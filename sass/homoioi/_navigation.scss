@@ -1,6 +1,163 @@
-#masthead nav{
-    /* Retirer "display: none;" pour travailler sur la navigation */
-    display: none;
-    position: absolute;
-    z-index: 1;
+/** 
+* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
+*/
+
+#masthead{
+  position: absolute;
 }
+
+#masthead nav {
+    display: inline-block;
+    font-family: 'Questrial';
+}
+
+
+/**
+* Style du layout du div menu-toggle
+*/
+#menu-toggle {
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  user-select: none;
+} 
+
+#menu-toggle input {
+  display: block;
+  position: absolute;  
+  width: 40px;
+  height: 32px;
+  top: -7px;
+  left: -5px; 
+  opacity: 0;  
+  z-index: 101;
+  cursor: pointer;
+ }
+
+
+/**
+* Création du menu burger
+*/
+#menu-toggle span {
+  display: block;
+  width: 48px;
+  height: 10px;
+  margin-bottom: 7px;
+  position: relative;
+  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  z-index: 100;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menu-toggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/**
+* Transformation des niveaux du burger
+*/
+#menu-toggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -2px);
+  background: linear-gradient(to left, #008080 0%, #12b9b9  100%);
+}
+
+#menu-toggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menu-toggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+
+
+/**
+* Style des items du menu
+*/
+#menu-ul {
+    position: absolute;
+    width: 370px;
+    height: 100vh;
+    margin: -71px 0 0 -20px;
+    // margin: -100px 0 0 -50px;
+    padding-left: 5px;
+    padding-top: 125px;
+    background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    
+        /**
+    * Style du texte dans le menu
+    */
+    a {
+        color:#E6E6E6;
+        text-transform: uppercase;
+        text-shadow:0px 0px 5px #E6E6E6;
+
+        &:visited {
+            color: #ffffff;
+        }
+
+        &:hover {
+            color:#ffffff;
+            text-shadow:0px 0px 10px #ffffff;
+            transition: all 0.2s ease-in;
+        }
+    }
+    
+    p{
+        padding-left: 85px;
+        color:#E6E6E6;
+        text-shadow:0px 0px 3px #E6E6E6;
+        transition: all 0.2s ease-in;
+    }
+
+    li {
+        padding: 15px 0;
+        font-size: 24px;
+        list-style-type: none;
+    }
+}
+
+/**
+* Basculer à partir de la gauche
+*/
+#menu-toggle input:checked ~ ul {
+  transform: none;
+}
+
+/**
+* Icons
+*/
+#icon {
+  padding-top: 45%;
+  padding-left: 70px;
+  img {
+    height: 30px;
+    padding-left: 15px;
+    transition: transform .5s;
+  
+    &:hover{
+      transform: scale(1.2);
+      cursor: pointer;
+    } 
+  }
+}
+
+/*@media screen and (max-width: 768px) {
+  #menu-ul{
+    height: 100%;
+    background-color: yellow;
+  }
+}*/

@@ -32,6 +32,7 @@
 	}
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
+	 
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
 
@@ -42,6 +43,7 @@
 		}
 	} );
 
+	
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );
@@ -51,13 +53,13 @@
 			button.setAttribute( 'aria-expanded', 'false' );
 		}
 	} );
-
+	
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
 
 	// Get all the link elements with children within the menu.
 	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
-
+	/** 
 	// Toggle focus each time a menu link is focused or blurred.
 	for ( const link of links ) {
 		link.addEventListener( 'focus', toggleFocus, true );
@@ -68,10 +70,10 @@
 	for ( const link of linksWithChildren ) {
 		link.addEventListener( 'touchstart', toggleFocus, false );
 	}
-
+	*/
 	/**
 	 * Sets or removes .focus class on an element.
-	 */
+	 
 	function toggleFocus() {
 		if ( event.type === 'focus' || event.type === 'blur' ) {
 			let self = this;
@@ -96,4 +98,5 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+	*/
 }() );

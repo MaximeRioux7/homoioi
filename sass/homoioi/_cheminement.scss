@@ -1,5 +1,5 @@
 /*.entry-content{
-    min-height: 100%;
+    height: 100%;
     margin: 0;
 
     h1{
@@ -18,10 +18,23 @@
     }
 
     #creation {
-        color: purple;
+        color: #F08080;
     }
 
     p:nth-child(4) {
-        color: green;
+        color: orange;
+    }
+}
+
+entry-content{
+    #menu-ul{
+        color: yellow;
+        background-color: yellow;
     }
 }*/
+
+/*@media screen and (max-width: 768px) {
+    .cheminement{
+        height: 100%;
+    }
+  }*/

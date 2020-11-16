@@ -143,7 +143,7 @@ function homoioi_scripts() {
 	wp_enqueue_style( 'homoioi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'homoioi-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'homoioi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'homoioi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -193,11 +193,10 @@ function theme_homioi_gallerie() {
 add_action( 'wp_enqueue_scripts', 'theme_homioi_gallerie' );
 
 function collectiveray_load_js_script() {
-	if( is_front_page() ) {
-	  wp_enqueue_script('parallax', 'http://127.0.0.1/homoioiWordpress/wp-content/themes/homoioi/js/parallax.js', array('jquery'), '', false);
-	  //or use the version below if you know exactly where the file is
-	  //wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/myscript.js');
-	}
+    if( is_front_page() ) {
+      wp_enqueue_script('parallax', get_template_directory_uri() . '/js/parallax.js', array('jquery'), '', false);
+      //or use the version below if you know exactly where the file is
+      //wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/myscript.js');
+    }
   }
-  
-  add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
+add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
