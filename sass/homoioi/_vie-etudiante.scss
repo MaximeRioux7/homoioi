@@ -75,3 +75,9 @@ li .page_item {
     opacity: 1;
     z-index: 999;
 }
+
+#playlist-projet iframe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
