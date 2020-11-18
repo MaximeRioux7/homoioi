@@ -52,6 +52,23 @@ li .page_item {
             filter: grayscale(100%);
         }
     }
+/*********************** Vidéos YouTube ************************/
+    #playlist-projet iframe {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /*********************** Listes des stages ************************/
+    #details-stage {
+        padding-bottom: 40px;
+        p,
+        h2{
+            margin-top: 10px;
+            flex: 0 1 150px;
+            display: flex;
+            justify-content: center;
+        }
+    } 
 }
 
   /******************** LIGHTBOX *************************/
@@ -74,10 +91,4 @@ li .page_item {
 .lightbox:target {
     opacity: 1;
     z-index: 999;
-}
-
-#playlist-projet iframe {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
