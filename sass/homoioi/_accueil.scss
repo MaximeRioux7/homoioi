@@ -1,7 +1,10 @@
+
 .entry-content{
     min-height: 100%;
     margin: 0;
-
+    header{
+        height: 0;
+    }
     img.logo-site {
         width: 300px;
         height: auto;
@@ -10,26 +13,29 @@
         padding: 0;
         top: 50vh;
         left: 50vw;
-        //transform: translate(-50%, -50%) rotate(30deg);
+        
+        opacity: 0.9;
     }
 
     span.choix {
         width: 100%;
         position: absolute;
         top: 50vh;
-        font-size: 150%;
+        font-size: 1.2rem;
         text-shadow: 1px 1px darkslateblue;
         padding-top: 0;
         transform: translateY(-50%);
 
         a {
             color: white;
-            letter-spacing: 1px;
-    
+            //letter-spacing: 1px;
+            letter-spacing: 0.5rem;
+            text-shadow:0px 0px 5px #E6E6E6;
             &.gauche {
                 position: absolute;
                 margin-left: 2.75vw;
                 left: 0;
+                
             }
         
             &.droite {
@@ -37,6 +43,12 @@
                 position: absolute;
                 right: 0;
                 margin-right: 2.75vw;
+            }
+
+            &:hover {
+                color:#ffffff;
+                text-shadow:0px 0px 10px #ffffff;
+                transition: all 0.2s ease-in;
             }
         }
     }
@@ -49,13 +61,15 @@
         img.logo-site{
             width: 60%;
             height: auto;
+            transform: rotate(30deg);
         }
 
         span.choix {
             top: 0;
             a {
                 margin: 0 !important;
-
+                font-size: 1.5rem;
+                
                 &.gauche {
                     position: absolute;
                     top: 15vh;

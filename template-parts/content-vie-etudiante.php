@@ -34,6 +34,9 @@
 			<div id="ve-evenements">
 				<?php include 'vie-etudiante/ve-evenements.php'; ?>
 			</div>
+			<div id="ve-Enseignants">
+				<?php include 'content-Enseignants.php'; ?>
+			</div>
 		</div>
 	</div><!-- .entry-content -->
 

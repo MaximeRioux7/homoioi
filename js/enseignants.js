@@ -8,15 +8,16 @@
     let elmNomProf, elmImgProf, elmFlecheG, elmFlecheD;
 
     document.addEventListener("DOMContentLoaded", () => {
+        console.log(`is this working`);
         elmImgProf = document.getElementsByClassName("imgProf");
         elmNomProf = document.getElementsByClassName("infoProf");
         elmFlecheG = document.getElementById("flecheG").children[0];
         elmFlecheD = document.getElementById("flecheD").children[0];
         if(elmNomProf && elmImgProf && elmFlecheG && elmFlecheD){
             recupererProfs();
-            afficherListe(0);
+            afficherProfs();
             interactionFleches();
-        }else console.error(`Impossible d'afficher la liste des cours,\nau moins un élément avec l'ID suivant est introuvable: "liste-cours", "titre-cours", "desc-cours".`);
+        }else console.error(`Impossible d'afficher la liste des enseignants`);
     });
 
     function recupererProfs(){
@@ -33,10 +34,12 @@
 
     function afficherProfs(){
         //si en mode mobile, affiche seulement un prof
-        if(window.getComputedStyle(document.getElementsByClassName("prof2")[0], null).getPropertyValue("display") == "none") let nbElm = 1;
-        else let nbElm = 2;
+        /*if(window.getComputedStyle(document.getElementsByClassName("prof2")[0], null).getPropertyValue("display") == "none") let nbElm = 1;
+        else let nbElm = 2;*/
 
-        for(let i = 0; i < nbElm; i++){
+        for(let i = 0; i < 2; i++){
+            if(compteur > listeProfs.length)compteur=0;
+            else if(compteur < 0)compteur = listeProfs.length - 1;
             elmNomProf[i].Children[0].innerHTML = listeCours[compteur].nom;
             elmImgProf[i].children[0].src = listeCours[compteur].urlImg;
             compteur++;
@@ -44,13 +47,13 @@
     }
     
     function interactionFleches(){
-        for(let i = 0; i < elmSessions.children.length; i++){
-            elmSessions.children[i].addEventListener("click", () => {
-                afficherProfs(i+1);
-            });
-        }
         elmFlecheG.addEventListener("click", () => {
-            compteur
+            compteur+=2;
+            afficherProfs();
+        });
+        elmFlecheG.addEventListener("click", () => {
+            compteur-=3;
+            afficherProfs();
         });
     }
 })();

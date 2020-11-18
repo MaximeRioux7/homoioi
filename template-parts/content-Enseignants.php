@@ -20,14 +20,14 @@
 	<h1 class="vtTitre">ENSEIGNANTS</h1>
 		
 	<div class="divProf prof1">
-		<div class="imgProf"><img src="" alt="" ></div>
+		<div class="imgProf"></div>
 		
 		<div class="infoProf">
 			<h3></h3>
 		</div>
 	</div>
 	<div class="divProf prof2">
-		<div class="imgProf"><img src="" alt="" ></div>
+		<div class="imgProf"></div>
 		<div class="infoProf">
 			<h3></h3>
 		</div>
@@ -39,10 +39,11 @@
         <?php
 			$args = array(
 				'post_type'      => 'post',
-				'cat'            => get_category_by_slug('enseignants')->term_id,
+				'category_name'  => 'enseignant',
 				'posts_per_page' => -1
 			);
 			query_posts($args);
+			
 			while ( have_posts() ) : the_post();
 				echo '<span>';
 
@@ -53,7 +54,7 @@
 
 				// image du prof 
 				echo '<span class="enseignants-srcImg">';
-				wp_get_attachment_image_src();
+				the_content();
 				echo '</span>';
 
 				echo '</span>';

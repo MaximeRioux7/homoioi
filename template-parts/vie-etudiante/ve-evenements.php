@@ -7,7 +7,7 @@
     if(have_posts()){
         $i = 0;
 
-        echo "<h1>Événements</h1>";
+        echo "<h1>ÉVÉNEMENTS</h1>";
         while ( have_posts() ) : the_post();
             $i++;
             if($i == 1){
