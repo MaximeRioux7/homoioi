@@ -47,7 +47,9 @@
 			<?php endif; */?>
 		</div><!-- .site-branding -->
 		
-		<!-- La programmation de menu de navigation à été inspiré de plusieurs exemples sur Internet -->
+		<!-- La programmation de menu de navigation à été inspiré de plusieurs exemples sur Internet
+			 Par Nick Michelle Joseph
+		-->
 		<nav id="site-navigation">				
 			<div id="menu-toggle" > 				
 				<input type="checkbox"/>
@@ -78,7 +80,8 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/images/Discord-Logo-Light.png" alt="Discord">
 						</a>					
 					</div>					
-					<p>Technique d'Intégration Multimédia <br>Collège de Maisonneuve</p>
+					<p>Technique d'Intégration Multimédia <br></p>
+					<a id="M9" href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
 				</ul>																
 			</div>
 		</nav><!-- #site-navigation -->

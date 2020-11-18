@@ -1,4 +1,6 @@
 .entry-content{
+    /*padding-top: 0;*/
+    box-sizing: border-box;
     min-height: 100%;
     margin: 0;
 
@@ -41,13 +43,14 @@
         }
     }
 
+    
     @media screen and (max-width: 768px) {
         section #lesChoix {
             flex-direction: row;
         }
 
         img.logo-site{
-            width: 60%;
+            width: 55%;
             height: auto;
         }
 
@@ -58,15 +61,15 @@
 
                 &.gauche {
                     position: absolute;
-                    top: 15vh;
-                    left: 50;
+                    top: 20vh;
+                    left: 50 !important;
                     transform: translateX(50%);
                 }
             
                 &.droite {
                     position: absolute;
                     white-space: nowrap;
-                    top: 85vh;
+                    top: 80vh;
                     transform: translateX(50%) translateY(-100%);
                     right: 50%;
                 }

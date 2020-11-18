@@ -1030,7 +1030,8 @@ body.la-vie-au-tim {
 }
 
 /** 
-* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
+* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet
+* Par Nick Michelle Joseph 
 */
 #masthead {
   position: absolute;
@@ -1042,12 +1043,13 @@ body.la-vie-au-tim {
   font-family: 'Questrial';
 }
 
+/************************************************************* Version Desktop ***********************************************************/
 /**
 * Style du layout du div menu-toggle
 */
 #menu-toggle {
   display: block;
-  position: relative;
+  position: fixed;
   top: 20px;
   left: 20px;
   z-index: 100;
@@ -1111,9 +1113,13 @@ body.la-vie-au-tim {
 * Style des items du menu
 */
 #menu-ul {
-  position: absolute;
+  /* margin: -71px 0 0 -20px;*/
+  position: fixed;
   width: 370px;
   height: 100vh;
+  /*margin: -100px 0 0 -50px;*/
+  overflow-y: auto;
+  /*margin: 0;*/
   margin: -71px 0 0 -20px;
   padding-left: 5px;
   padding-top: 125px;
@@ -1146,6 +1152,22 @@ body.la-vie-au-tim {
   padding-left: 85px;
   color: #E6E6E6;
   text-shadow: 0px 0px 3px #E6E6E6;
+  transition: all 0.2s ease-in;
+}
+
+#menu-ul #M9 {
+  padding-left: 85px;
+  text-transform: none;
+  text-shadow: 0px 0px 3px #E6E6E6;
+}
+
+#menu-ul #M9:visited {
+  color: #ffffff;
+}
+
+#menu-ul #M9:h1 {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
   transition: all 0.2s ease-in;
 }
 
@@ -1187,7 +1209,41 @@ body.la-vie-au-tim {
     background-color: yellow;
   }
 }*/
+/************************************************************* Version Mobile ***********************************************************/
+@media screen and (max-width: 768px) {
+  /**
+  * Modification du style des items du menu
+  */
+  #menu-ul {
+    overflow-y: auto;
+    width: 370px;
+    padding-left: 5px;
+    padding-top: 110px;
+    /**
+    * Modification du style du texte dans le menu
+    */
+  }
+  #menu-ul li.page_item {
+    font-size: 28px;
+  }
+  #menu-ul p {
+    font-size: 14px;
+  }
+  /**
+  * Modification des icons
+  */
+  #icon {
+    padding-top: 35%;
+  }
+  #icon img {
+    height: 25px;
+    padding-left: 15px;
+  }
+}
+
 .entry-content {
+  /*padding-top: 0;*/
+  box-sizing: border-box;
   min-height: 100%;
   margin: 0;
 }
@@ -1235,7 +1291,7 @@ body.la-vie-au-tim {
     flex-direction: row;
   }
   .entry-content img.logo-site {
-    width: 60%;
+    width: 55%;
     height: auto;
   }
   .entry-content span.choix {
@@ -1246,14 +1302,14 @@ body.la-vie-au-tim {
   }
   .entry-content span.choix a.gauche {
     position: absolute;
-    top: 15vh;
-    left: 50;
+    top: 20vh;
+    left: 50 !important;
     transform: translateX(50%);
   }
   .entry-content span.choix a.droite {
     position: absolute;
     white-space: nowrap;
-    top: 85vh;
+    top: 80vh;
     transform: translateX(50%) translateY(-100%);
     right: 50%;
   }
@@ -1643,7 +1699,7 @@ li .page_item {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(63, 1, 50, 0.4);
+  background: rgba(8, 0, 7, 0.9);
 }
 
 .lightbox:target {
@@ -1651,8 +1707,22 @@ li .page_item {
   z-index: 999;
 }
 
-/*
-  <figure class="wp-block-gallery columns-3 is-cropped">
+@media screen and (max-width: 768px) {
+  .img-parent {
+    height: 90%;
+    padding-top: 100px;
+  }
+  .img-parent .img-enfants {
+    height: 200px;
+    flex: 40%;
+  }
+  .img-parent .img-enfants img {
+    transition: none;
+  }
+}
+
+/* 
+<figure class="wp-block-gallery columns-3 is-cropped">
   <ul class="img-parent blocks-gallery-grid">
   <li class="blocks-gallery-item">
   <figure>
@@ -1809,29 +1879,6 @@ li .page_item {
 
 .vie-au-tim > div > h1 {
   font-size: 46px;
-}
-
-footer {
-  position: fixed;
-  left: 10px;
-  bottom: 3px;
-  color: white;
-  font-family: 'Yantramanav', sans-serif;
-  text-shadow: 0 0 10px black;
-  pointer-events: none;
-}
-
-footer a {
-  color: white !important;
-  font-weight: 900;
-  letter-spacing: 1px;
-  pointer-events: initial;
-}
-
-@media screen and (max-width: 768px) {
-  footer a {
-    font-weight: 300;
-  }
 }
 
 #primary > .post {

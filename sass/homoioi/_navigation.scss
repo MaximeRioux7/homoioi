@@ -1,5 +1,6 @@
 /** 
-* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet 
+* La programmation du style de menu de navigation à été inspiré de plusieurs exemples sur Internet
+* Par Nick Michelle Joseph 
 */
 
 #masthead{
@@ -12,13 +13,14 @@
     font-family: 'Questrial';
 }
 
+/************************************************************* Version Desktop ***********************************************************/
 
 /**
 * Style du layout du div menu-toggle
 */
 #menu-toggle {
   display: block;
-  position: relative;
+  position: fixed;
   top: 20px;
   left: 20px;
   z-index: 100;
@@ -81,24 +83,26 @@
   transform: rotate(-45deg) translate(6px, -5px);
 }
 
-
 /**
 * Style des items du menu
 */
 #menu-ul {
-    position: absolute;
-    width: 370px;
-    height: 100vh;
-    margin: -71px 0 0 -20px;
-    // margin: -100px 0 0 -50px;
-    padding-left: 5px;
-    padding-top: 125px;
-    background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  /* margin: -71px 0 0 -20px;*/
+  position: fixed;
+  width: 370px;
+  height: 100vh;
+  /*margin: -100px 0 0 -50px;*/
+  overflow-y: auto;
+  /*margin: 0;*/
+  margin: -71px 0 0 -20px;
+  padding-left: 5px;
+  padding-top: 125px;
+  background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     
-        /**
+    /**
     * Style du texte dans le menu
     */
     a {
@@ -122,6 +126,22 @@
         color:#E6E6E6;
         text-shadow:0px 0px 3px #E6E6E6;
         transition: all 0.2s ease-in;
+    }
+
+    #M9 {
+      padding-left: 85px;
+      text-transform: none;
+      text-shadow:0px 0px 3px #E6E6E6;
+
+      &:visited {
+        color: #ffffff;
+      }
+
+      &:h1 {
+          color:#ffffff;
+          text-shadow:0px 0px 10px #ffffff;
+          transition: all 0.2s ease-in;
+      }
     }
 
     li {
@@ -162,3 +182,45 @@
     background-color: yellow;
   }
 }*/
+/************************************************************* Version Mobile ***********************************************************/
+
+@media screen and (max-width: 768px) {
+  /**
+  * Modification du style des items du menu
+  */
+  #menu-ul {
+    overflow-y: auto;
+    width: 370px;
+    //height: 600px;
+    //margin: -100px 0 0 -50px;
+    padding-left: 5px;
+    padding-top: 110px;
+    
+    /**
+    * Modification du style du texte dans le menu
+    */
+    li.page_item {
+      font-size: 28px;
+    }
+
+    p{
+      font-size: 14px;
+    }
+
+    #M9{
+      // font-weight: 900;
+    }
+  }
+
+  /**
+  * Modification des icons
+  */
+  #icon {
+    padding-top: 35%;
+
+    img {
+      height: 25px;
+      padding-left: 15px;
+    }
+  }
+}
