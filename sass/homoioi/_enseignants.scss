@@ -20,7 +20,7 @@ body{
 }
 
 
-#enseignants{
+#ve-enseignants{
 	width: 60vw;
 	margin: auto;
 	display: grid;
@@ -36,16 +36,19 @@ body{
 	grid-column-start: 1;
 	grid-column-end: 5;
 	padding-bottom: 5vh;
+	width: 80vw;
+	text-align: center;
+	letter-spacing: 0.5rem;
 }
 .divProf{
 	width: 50vw;
 	margin: auto;
-	grid-template-areas: auto auto ;
+	grid-template-areas: auto auto auto;
+	grid-column-gap: 5vh;
 	display: grid;
-	grid-column-gap: 10vw;
-	height: 35vh;
+	height: 40vh;
 	grid-column-start: 2;
-	grid-column-end: 5;
+	grid-column-end: 4;
 }
 
 .prof1{
@@ -59,20 +62,24 @@ body{
 }
 
 .imgProf{
-	margin-left:0;
+	margin: auto;
+	grid-column: 1;
+	width: 300px!important;
+	gri
 
 }
 .imgProf > figure > img{
-	height: 35vh;
-	width: auto;
+	height: 35vh !important;
+	width: auto !important;
 	margin-left: 0;
+
 	
 }
 .infoProf{
 	grid-column-start: 2;
 	grid-column-end: 4;
-	margin-left: 0;
-	margin-top: auto;
+	margin: auto auto auto 0;
+	width: auto!important;
 }
 #flecheG, #flecheD{	
 	width: 5vw;
@@ -82,12 +89,12 @@ body{
 }
 #flecheD{
 	grid-area: "flecheD";
-	grid-column: 5;
+	grid-column:4 !important;
 	transform: rotate(180deg);
 }
 #flecheG{
 	grid-area: "flecheG";
-	grid-column: 1;
+	grid-column: 1 !important;
 }
 #flecheD > img, #flecheG > img{
 	height: 3.5rem;
@@ -98,7 +105,7 @@ body{
 	body{
 		font-size: 1.5rem;
 	}
-	#enseignants{
+	#ve-Enseignants{
 		width: 80vw;
 		grid-template-areas: 
 		'title title'
@@ -108,17 +115,20 @@ body{
 		grid-auto-rows: minmax(min-content, max-content);
 	}
 	.vtTitre{
-		margin-left: 0;
+		margin:0;
 		grid-column-start: 1;
 		grid-column-end: 3;
+		font-size: 36px;
+		letter-spacing: 0.3rem;
 	}
 	.divProf{
 		width: 80vw;
 		margin: auto;
+		height: fit-content !important;
 		grid-template-areas: 
 		auto
 		auto;
-		grid-row-gap: 5vw;
+		grid-row-gap: 0;
 		height: 35vh;
 		grid-column-start: 1;
 		grid-column-end: 2;
@@ -127,19 +137,25 @@ body{
 	}
 	
 	.imgProf{
-		margin-left:0px;
+		margin-left:0!important;
+		margin-top: 0;
+		grid-row: 1;
+		grid-column: 1;
+		min-height: fit-content;
+		max-height: fit-content;
 	}
-	.imgProf > img{
-		width: 70vw;
-		height: auto;
-		
+	.imgProf >figure> img{
+		width: 70vw !important;
+		height: auto !important;
 	}
 	.infoProf{
 		grid-column-start: 1;
 		grid-column-end: 3;
-		margin: auto;
+		margin: 0;
+		grid-row: 2;
+		grid-column: 1;
 	}
-	.flecheG, .flecheD{	
+	.flecheG, .flecheD{
 		width: 50vw;
 		grid-row: 4;
 		grid-column:1;
@@ -151,7 +167,9 @@ body{
 		transform: rotate(180deg);
 	}
 	.flecheD > img, .flecheG > img{
-		height: 3.5rem;
+		height: 4rem!important;
+		width: auto !important;
+		
 	}
 
 }/*fin media query*/
