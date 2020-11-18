@@ -34,9 +34,14 @@
 			<div id="ve-evenements">
 				<?php include 'vie-etudiante/ve-evenements.php'; ?>
 			</div>
+<<<<<<< HEAD
 
 			<div id="ve-enseignants">
 				<?php include 'vie-etudiante/ve-enseignants.php'; ?>
+=======
+			<div id="ve-Enseignants">
+				<?php include 'content-Enseignants.php'; ?>
+>>>>>>> pascal
 			</div>
 		</div>
 	</div><!-- .entry-content -->

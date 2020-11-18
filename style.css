@@ -1136,6 +1136,7 @@ body.la-vie-au-tim {
   color: #E6E6E6;
   text-transform: uppercase;
   text-shadow: 0px 0px 5px #E6E6E6;
+  letter-spacing: 0.5rem;
 }
 
 #menu-ul a:visited {
@@ -1173,7 +1174,7 @@ body.la-vie-au-tim {
 
 #menu-ul li {
   padding: 15px 0;
-  font-size: 24px;
+  font-size: 18px;
   list-style-type: none;
 }
 
@@ -1248,6 +1249,10 @@ body.la-vie-au-tim {
   margin: 0;
 }
 
+.entry-content header {
+  height: 0;
+}
+
 .entry-content img.logo-site {
   width: 300px;
   height: auto;
@@ -1255,14 +1260,14 @@ body.la-vie-au-tim {
   padding: 0;
   top: 50vh;
   left: 50vw;
-  transform: translate(-50%, -50%) rotate(30deg);
+  opacity: 0.9;
 }
 
 .entry-content span.choix {
   width: 100%;
   position: absolute;
   top: 50vh;
-  font-size: 150%;
+  font-size: 1.2rem;
   text-shadow: 1px 1px darkslateblue;
   padding-top: 0;
   transform: translateY(-50%);
@@ -1270,7 +1275,8 @@ body.la-vie-au-tim {
 
 .entry-content span.choix a {
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 0.5rem;
+  text-shadow: 0px 0px 5px #E6E6E6;
 }
 
 .entry-content span.choix a.gauche {
@@ -1286,6 +1292,12 @@ body.la-vie-au-tim {
   margin-right: 2.75vw;
 }
 
+.entry-content span.choix a:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
+  transition: all 0.2s ease-in;
+}
+
 @media screen and (max-width: 768px) {
   .entry-content section #lesChoix {
     flex-direction: row;
@@ -1293,12 +1305,14 @@ body.la-vie-au-tim {
   .entry-content img.logo-site {
     width: 55%;
     height: auto;
+    transform: rotate(30deg);
   }
   .entry-content span.choix {
     top: 0;
   }
   .entry-content span.choix a {
     margin: 0 !important;
+    font-size: 1.5rem;
   }
   .entry-content span.choix a.gauche {
     position: absolute;
@@ -1420,6 +1434,9 @@ entry-content{
 
 #titre-cours {
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 
 .entry-content {
@@ -1438,6 +1455,8 @@ entry-content{
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 
 .cheminement ul#choix-session {
@@ -1466,6 +1485,8 @@ entry-content{
   cursor: pointer;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
   transition: color 0.1s, border-color 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 
 .cheminement ul#choix-session > li:hover {
@@ -1497,6 +1518,8 @@ entry-content{
 
 .cheminement .grille div.desc-cours h3 {
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 
 .cheminement .grille ul#liste-cours {
@@ -1765,6 +1788,194 @@ li .page_item {
   }
 }
 
+body {
+  color: white;
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+}
+
+.infoProf > h1, h2, h3 {
+  color: #8080ff;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  display: inline;
+  letter-spacing: 0.5rem;
+}
+
+.infoProf > h2, h3 {
+  font-size: 28px;
+}
+
+.infoProf > h3 {
+  font-weight: 400;
+}
+
+h2 {
+  color: #7fffff;
+}
+
+#enseignants {
+  width: 60vw;
+  margin: auto;
+  display: grid;
+  grid-template-areas: 'title title title title' 'flecheG prof1 prof1 flecheD' 'flecheG prof2 prof2 flecheD';
+}
+
+.vtTitre {
+  grid-area: "title";
+  margin: auto;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding-bottom: 5vh;
+}
+
+.divProf {
+  width: 50vw;
+  margin: auto;
+  grid-template-areas: auto auto;
+  display: grid;
+  grid-column-gap: 5vw;
+  height: 35vh;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.prof1 {
+  grid-area: "prof1";
+  grid-row: 2;
+}
+
+.prof2 {
+  grid-area: "prof2";
+  grid-row: 3;
+}
+
+.imgProf {
+  margin: auto;
+}
+
+.imgProf > img {
+  height: 30vh;
+}
+
+.infoProf {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  margin: auto;
+}
+
+.flecheG, .flecheD {
+  width: 5vw;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  margin: auto;
+}
+
+#flecheD {
+  grid-area: "flecheD";
+  grid-column: 5;
+  transform: rotate(180deg);
+}
+
+#flecheG {
+  grid-area: "flecheG";
+  grid-column: 1;
+}
+
+#flecheD > img, #flecheG > img {
+  height: 3.5rem;
+}
+
+/* Début style tablette*/
+/*@media (min-width: 521px) and (max-width: 980px){
+	#teacher{
+		font
+	}
+
+	#mosaic{
+		grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+	}
+	.hideTab{
+		display: none;
+	}
+	#callToAction{
+		background-color: red;
+		height: 85vh;
+
+		display: grid;
+
+		grid-template-areas: "cell1" "cell2" "cell3" ;
+		grid-template-columns: 0;
+		grid-template-rows: 1fr 2fr 1fr;
+	
+	}
+	#googleMap{
+	width: 100vw;
+
+	}
+	#footer{
+		width: 100vw;
+		grid-template-rows: :1fr 1fr;
+		grid-template-columns:1fr 1fr;
+	}
+}/*fin media query*/
+/* Début style mobile*/
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.5rem;
+  }
+  #enseignants {
+    width: 80vw;
+    grid-template-areas: 'title title' 'prof1 prof1' 'prof2 prof2' 'flecheG flecheD';
+    grid-auto-rows: minmax(min-content, max-content);
+  }
+  .vtTitre {
+    margin-left: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .divProf {
+    width: 80vw;
+    margin: auto;
+    grid-template-areas: auto auto;
+    grid-row-gap: 5vw;
+    height: 35vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .imgProf {
+    margin-left: 0px;
+  }
+  .imgProf > img {
+    width: 70vw;
+    height: auto;
+  }
+  .infoProf {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: auto;
+  }
+  .flecheG, .flecheD {
+    width: 50vw;
+    grid-row: 4;
+    grid-column: 1;
+    margin: auto;
+  }
+  .flecheD {
+    grid-area: "flecheD";
+    grid-column: 2;
+    transform: rotate(180deg);
+  }
+  .flecheD > img, .flecheG > img {
+    height: 3.5rem;
+  }
+}
+
+/*fin media query*/
 #ve-evenements {
   display: grid;
   grid-template-columns: 3fr 2fr;
