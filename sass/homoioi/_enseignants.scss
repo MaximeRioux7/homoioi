@@ -124,6 +124,8 @@ body{
 			}
 			.divProf{
 				width: 80vw;
+				max-width: 300px;
+				box-sizing: border-box;
 				margin: auto;
 				height: fit-content !important;
 				grid-template-areas: 
@@ -138,15 +140,18 @@ body{
 			}
 			
 			.imgProf{
+				width: 300px;
+				box-sizing: border-box;
 				margin-left:0!important;
 				margin-top: 0;
+				margin: 0 !important;
 				grid-row: 1;
 				grid-column: 1;
 				min-height: fit-content;
 				max-height: fit-content;
 			}
 			.imgProf >figure> img{
-				width: 70vw !important;
+				width: 300px !important;
 				height: auto !important;
 			}
 			.infoProf{

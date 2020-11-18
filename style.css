@@ -1015,6 +1015,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
@@ -1929,6 +1930,8 @@ body {
   }
   #ve-Enseignants .conteneur-grid .divProf {
     width: 80vw;
+    max-width: 300px;
+    box-sizing: border-box;
     margin: auto;
     height: fit-content !important;
     grid-template-areas: auto auto;
@@ -1940,15 +1943,18 @@ body {
     grid-row-end: 3;
   }
   #ve-Enseignants .conteneur-grid .imgProf {
+    width: 300px;
+    box-sizing: border-box;
     margin-left: 0 !important;
     margin-top: 0;
+    margin: 0 !important;
     grid-row: 1;
     grid-column: 1;
     min-height: fit-content;
     max-height: fit-content;
   }
   #ve-Enseignants .conteneur-grid .imgProf > figure > img {
-    width: 70vw !important;
+    width: 300px !important;
     height: auto !important;
   }
   #ve-Enseignants .conteneur-grid .infoProf {
@@ -2089,6 +2095,7 @@ body {
 }
 
 .vie-au-tim > div > h1 {
+  margin-left: 40px;
   font-size: 46px;
 }
 
