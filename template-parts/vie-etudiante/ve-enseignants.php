@@ -1,20 +1,21 @@
 <h1 class="vtTitre">ENSEIGNANTS</h1>
-		
-<div class="divProf prof1">
-    <div class="imgProf"><img src="" alt="" ></div>
-    
-    <div class="infoProf">
-        <h3></h3>
+<div class="conteneur-grid">
+    <div class="divProf prof1">
+        <div class="imgProf"><img src="" alt="" ></div>
+        
+        <div class="infoProf">
+            <h3></h3>
+        </div>
     </div>
-</div>
-<div class="divProf prof2">
-    <div class="imgProf"><img src="" alt="" ></div>
-    <div class="infoProf">
-        <h3></h3>
+    <div class="divProf prof2">
+        <div class="imgProf"><img src="" alt="" ></div>
+        <div class="infoProf">
+            <h3></h3>
+        </div>
     </div>
+    <div id="flecheG"><img src="<?php echo get_template_directory_uri(); ?>/images/fleche.png" alt="fleche" ></div>
+    <div id="flecheD"><img src="<?php echo get_template_directory_uri(); ?>/images/fleche.png" alt="fleche" ></div>
 </div>
-<div id="flecheG"><img src="<?php echo get_template_directory_uri(); ?>/images/fleche.png" alt="fleche" ></div>
-<div id="flecheD"><img src="<?php echo get_template_directory_uri(); ?>/images/fleche.png" alt="fleche" ></div>
 
 <div id="requete-enseignants">
     <?php
