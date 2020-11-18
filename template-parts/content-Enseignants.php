@@ -17,14 +17,11 @@
 
 	<?php /*homoioi_post_thumbnail();*/ ?>
 
-<<<<<<< HEAD
-	
-=======
 	<h1 class="vtTitre">ENSEIGNANTS</h1>
 		
 	<div class="divProf prof1">
 		<div class="imgProf"></div>
-		
+
 		<div class="infoProf">
 			<h3></h3>
 		</div>
@@ -65,7 +62,6 @@
 			wp_reset_query();
 		?>
     </div>
->>>>>>> pascal
 
 	<?php if ( get_edit_post_link() && false ) : ?>
 		<footer class="entry-footer">

@@ -4,26 +4,7 @@ body{
 	font-size: 16px;
 }
 
-.infoProf > h1, h2, h3{
-	color: #8080ff;
-	font-family: 'Yantramanav', sans-serif;
-	font-size: 36px;
-	font-weight: 900;
-	display: inline;
-	letter-spacing: 0.2rem;
-}
-.infoProf > h2, h3{
-	font-size: 28px;
-}
-.infoProf > h3{
-	font-weight: 400;
-}
-h2{
-	color: #7fffff;	
-}
-
-
-#enseignants{
+#ve-enseignants{
 	width: 60vw;
 	margin: auto;
 	display: grid;
@@ -31,107 +12,98 @@ h2{
 	'title title title title'
 	'flecheG prof1 prof1 flecheD'
 	'flecheG prof2 prof2 flecheD';
-}
-.vtTitre{
-	grid-area: "title";
-	margin: auto;
-	grid-row: 1;
-	grid-column-start: 1;
-	grid-column-end: 5;
-	padding-bottom: 5vh;
-}
-.divProf{
-	width: 50vw;
-	margin: auto;
-	grid-template-areas: auto auto ;
-	display: grid;
-	grid-column-gap: 5vw;
-	height: 35vh;
-	grid-column-start: 2;
-	grid-column-end: 5;
-}
 
-.prof1{
-	grid-area: "prof1";
-	grid-row: 2;
-}
-
-.prof2{
-	grid-area: "prof2";
-	grid-row: 3;
-}
-
-.imgProf{
-	margin:auto;
-}
-.imgProf > img{
-	height: 30vh;
-	
-}
-.infoProf{
-	grid-column-start: 2;
-	grid-column-end: 4;
-	margin: auto;
-}
-.flecheG, .flecheD{	
-	width: 5vw;
-	grid-row-start: 2;
-	grid-row-end: 4;
-	margin: auto;
-}
-#flecheD{
-	grid-area: "flecheD";
-	grid-column: 5;
-	transform: rotate(180deg);
-}
-#flecheG{
-	grid-area: "flecheG";
-	grid-column: 1;
-}
-#flecheD > img, #flecheG > img{
-	height: 3.5rem;
-}
-
-
-/* Début style tablette*/
-/*@media (min-width: 521px) and (max-width: 980px){
-	#teacher{
-		font
+	.infoProf > h1, h2, h3{
+		color: #8080ff;
+		font-family: 'Yantramanav', sans-serif;
+		font-size: 36px;
+		font-weight: 900;
+		display: inline;
+		letter-spacing: 0.2rem;
+	}
+	.infoProf > h2, h3{
+		font-size: 28px;
+	}
+	.infoProf > h3{
+		font-weight: 400;
 	}
 
-	#mosaic{
-		grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+	.vtTitre{
+		grid-area: "title";
+		margin: auto;
+		grid-row: 1;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		padding-bottom: 5vh;
+		width: 80vw;
+		text-align: center;
+		letter-spacing: 0.5rem;
 	}
-	.hideTab{
-		display: none;
-	}
-	#callToAction{
-		background-color: red;
-		height: 85vh;
-
+	.divProf{
+		width: 50vw;
+		margin: auto;
+		grid-template-areas: auto auto auto;
+		grid-column-gap: 5vh;
 		display: grid;
-
-		grid-template-areas: "cell1" "cell2" "cell3" ;
-		grid-template-columns: 0;
-		grid-template-rows: 1fr 2fr 1fr;
+		height: 40vh;
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
 	
+	.prof1{
+		grid-area: "prof1";
+		grid-row: 2;
 	}
-	#googleMap{
-	width: 100vw;
+	
+	.prof2{
+		grid-area: "prof2";
+		grid-row: 3;
+	}
+	
+	.imgProf{
+		margin: auto;
+		grid-column: 1;
+		width: 300px!important;
+	}
+	
+	.imgProf > figure > img{
+		height: 35vh !important;
+		width: auto !important;
+		margin-left: 0;
+	}
+	
+	.infoProf{
+		grid-column-start: 2;
+		grid-column-end: 4;
+		margin: auto auto auto 0;
+		width: auto!important;
+	}
+	#flecheG, #flecheD{	
+		width: 5vw;
+		grid-row-start: 2;
+		grid-row-end: 4;
+		margin: auto;
+	}
+	#flecheD{
+		grid-area: "flecheD";
+		grid-column:4 !important;
+		transform: rotate(180deg);
+	}
+	#flecheG{
+		grid-area: "flecheG";
+		grid-column: 1 !important;
+	}
+	#flecheD > img, #flecheG > img{
+		height: 3.5rem;
+	}
+}
 
-	}
-	#footer{
-		width: 100vw;
-		grid-template-rows: :1fr 1fr;
-		grid-template-columns:1fr 1fr;
-	}
-}/*fin media query*/
 /* Début style mobile*/
 @media screen and (max-width: 768px){
-	body{
-		//font-size: 1.5rem;
-	}
-	#enseignants{
+	/*body{
+		font-size: 1.5rem;
+	}*/
+	#ve-Enseignants{
 		width: 80vw;
 		grid-template-areas: 
 		'title title'
@@ -139,52 +111,64 @@ h2{
 		'prof2 prof2'
 		'flecheG flecheD';
 		grid-auto-rows: minmax(min-content, max-content);
-	}
-	.vtTitre{
-		margin-left: 0;
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-	.divProf{
-		width: 80vw;
-		margin: auto;
-		grid-template-areas: 
-		auto
-		auto;
-		grid-row-gap: 5vw;
-		height: 35vh;
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 2;
-		grid-row-end: 3;
-	}
-	
-	.imgProf{
-		margin-left:0px;
-	}
-	.imgProf > img{
-		width: 70vw;
-		height: auto;
+
+		.vtTitre{
+			margin:0;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			font-size: 36px;
+			letter-spacing: 0.3rem;
+		}
+		.divProf{
+			width: 80vw;
+			margin: auto;
+			height: fit-content !important;
+			grid-template-areas: 
+			auto
+			auto;
+			grid-row-gap: 0;
+			height: 35vh;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
 		
-	}
-	.infoProf{
-		grid-column-start: 1;
-		grid-column-end: 3;
-		margin: auto;
-	}
-	.flecheG, .flecheD{	
-		width: 50vw;
-		grid-row: 4;
-		grid-column:1;
-		margin: auto;
-	}
-	.flecheD{
-		grid-area: "flecheD";
-		grid-column: 2;
-		transform: rotate(180deg);
-	}
-	.flecheD > img, .flecheG > img{
-		height: 3.5rem;
+		.imgProf{
+			margin-left:0!important;
+			margin-top: 0;
+			grid-row: 1;
+			grid-column: 1;
+			min-height: fit-content;
+			max-height: fit-content;
+		}
+		.imgProf >figure> img{
+			width: 70vw !important;
+			height: auto !important;
+		}
+		.infoProf{
+			grid-column-start: 1;
+			grid-column-end: 3;
+			margin: 0;
+			grid-row: 2;
+			grid-column: 1;
+		}
+		.flecheG, .flecheD{
+			width: 50vw;
+			grid-row: 4;
+			grid-column:1;
+			margin: auto;
+		}
+		.flecheD{
+			grid-area: "flecheD";
+			grid-column: 2;
+			transform: rotate(180deg);
+		}
+		.flecheD > img, .flecheG > img{
+			height: 4rem!important;
+			width: auto !important;
+			
+		}
 	}
 
 }/*fin media query*/

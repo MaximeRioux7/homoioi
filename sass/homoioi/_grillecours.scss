@@ -29,6 +29,10 @@
         letter-spacing: 0.5rem;
     }
 
+    h3{
+        display: block;
+    }
+
     ul#choix-session{
         height: 100%;
         padding: 0;
@@ -81,8 +85,8 @@
         }
     
         div.desc-cours{
-            text-align: justify;
-            text-justify: inter-word;
+            //text-align: justify;
+            //text-justify: inter-word;
             padding: 15px;
             width: 70vw;
             flex-grow: 1;
@@ -225,6 +229,7 @@
         // margin-top: 25%;
         padding-top: 15%;
         padding-bottom: 0;
+        letter-spacing: 0;
     }
     
     .cheminement ul#choix-session > li:first-child {

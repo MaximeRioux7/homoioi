@@ -1221,7 +1221,8 @@ body.la-vie-au-tim {
   */
   #menu-ul {
     overflow-y: auto;
-    width: 370px;
+    height: 100vh;
+    width: 100vw;
     padding-left: 5px;
     padding-top: 110px;
     /**
@@ -1229,7 +1230,7 @@ body.la-vie-au-tim {
     */
   }
   #menu-ul li.page_item {
-    font-size: 28px;
+    font-size: 18px;
   }
   #menu-ul p {
     font-size: 14px;
@@ -1317,7 +1318,6 @@ body.la-vie-au-tim {
   .entry-content span.choix a {
     text-transform: uppercase !important;
     margin: 0 !important;
-    font-size: 1.5rem;
   }
   .entry-content span.choix a.gauche {
     position: absolute;
@@ -1464,6 +1464,10 @@ entry-content{
   letter-spacing: 0.5rem;
 }
 
+.cheminement h3 {
+  display: block;
+}
+
 .cheminement ul#choix-session {
   height: 100%;
   padding: 0;
@@ -1512,8 +1516,6 @@ entry-content{
 }
 
 .cheminement .grille div.desc-cours {
-  text-align: justify;
-  text-justify: inter-word;
   padding: 15px;
   width: 70vw;
   flex-grow: 1;
@@ -1637,6 +1639,7 @@ entry-content{
     font-weight: normal;
     padding-top: 15%;
     padding-bottom: 0;
+    letter-spacing: 0;
   }
   .cheminement ul#choix-session > li:first-child {
     padding-left: 2.5%;
@@ -1809,7 +1812,14 @@ body {
   font-size: 16px;
 }
 
-.infoProf > h1, h2, h3 {
+#ve-enseignants {
+  width: 60vw;
+  margin: auto;
+  display: grid;
+  grid-template-areas: 'title title title title' 'flecheG prof1 prof1 flecheD' 'flecheG prof2 prof2 flecheD';
+}
+
+#ve-enseignants .infoProf > h1, #ve-enseignants h2, #ve-enseignants h3 {
   color: #8080ff;
   font-family: 'Yantramanav', sans-serif;
   font-size: 36px;
@@ -1818,172 +1828,150 @@ body {
   letter-spacing: 0.2rem;
 }
 
-.infoProf > h2, h3 {
+#ve-enseignants .infoProf > h2, #ve-enseignants h3 {
   font-size: 28px;
 }
 
-.infoProf > h3 {
+#ve-enseignants .infoProf > h3 {
   font-weight: 400;
 }
 
-h2 {
-  color: #7fffff;
-}
-
-#enseignants {
-  width: 60vw;
-  margin: auto;
-  display: grid;
-  grid-template-areas: 'title title title title' 'flecheG prof1 prof1 flecheD' 'flecheG prof2 prof2 flecheD';
-}
-
-.vtTitre {
+#ve-enseignants .vtTitre {
   grid-area: "title";
   margin: auto;
   grid-row: 1;
   grid-column-start: 1;
   grid-column-end: 5;
   padding-bottom: 5vh;
+  width: 80vw;
+  text-align: center;
+  letter-spacing: 0.5rem;
 }
 
-.divProf {
+#ve-enseignants .divProf {
   width: 50vw;
   margin: auto;
-  grid-template-areas: auto auto;
+  grid-template-areas: auto auto auto;
+  grid-column-gap: 5vh;
   display: grid;
-  grid-column-gap: 5vw;
-  height: 35vh;
+  height: 40vh;
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: 4;
 }
 
-.prof1 {
+#ve-enseignants .prof1 {
   grid-area: "prof1";
   grid-row: 2;
 }
 
-.prof2 {
+#ve-enseignants .prof2 {
   grid-area: "prof2";
   grid-row: 3;
 }
 
-.imgProf {
+#ve-enseignants .imgProf {
   margin: auto;
+  grid-column: 1;
+  width: 300px !important;
 }
 
-.imgProf > img {
-  height: 30vh;
+#ve-enseignants .imgProf > figure > img {
+  height: 35vh !important;
+  width: auto !important;
+  margin-left: 0;
 }
 
-.infoProf {
+#ve-enseignants .infoProf {
   grid-column-start: 2;
   grid-column-end: 4;
-  margin: auto;
+  margin: auto auto auto 0;
+  width: auto !important;
 }
 
-.flecheG, .flecheD {
+#ve-enseignants #flecheG, #ve-enseignants #flecheD {
   width: 5vw;
   grid-row-start: 2;
   grid-row-end: 4;
   margin: auto;
 }
 
-#flecheD {
+#ve-enseignants #flecheD {
   grid-area: "flecheD";
-  grid-column: 5;
+  grid-column: 4 !important;
   transform: rotate(180deg);
 }
 
-#flecheG {
+#ve-enseignants #flecheG {
   grid-area: "flecheG";
-  grid-column: 1;
+  grid-column: 1 !important;
 }
 
-#flecheD > img, #flecheG > img {
+#ve-enseignants #flecheD > img, #ve-enseignants #flecheG > img {
   height: 3.5rem;
 }
 
-/* Début style tablette*/
-/*@media (min-width: 521px) and (max-width: 980px){
-	#teacher{
-		font
-	}
-
-	#mosaic{
-		grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
-	}
-	.hideTab{
-		display: none;
-	}
-	#callToAction{
-		background-color: red;
-		height: 85vh;
-
-		display: grid;
-
-		grid-template-areas: "cell1" "cell2" "cell3" ;
-		grid-template-columns: 0;
-		grid-template-rows: 1fr 2fr 1fr;
-	
-	}
-	#googleMap{
-	width: 100vw;
-
-	}
-	#footer{
-		width: 100vw;
-		grid-template-rows: :1fr 1fr;
-		grid-template-columns:1fr 1fr;
-	}
-}/*fin media query*/
 /* Début style mobile*/
 @media screen and (max-width: 768px) {
-  #enseignants {
+  /*body{
+		font-size: 1.5rem;
+	}*/
+  #ve-Enseignants {
     width: 80vw;
     grid-template-areas: 'title title' 'prof1 prof1' 'prof2 prof2' 'flecheG flecheD';
     grid-auto-rows: minmax(min-content, max-content);
   }
-  .vtTitre {
-    margin-left: 0;
+  #ve-Enseignants .vtTitre {
+    margin: 0;
     grid-column-start: 1;
     grid-column-end: 3;
+    font-size: 36px;
+    letter-spacing: 0.3rem;
   }
-  .divProf {
+  #ve-Enseignants .divProf {
     width: 80vw;
     margin: auto;
+    height: fit-content !important;
     grid-template-areas: auto auto;
-    grid-row-gap: 5vw;
+    grid-row-gap: 0;
     height: 35vh;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
   }
-  .imgProf {
-    margin-left: 0px;
+  #ve-Enseignants .imgProf {
+    margin-left: 0 !important;
+    margin-top: 0;
+    grid-row: 1;
+    grid-column: 1;
+    min-height: fit-content;
+    max-height: fit-content;
   }
-  .imgProf > img {
-    width: 70vw;
-    height: auto;
+  #ve-Enseignants .imgProf > figure > img {
+    width: 70vw !important;
+    height: auto !important;
   }
-  .infoProf {
+  #ve-Enseignants .infoProf {
     grid-column-start: 1;
     grid-column-end: 3;
-    margin: auto;
+    margin: 0;
+    grid-row: 2;
+    grid-column: 1;
   }
-  .flecheG, .flecheD {
+  #ve-Enseignants .flecheG, #ve-Enseignants .flecheD {
     width: 50vw;
     grid-row: 4;
     grid-column: 1;
     margin: auto;
   }
-  .flecheD {
+  #ve-Enseignants .flecheD {
     grid-area: "flecheD";
     grid-column: 2;
     transform: rotate(180deg);
   }
-  .flecheD > img, .flecheG > img {
-    height: 3.5rem;
+  #ve-Enseignants .flecheD > img, #ve-Enseignants .flecheG > img {
+    height: 4rem !important;
+    width: auto !important;
   }
 }
 
@@ -2089,6 +2077,10 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.vie-au-tim {
+  overflow-x: hidden;
 }
 
 .vie-au-tim > div {
