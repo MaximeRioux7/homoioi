@@ -13,8 +13,8 @@
         <h3></h3>
     </div>
 </div>
-<div id="flecheG"><img src="http://127.0.0.1/homoioiWordpress/wp-content/uploads/2020/11/fleche.png" alt="fleche" ></div>
-<div id="flecheD"><img src="http://127.0.0.1/homoioiWordpress/wp-content/uploads/2020/11/fleche.png" alt="fleche" ></div>
+<div id="flecheG"><img src="<?php echo get_template_directory_uri(); ?>/images/fleche.png" alt="fleche" ></div>
+<div id="flecheD"><img src="<?php echo get_template_directory_uri(); ?>/images/fleche.png" alt="fleche" ></div>
 
 <div id="requete-enseignants">
     <?php

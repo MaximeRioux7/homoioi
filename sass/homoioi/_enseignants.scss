@@ -10,7 +10,7 @@ body{
 	font-size: 36px;
 	font-weight: 900;
 	display: inline;
-	letter-spacing: 0.5rem;
+	letter-spacing: 0.2rem;
 }
 .infoProf > h2, h3{
 	font-size: 28px;
@@ -129,7 +129,7 @@ h2{
 /* Début style mobile*/
 @media screen and (max-width: 768px){
 	body{
-		font-size: 1.5rem;
+		//font-size: 1.5rem;
 	}
 	#enseignants{
 		width: 80vw;

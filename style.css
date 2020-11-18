@@ -1149,6 +1149,10 @@ body.la-vie-au-tim {
   transition: all 0.2s ease-in;
 }
 
+#menu-ul p + a {
+  letter-spacing: 0;
+}
+
 #menu-ul p {
   padding-left: 85px;
   color: #E6E6E6;
@@ -1311,6 +1315,7 @@ body.la-vie-au-tim {
     top: 0;
   }
   .entry-content span.choix a {
+    text-transform: uppercase !important;
     margin: 0 !important;
     font-size: 1.5rem;
   }
@@ -1479,14 +1484,12 @@ entry-content{
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   font-weight: 400;
   text-align: center;
-  font-size: 18px;
   padding: 10px;
   display: inline-block;
   cursor: pointer;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
   transition: color 0.1s, border-color 0.1s;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
 }
 
 .cheminement ul#choix-session > li:hover {
@@ -1518,8 +1521,8 @@ entry-content{
 
 .cheminement .grille div.desc-cours h3 {
   color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  /*text-transform: uppercase;
+                letter-spacing: 0.5rem;*/
 }
 
 .cheminement .grille ul#liste-cours {
@@ -1699,6 +1702,14 @@ li .page_item {
   /*********************** Listes des stages ************************/
 }
 
+.img-parent details summary {
+  cursor: pointer;
+}
+
+.img-parent details h1 {
+  display: inline-block;
+}
+
 .img-parent .img-enfants {
   flex: 0 1 150px;
   margin: 5px;
@@ -1788,6 +1799,10 @@ li .page_item {
   }
 }
 
+#flecheG img, #flecheD img {
+  cursor: pointer;
+}
+
 body {
   color: white;
   font-family: 'Questrial', sans-serif;
@@ -1800,7 +1815,7 @@ body {
   font-size: 36px;
   font-weight: 900;
   display: inline;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .infoProf > h2, h3 {
@@ -1923,9 +1938,6 @@ h2 {
 }/*fin media query*/
 /* Début style mobile*/
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 1.5rem;
-  }
   #enseignants {
     width: 80vw;
     grid-template-areas: 'title title' 'prof1 prof1' 'prof2 prof2' 'flecheG flecheD';
@@ -2077,10 +2089,6 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.vie-au-tim {
-  overflow: auto;
 }
 
 .vie-au-tim > div {

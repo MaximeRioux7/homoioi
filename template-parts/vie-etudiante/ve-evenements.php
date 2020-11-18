@@ -1,45 +1,33 @@
-<h1 class="vtTitre">ENSEIGNANTS</h1>
-		
-<div class="divProf prof1">
-    <div class="imgProf"></div>
-    
-    <div class="infoProf">
-        <h3></h3>
-    </div>
-</div>
-<div class="divProf prof2">
-    <div class="imgProf"></div>
-    <div class="infoProf">
-        <h3></h3>
-    </div>
-</div>
-<div id="flecheG"><img src="http://127.0.0.1/homoioiWordpress/wp-content/uploads/2020/11/fleche.png" alt="fleche" ></div>
-<div id="flecheD"><img src="http://127.0.0.1/homoioiWordpress/wp-content/uploads/2020/11/fleche.png" alt="fleche" ></div>
+<?php 
+    query_posts(array(
+        'post_type'      => 'post',
+        'cat'            => get_category_by_slug('evenement')->term_id,
+        'posts_per_page' => 3
+    ));
+    if(have_posts()){
+        $i = 0;
 
-<div id="requete-enseignants">
-    <?php
-        $args = array(
-            'post_type'      => 'post',
-            'category_name'  => 'enseignant',
-            'posts_per_page' => -1
-        );
-        query_posts($args);
-        
+        echo "<h1>ÉVÉNEMENTS</h1>";
         while ( have_posts() ) : the_post();
-            echo '<span>';
-
-            // Titre du cours 
-            echo '<span class="enseignants-nom">';
-            the_title();
-            echo '</span>';
-
-            // image du prof 
-            echo '<span class="enseignants-srcImg">';
-            the_content();
-            echo '</span>';
-
-            echo '</span>';
+            $i++;
+            if($i == 1){
+                echo ("<a href='".get_post_permalink()."' class='evenement-premier'>");
+                    echo "<span class='parent-image' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                        echo "<h1>";
+                        the_title();
+                        echo "</h1>";
+                    echo "</span>";
+                echo "</a>";
+                echo "<div class='autres-evenements'>";
+            } else {
+                echo "<a href='".get_post_permalink()."' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                    echo "<h2>";
+                        the_title();
+                    echo "</h2>";
+                echo "</a>";
+            }
         endwhile;
-        wp_reset_query();
-    ?>
-</div>
+        echo "</div>";
+    }
+    wp_reset_query();
+?>

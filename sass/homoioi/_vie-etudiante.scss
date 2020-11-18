@@ -16,6 +16,16 @@ li .page_item {
     flex-wrap: wrap;
     justify-content: center;
 
+    details {
+        summary{
+            cursor: pointer;
+        }
+
+        h1{
+            display: inline-block;
+        }
+    }
+
     .img-enfants {
         flex: 0 1 150px;
         margin: 5px;
@@ -112,5 +122,11 @@ li .page_item {
                 margin: 0;
             }
         }
+    }
+}
+
+#flecheG, #flecheD{
+    img{
+        cursor: pointer;
     }
 }
