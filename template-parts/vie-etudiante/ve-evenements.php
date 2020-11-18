@@ -1,7 +1,7 @@
 <?php 
     query_posts(array(
         'post_type'      => 'post',
-        'cat'            => get_category_by_slug('evenements')->term_id,
+        'cat'            => get_category_by_slug('evenement')->term_id,
         'posts_per_page' => 3
     ));
     if(have_posts()){
