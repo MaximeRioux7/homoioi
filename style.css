@@ -1728,6 +1728,27 @@ li .page_item {
   z-index: 999;
 }
 
+@media screen and (max-width: 768px) {
+  .img-parent {
+    position: relative;
+    height: 90%;
+    padding-top: 100px;
+  }
+  .img-parent a {
+    display: block;
+    width: 100%;
+  }
+  .img-parent .img-enfants {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    flex: 40%;
+  }
+  .img-parent .img-enfants img {
+    margin: 0;
+  }
+}
+
 #ve-evenements {
   display: grid;
   grid-template-columns: 3fr 2fr;
