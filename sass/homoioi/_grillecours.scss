@@ -216,30 +216,46 @@
         padding-top: 15%;
         padding-bottom: 0;
     }
+    
+    .cheminement ul#choix-session > li:first-child {
+        padding-left: 2.5%;
+    }
+
+    .cheminement ul#choix-session > li:last-child {
+        padding-right: 2.5%;
+    }
 
     .cheminement ul#choix-session > li {
+        margin: 0;
+        padding: 0;
         font-size: 65%;
-        // color: yellow;
-        // font-weight: normal;
+    }
+
+    .grille div.desc-cours #titre-cours{
+        text-align: left;
     }
 
     .cheminement .grille ul#liste-cours > li {
-        // color: purple;
         margin: 0;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        font-size: 65%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 75%;
+        line-height: 100%;
     }
 
     .cheminement .grille div.desc-cours h3 {
-        // color: green;
         margin: 0;
         padding-top: 5%;
     }
 
     .cheminement .grille div.desc-cours p {
-        // color: red;
         font-size: 75%;
+    }
+
+    #titre-cours {
+        font-weight: bolder;
+        font-size: 110%;
+        // justify-content: flex-start;
     }
 
     /*.entry-content{
