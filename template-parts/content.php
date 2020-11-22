@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<a class="bouton-retour" href="<?php echo get_bloginfo('wpurl'); ?>/la-vie-au-tim/">&lt; Retour à la Vie au TIM</a>
 	<?php homoioi_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php

@@ -12,9 +12,13 @@
             $i++;
             if($i == 1){
                 echo ("<a href='".get_post_permalink()."' class='evenement-premier'>");
-                    echo "<span class='parent-image' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                    //echo "<span class='parent-image' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                    echo "<span class='parent-evenement'>";
+                        echo "<div class='parent-image'>";
+                            echo "<span class='img-evenement' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                        echo "</div>";
                         echo "<h1>";
-                        the_title();
+                            the_title();
                         echo "</h1>";
                     echo "</span>";
                 echo "</a>";

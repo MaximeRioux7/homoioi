@@ -42,6 +42,17 @@
         }
     }
 
+    a.bouton-retour{
+        display: inline-block;
+        color: white;
+        padding: 5px 10px;
+        margin: 5px;
+        border: 2px solid rgba(#FFF, 0.2);
+        transition: border-color 0.2s;
+        &:hover{
+            border-color: rgba(#FFF, 0.75);
+        }
+    }
 
     .entry-content{
         background-image: linear-gradient(to bottom, rgba(#000, 0.8), rgba(#000, 0));
@@ -70,7 +81,14 @@
         > p {
             font-size: 18px;
         }
+    }
+}
 
-
+@media screen and (max-width: 768px) {
+    #primary > .post a.bouton-retour{
+        text-align: center;
+        display: block;
+        letter-spacing: 1px;
+        font-size: 18px;
     }
 }

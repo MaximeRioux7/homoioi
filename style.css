@@ -1986,6 +1986,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: auto auto;
+  margin: 40px auto;
 }
 
 #ve-evenements > h1:first-child {
@@ -1999,7 +2000,7 @@ body {
 }
 
 #ve-evenements .evenement-premier {
-  margin: 40px;
+  position: relative;
   color: white !important;
 }
 
@@ -2007,34 +2008,62 @@ body {
   color: white !important;
 }
 
-#ve-evenements .evenement-premier .parent-image {
-  border-radius: 7px;
+#ve-evenements .evenement-premier:hover .img-evenement {
+  filter: grayscale(0%) !important;
+}
+
+#ve-evenements .evenement-premier:hover:after {
+  z-index: 0;
+  position: absolute;
+  content: " ";
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  transform: translateY(-100%);
+}
+
+#ve-evenements .evenement-premier .parent-evenement {
+  border-radius: 7px 0 0 7px;
   position: relative;
   display: block;
   width: 100%;
-  padding-bottom: 60%;
+  height: 450px;
+}
+
+#ve-evenements .evenement-premier .parent-evenement .parent-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+#ve-evenements .evenement-premier .parent-evenement .parent-image .img-evenement {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
 }
 
-#ve-evenements .evenement-premier .parent-image h1 {
+#ve-evenements .evenement-premier .parent-evenement h1 {
   width: 100%;
   position: absolute;
   display: block;
   text-align: center;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 5px;
+  background: #111111;
+  padding: 15px;
   font-size: calc(12px + 1vw);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 5px black !important;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 #ve-evenements .autres-evenements {
-  margin: 40px 0;
+  /*margin: 40px 0;*/
   display: flex;
   flex-direction: column;
 }
@@ -2052,34 +2081,35 @@ body {
   flex: 1 0 auto;
   display: flex;
   align-items: center;
+  max-height: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 10px 0;
+  /*margin: 10px 0;*/
   box-sizing: border-box;
-  border-radius: 7px;
-  transition: transform 0.25s;
 }
 
 #ve-evenements .autres-evenements > *:after {
   z-index: 0;
   position: absolute;
   content: " ";
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(204, 204, 204, 0.2));
-  border-radius: 7px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(170, 170, 170, 0.3));
+  border: 0px solid rgba(0, 0, 0, 0);
+  /*transform: translateX(-2px);*/
 }
 
-#ve-evenements .autres-evenements > *:hover {
-  transform: scale(1.07);
+#ve-evenements .autres-evenements > *:hover:after {
+  border: 2px solid rgba(255, 255, 255, 0.75);
 }
 
 #ve-evenements .autres-evenements > * h2 {
   z-index: 2;
   vertical-align: middle;
   margin: 20px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 5px black !important;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2143,6 +2173,19 @@ body {
   border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
 }
 
+#primary > .post a.bouton-retour {
+  display: inline-block;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.2s;
+}
+
+#primary > .post a.bouton-retour:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
 #primary > .post .entry-content {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   min-height: 300px;
@@ -2170,6 +2213,15 @@ body {
 
 #primary > .post .entry-content > p {
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  #primary > .post a.bouton-retour {
+    text-align: center;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
 }
 
 /* Thème créé dans le cadre du cours 582-554-MA des Techniques d'Intégration Multimédia;
