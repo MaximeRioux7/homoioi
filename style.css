@@ -1508,7 +1508,6 @@ entry-content{
   background-color: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 5px black;
   display: flex;
-  /* @media ... */
 }
 
 .cheminement .grille div.liste-cours, .cheminement .grille div.desc-cours {
@@ -1519,13 +1518,24 @@ entry-content{
 .cheminement .grille div.desc-cours {
   padding: 15px;
   width: 70vw;
+  max-width: 1280px;
+  margin: 0 auto;
   flex-grow: 1;
+}
+
+.cheminement .grille div.desc-cours p {
+  font-size: 17px;
 }
 
 .cheminement .grille div.desc-cours h3 {
   color: white;
   /*text-transform: uppercase;
                 letter-spacing: 0.5rem;*/
+}
+
+.cheminement .grille div.desc-cours #desc-cours > * {
+  line-height: 1.75;
+  margin: 10px 0;
 }
 
 .cheminement .grille ul#liste-cours {
@@ -1553,8 +1563,6 @@ entry-content{
   margin: 10px 0;
   padding: 5px;
   border-left: 2px solid rgba(255, 255, 255, 0);
-  /*border: 1px solid rgba(#FFF, 0.5);
-                border-collapse: collapse;*/
   line-height: 24px;
   /*min-height: 48px;*/
   max-width: 315px !important;
@@ -1572,29 +1580,6 @@ entry-content{
 .cheminement .grille .entry-content {
   min-height: 100%;
   margin: 0;
-  /*@media screen and (max-width: 768px) {
-                html {
-                    font-size: 100%;
-                    // height: 100%;
-                }
-
-                .grille {
-                    color: yellow;
-                }
-
-                .entry-content{
-                    min-height: 100%;
-                }
-            
-                td {
-                    width: 50%;
-                    color: purple;
-                }
-
-                #desc-cours{
-                    color: red;
-                }
-            }*/
 }
 
 .cheminement .grille .entry-content td {
@@ -1627,6 +1612,14 @@ entry-content{
   }
   .grille div.desc-cours > * > * {
     margin: 15px 0;
+  }
+  .grille div.desc-cours #desc-cours {
+    /*> p:first-child{
+                color: cyan;
+            }*/
+  }
+  .grille div.desc-cours #desc-cours > * {
+    margin: 20px 0 !important;
   }
 }
 
@@ -1668,7 +1661,7 @@ entry-content{
     padding-top: 5%;
   }
   .cheminement .grille div.desc-cours p {
-    font-size: 75%;
+    font-size: 16px;
   }
   #titre-cours {
     font-weight: bolder;
