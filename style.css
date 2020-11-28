@@ -1524,11 +1524,19 @@ entry-content{
 }
 
 .cheminement .grille div.desc-cours p {
-  font-size: 17px;
+  font-size: 19px;
+  line-height: 2.5 !important;
+  max-width: 840px;
+}
+
+.cheminement .grille div.desc-cours h2 {
+  font-size: 32px;
+  margin: 20px 0 10px 0;
 }
 
 .cheminement .grille div.desc-cours h3 {
   color: white;
+  font-size: 23px;
   /*text-transform: uppercase;
                 letter-spacing: 0.5rem;*/
 }

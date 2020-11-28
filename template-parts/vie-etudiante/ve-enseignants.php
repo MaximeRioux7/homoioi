@@ -21,7 +21,7 @@
     <?php
         $args = array(
             'post_type'      => 'post',
-            'cat'            => get_category_by_slug('enseignants')->term_id,
+            'cat'            => get_category_by_slug('enseignant')->term_id,
             'posts_per_page' => -1
         );
         query_posts($args);
