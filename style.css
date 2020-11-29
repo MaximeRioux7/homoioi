@@ -1802,6 +1802,20 @@ li .page_item {
   .img-parent .img-enfants img {
     margin: 0;
   }
+  summary {
+    font-size: 80%;
+  }
+  .img-evenement {
+    position: relative;
+  }
+  #ve-evenements .autres-evenements {
+    position: absolute;
+    margin-top: 138.5%;
+  }
+  /*img {
+        width: 95%;
+        height: 95%;
+    }*/
 }
 
 #flecheG img, #flecheD img {
