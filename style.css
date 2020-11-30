@@ -1954,37 +1954,33 @@ body {
 }
 
 /*fin media query*/
-#ve-evenements {
+#ve-evenements > .container {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: auto auto;
   margin: 40px auto;
+  padding: 0 40px;
 }
 
-#ve-evenements > h1:first-child {
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-#ve-evenements > div, #ve-evenements > a {
+#ve-evenements > .container > div, #ve-evenements > .container > a {
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
-#ve-evenements .evenement-premier {
+#ve-evenements > .container .evenement-premier {
   position: relative;
   color: white !important;
 }
 
-#ve-evenements .evenement-premier:hover {
+#ve-evenements > .container .evenement-premier:hover {
   color: white !important;
 }
 
-#ve-evenements .evenement-premier:hover .img-evenement {
+#ve-evenements > .container .evenement-premier:hover .img-evenement {
   filter: grayscale(0%) !important;
 }
 
-#ve-evenements .evenement-premier:hover:after {
+#ve-evenements > .container .evenement-premier:hover:after {
   z-index: 0;
   position: absolute;
   content: " ";
@@ -1995,7 +1991,7 @@ body {
   transform: translateY(-100%);
 }
 
-#ve-evenements .evenement-premier .parent-evenement {
+#ve-evenements > .container .evenement-premier .parent-evenement {
   border-radius: 7px 0 0 7px;
   position: relative;
   display: block;
@@ -2003,12 +1999,12 @@ body {
   height: 450px;
 }
 
-#ve-evenements .evenement-premier .parent-evenement .parent-image {
+#ve-evenements > .container .evenement-premier .parent-evenement .parent-image {
   height: 100%;
   overflow: hidden;
 }
 
-#ve-evenements .evenement-premier .parent-evenement .parent-image .img-evenement {
+#ve-evenements > .container .evenement-premier .parent-evenement .parent-image .img-evenement {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2019,7 +2015,7 @@ body {
   transition: filter 0.2s;
 }
 
-#ve-evenements .evenement-premier .parent-evenement h1 {
+#ve-evenements > .container .evenement-premier .parent-evenement h1 {
   width: 100%;
   position: absolute;
   display: block;
@@ -2027,28 +2023,32 @@ body {
   bottom: 0;
   background: #111111;
   padding: 15px;
-  font-size: calc(12px + 1vw);
+  font-size: calc(14px + 1.2vw);
   text-shadow: 1px 1px 5px black !important;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-#ve-evenements .autres-evenements {
+#ve-evenements > .container .autres-evenements {
   /*margin: 40px 0;*/
   display: flex;
   flex-direction: column;
 }
 
-#ve-evenements .autres-evenements a {
+#ve-evenements > .container .autres-evenements a {
   color: white !important;
 }
 
-#ve-evenements .autres-evenements a:hover {
+#ve-evenements > .container .autres-evenements a:hover {
   color: white !important;
 }
 
-#ve-evenements .autres-evenements > * {
+#ve-evenements > .container .autres-evenements > .premier-event-secondaire {
+  display: none;
+}
+
+#ve-evenements > .container .autres-evenements > * {
   position: relative;
   flex: 1 0 auto;
   display: flex;
@@ -2061,7 +2061,7 @@ body {
   box-sizing: border-box;
 }
 
-#ve-evenements .autres-evenements > *:after {
+#ve-evenements > .container .autres-evenements > *:after {
   z-index: 0;
   position: absolute;
   content: " ";
@@ -2073,11 +2073,11 @@ body {
   /*transform: translateX(-2px);*/
 }
 
-#ve-evenements .autres-evenements > *:hover:after {
+#ve-evenements > .container .autres-evenements > *:hover:after {
   border: 2px solid rgba(255, 255, 255, 0.75);
 }
 
-#ve-evenements .autres-evenements > * h2 {
+#ve-evenements > .container .autres-evenements > * h2 {
   z-index: 2;
   vertical-align: middle;
   margin: 20px;
@@ -2085,6 +2085,58 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 960px) {
+  #ve-evenements > .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .parent-evenement {
+    display: none !important;
+    height: 350px !important;
+  }
+  .autres-evenements > .premier-event-secondaire {
+    display: flex !important;
+  }
+  .autres-evenements > * {
+    height: 200px;
+    margin: 5px 10px;
+    border: 3px solid white;
+  }
+  .autres-evenements > *:after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(170, 170, 170, 0.5)) !important;
+  }
+  .autres-evenements > * h2 {
+    display: block;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0 auto !important;
+    padding: 10px;
+    text-shadow: 1px 1px 10px black !important;
+  }
+  .autres-evenements > *:hover {
+    border-color: #CCC !important;
+  }
+  .autres-evenements > *:hover:after {
+    border: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ve-evenements > .container {
+    padding: 0;
+  }
+  .parent-evenement {
+    height: 275px !important;
+  }
+  .autres-evenements > * {
+    height: 120px;
+  }
+  .autres-evenements > * h2 {
+    font-size: 30px;
+    white-space: auto;
+  }
 }
 
 .vie-au-tim {

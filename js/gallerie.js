@@ -20,7 +20,6 @@
     let elmNomProf, elmImgProf, elmFlecheG, elmFlecheD;
 
     document.addEventListener("DOMContentLoaded", () => {
-        console.log(`is this working`);
         elmImgProf = document.getElementsByClassName("imgProf");
         elmNomProf = document.getElementsByClassName("infoProf");
         elmFlecheG = document.getElementById("flecheG").children[0];
@@ -55,7 +54,7 @@
             elmNomProf[i].children[0].innerHTML = listeProfs[compteur].nom;
             elmImgProf[i].innerHTML = listeProfs[compteur].urlImg;
             compteur++;
-            console.log(compteur);
+            //console.log(compteur);
         }
     }
     
