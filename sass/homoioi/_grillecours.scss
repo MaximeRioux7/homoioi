@@ -3,7 +3,9 @@
 }
 
 #titre-cours{
-    border-bottom: 2px solid rgba(#FFF, 0.5);
+    border-bottom: 2px solid white;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgba(#FFF, 0.5), rgba(#FFF, 0));
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.5rem;

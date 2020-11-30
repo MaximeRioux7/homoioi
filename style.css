@@ -1019,15 +1019,15 @@ body {
 }
 
 body {
-  background-image: url("./images/AccueilAlterSombre.jpg");
+  background-image: url("./images/AccueilCouleur1.jpg");
 }
 
 body.cheminement {
-  background-image: url("./images/GeneriqueAlterSombre.jpg");
+  background-image: url("./images/GeneriqueCouleur1.jpg");
 }
 
 body.la-vie-au-tim {
-  background-image: url("./images/CreationAlterSombre.jpg");
+  background-image: url("./images/CreationCouleur1.jpg");
 }
 
 /** 
@@ -1400,7 +1400,9 @@ nav.vEtudiante p {
 }
 
 #titre-cours {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
@@ -2149,8 +2151,11 @@ body {
 }
 
 .vie-au-tim > div > h1 {
-  margin-left: 40px;
+  margin: 0 40px;
   font-size: 46px;
+  border-bottom: 4px solid white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
 #primary > .post {

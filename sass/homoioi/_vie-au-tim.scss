@@ -7,8 +7,11 @@
         margin: 40px auto;
 
         > h1{
-            margin-left: 40px;
+            margin: 0 40px;
             font-size: 46px;
+            border-bottom: 4px solid white;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, rgba(#FFF, 0.5), rgba(#FFF, 0));
         }
     }
 }
