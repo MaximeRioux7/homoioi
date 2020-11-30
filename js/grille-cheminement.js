@@ -1,4 +1,8 @@
 (function(){
+
+    let classeSessionActive = `session-active`;
+    let classeCoursActif = `cours-actif`;
+
     // Liste des cours pour chaque session
     let listeCours = [[],[],[],[],[],[]];
     
@@ -15,8 +19,9 @@
         elmSessions = document.getElementById("choix-session");
         if(elmListeCours && elmTitreCours && elmDescCours){
             recupererCours();
-            afficherListe(1);
+            afficherListe();
             interactionSessions();
+            if(typeof elmSessions.children[0] != `undefined`) sessionActive(elmSessions.children[0]);
         }else console.error(`Impossible d'afficher la liste des cours,\nau moins un élément avec l'ID suivant est introuvable: "liste-cours", "titre-cours", "desc-cours".`);
     });
 
@@ -41,12 +46,13 @@
         for(let i = 0; i < listeCours[session-1].length; i++){
             // Créer un nouvel élément de la liste
             tmpElm = document.createElement("li");
-            tmpElm.innerHTML = `<li>${listeCours[session-1][i].titre.substring(7)}</li>`;
+            tmpElm.innerHTML = listeCours[session-1][i].titre.substring(7);
 
             // Ajouter l'interaction à la liste
-            tmpElm.addEventListener("click", () => {
+            tmpElm.addEventListener("click", (event) => {
                 elmTitreCours.innerHTML = listeCours[session-1][i].titre;
                 elmDescCours.innerHTML = listeCours[session-1][i].description;
+                coursActif(event.target);
             });
 
             // Ajouter l'élément de la liste à la page
@@ -56,9 +62,24 @@
 
     function interactionSessions(){
         for(let i = 0; i < elmSessions.children.length; i++){
-            elmSessions.children[i].addEventListener("click", () => {
+            elmSessions.children[i].addEventListener("click", (event) => {
+                sessionActive(event.target);
                 afficherListe(i+1);
             });
         }
+    }
+
+    function sessionActive(session){
+        for(let i = 0; i < elmSessions.children.length; i++){
+            elmSessions.children[i].classList.remove(classeSessionActive);
+        }
+        session.classList.add(classeSessionActive);
+    }
+
+    function coursActif(cours){
+        for(let i = 0; i < elmListeCours.children.length; i++){
+            elmListeCours.children[i].classList.remove(classeCoursActif);
+        }
+        cours.classList.add(classeCoursActif);
     }
 })();

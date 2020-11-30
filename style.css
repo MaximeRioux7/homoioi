@@ -1395,45 +1395,6 @@ nav.vEtudiante p {
     color: white;
 }
 */
-/*.entry-content{
-    height: 100%;
-    margin: 0;
-
-    h1{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    p{
-        margin: auto;
-        padding: 0;
-        max-width: 50%;
-        left: 25%;
-        text-align: justify;
-        color: orange;
-    }
-
-    #creation {
-        color: #F08080;
-    }
-
-    p:nth-child(4) {
-        color: orange;
-    }
-}
-
-entry-content{
-    #menu-ul{
-        color: yellow;
-        background-color: yellow;
-    }
-}*/
-/*@media screen and (max-width: 768px) {
-    .cheminement{
-        height: 100%;
-    }
-  }*/
 #requete-cours {
   display: none !important;
 }
@@ -1493,14 +1454,19 @@ entry-content{
   display: inline-block;
   cursor: pointer;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
-  transition: color 0.1s, border-color 0.1s;
+  transition: color 0.2s, border-color 0.2s;
   text-transform: uppercase;
 }
 
-.cheminement ul#choix-session > li:hover {
+.cheminement ul#choix-session > li:hover, .cheminement ul#choix-session > li.session-active {
   font-weight: 900;
   color: white;
   border-color: white;
+}
+
+.cheminement ul#choix-session > li.session-active {
+  color: #59f0eb;
+  border-color: #59f0eb;
 }
 
 .cheminement .grille {
@@ -1579,10 +1545,15 @@ entry-content{
   transition: color 0.1s, border-color 0.1s, background-color 0.1s;
 }
 
-.cheminement .grille ul#liste-cours > li:hover {
+.cheminement .grille ul#liste-cours > li:hover, .cheminement .grille ul#liste-cours > li.cours-actif {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   border-color: white;
+}
+
+.cheminement .grille ul#liste-cours > li.cours-actif {
+  color: #59f0eb;
+  border-color: #59f0eb;
 }
 
 .cheminement .grille .entry-content {
