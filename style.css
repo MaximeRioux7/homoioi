@@ -1078,7 +1078,7 @@ body.la-vie-au-tim {
   height: 10px;
   margin-bottom: 7px;
   position: relative;
-  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  background: linear-gradient(to left, #8300b3 0%, #a800e6 100%);
   z-index: 100;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -1098,7 +1098,7 @@ body.la-vie-au-tim {
 #menu-toggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -2px);
-  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  background: linear-gradient(to left, #8300b3 0%, #a800e6 100%);
 }
 
 #menu-toggle input:checked ~ span:nth-last-child(3) {
@@ -1114,23 +1114,28 @@ body.la-vie-au-tim {
 * Style des items du menu
 */
 #menu-ul {
-  /* margin: -71px 0 0 -20px;*/
   position: fixed;
-  width: 370px;
+  width: 315px;
   height: 100vh;
-  /*margin: -100px 0 0 -50px;*/
   overflow-y: auto;
-  /*margin: 0;*/
   margin: -71px 0 0 -20px;
   padding-left: 5px;
   padding-top: 125px;
-  background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
+  background: linear-gradient(to bottom right, #222127 0%, #404040 100%);
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   /**
     * Style du texte dans le menu
     */
+}
+
+#menu-ul #primary-menu {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #menu-ul a {
@@ -1155,16 +1160,20 @@ body.la-vie-au-tim {
 }
 
 #menu-ul p {
-  padding-left: 85px;
+  position: absolute;
+  bottom: 70px;
+  padding-left: 15%;
   color: #E6E6E6;
   text-shadow: 0px 0px 3px #E6E6E6;
   transition: all 0.2s ease-in;
 }
 
 #menu-ul #M9 {
-  padding-left: 85px;
+  position: absolute;
+  bottom: 40px;
+  padding-left: 15%;
   text-transform: none;
-  text-shadow: 0px 0px 3px #E6E6E6;
+  text-shadow: 0px 0px 5px #E6E6E6;
 }
 
 #menu-ul #M9:visited {
@@ -1194,8 +1203,9 @@ body.la-vie-au-tim {
 * Icons
 */
 #icon {
-  padding-top: 45%;
-  padding-left: 70px;
+  padding-left: 10%;
+  position: absolute;
+  bottom: 150px;
 }
 
 #icon img {

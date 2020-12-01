@@ -79,9 +79,11 @@
 						<a href=" https://discord.gg/53vFvr9" target="_blank">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/Discord-Logo-Light.png" alt="Discord">
 						</a>					
-					</div>					
-					<p>Technique d'Intégration Multimédia <br></p>
-					<a id="M9" href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
+					</div>
+					<div id="TIM">
+						<p>Techniques d'Intégration Multimédia <br></p>
+						<a id="M9" href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
+					</div>										
 				</ul>																
 			</div>
 		</nav><!-- #site-navigation -->
