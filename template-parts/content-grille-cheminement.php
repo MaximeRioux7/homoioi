@@ -22,7 +22,7 @@
 			<!-- En-tête de la grille -->
 			<h1>Grille de cheminement</h1>
 			<div>
-				<ul id="choix-session"><li>Session 1</li><li>Session 2</li><li>Session 3</li><li>Session 4</li><li>Session 5</li><li>Session 6</li></ul>
+				<ul id="choix-session"><h2 class="titre-sessions">SESSIONS</h2><li>Session 1</li><li>Session 2</li><li>Session 3</li><li>Session 4</li><li>Session 5</li><li>Session 6</li></ul>
 			</div>
 
 			<!-- Début de la grille -->

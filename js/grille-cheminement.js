@@ -21,7 +21,12 @@
             recupererCours();
             afficherListe();
             interactionSessions();
-            if(typeof elmSessions.children[0] != `undefined`) sessionActive(elmSessions.children[0]);
+            if(typeof elmSessions.children[1] != `undefined`) sessionActive(elmSessions.children[1]);
+
+            let query = window.matchMedia("(max-width: 960px)");
+            query.addListener(MediaQuery);
+            MediaQuery(query);
+
         }else console.error(`Impossible d'afficher la liste des cours,\nau moins un élément avec l'ID suivant est introuvable: "liste-cours", "titre-cours", "desc-cours".`);
     });
 
@@ -61,16 +66,16 @@
     }
 
     function interactionSessions(){
-        for(let i = 0; i < elmSessions.children.length; i++){
+        for(let i = 1; i < elmSessions.children.length; i++){
             elmSessions.children[i].addEventListener("click", (event) => {
                 sessionActive(event.target);
-                afficherListe(i+1);
+                afficherListe(i);
             });
         }
     }
 
     function sessionActive(session){
-        for(let i = 0; i < elmSessions.children.length; i++){
+        for(let i = 1; i < elmSessions.children.length; i++){
             elmSessions.children[i].classList.remove(classeSessionActive);
         }
         session.classList.add(classeSessionActive);
@@ -81,5 +86,17 @@
             elmListeCours.children[i].classList.remove(classeCoursActif);
         }
         cours.classList.add(classeCoursActif);
+    }
+
+    function MediaQuery(query){
+        if(query.matches){
+            for(let i = 1; i < elmSessions.children.length; i++){
+                elmSessions.children[i].innerHTML = i;
+            }
+        }else{
+            for(let i = 1; i < elmSessions.children.length; i++){
+                elmSessions.children[i].innerHTML = `Session ${i}`;
+            }
+        }
     }
 })();
