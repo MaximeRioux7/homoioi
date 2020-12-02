@@ -36,6 +36,6 @@
     //          15 -> 15
     //           9 -> 09
     function formatterID($id){
-        return ($id < 10 ? "0".$id : $id);
+        return ($id < 10 ? "0{$id}" : $id);
     }
 ?>
