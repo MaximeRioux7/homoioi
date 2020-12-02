@@ -89,10 +89,8 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/images/Discord-Logo-Light.png" alt="Discord">
 							</a>					
 						</div>
-					</ul>					
-															
+					</ul>																		
 				</ul>																
 			</div>
 		</nav><!-- #site-navigation -->
-		
 	</header><!-- #masthead -->
