@@ -32,9 +32,9 @@
 
 
 			<!-- Ajouter toutes les parties à la page de la vie étudiante -->
-			<!--<div id="ve-evenements">
-				<?php //include 'vie-etudiante/ve-vie-etudiante.php'; ?>
-			</div>-->
+			<div id="ve-evenements">
+				<?php include 'vie-etudiante/ve-vie-etudiante.php'; ?>
+			</div>
 			<div id="ve-evenements">
 				<?php include 'vie-etudiante/ve-evenements.php'; ?>
 			</div>
