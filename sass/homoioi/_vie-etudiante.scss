@@ -1,15 +1,4 @@
 
-/*********************** TERRITOIRE DE MONICA *************************/
-li .page_item {
-	display: hide;
-  }
-
-/*p {
-	color: aqua;
-    display: grid;
-    place-items: center;
-}*/
-
 .img-parent {
     padding-top: 75px;
     display: flex;
@@ -43,13 +32,6 @@ li .page_item {
     .gallerie-img-etudiante {
         object-fit: none;
         height: 100%;
-        //clip-path: inset(10px 100px);
-        //mask-size: cover;
-        //border-radius: 100%;
-        //-moz-border-radius: 100%;
-        //-webkit-border-radius: 100%;
-        //-o-border-radius: 100%;
-        //clip-path: circle(140px at center);
         filter: grayscale(100%);
 
         &:hover {
@@ -99,7 +81,22 @@ li .page_item {
 .lightbox:target {
     opacity: 1;
     z-index: 999;
+    img {
+        animation: move1 1s;
+    }
 }
+
+/******************** Animation *************************/
+@keyframes move1 {
+    0% {
+      transform: scale(0); 
+      backdrop-filter: blur(20px);
+    }
+    100% {
+      transform: scale(1);
+      backdrop-filter: blur(0px);
+    }
+  }
 
 @media screen and (max-width: 768px) {
     .img-parent {
