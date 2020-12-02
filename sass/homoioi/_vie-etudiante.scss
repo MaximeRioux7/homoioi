@@ -125,7 +125,25 @@ li .page_item {
     }
     
     summary {
-        font-size: 80%;
+        margin-left: 10%;
+        font-size: 60%;
+        /*display: flex;
+        justify-content: space-around;*/
+        // width: 90%;
+    }
+
+    summary:first-child {
+        padding-bottom: 10%;
+    }
+
+    summary:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #ve-evenements h1 {
+        margin: 0;
+        padding: 0;
     }
 
     // Positionnement des éléments un par-dessus l'autre
@@ -133,19 +151,12 @@ li .page_item {
         position: relative;
     }
 
-    /* #ve-evenements .autres-evenements {
-        // position: absolute;
-        // margin-top: 138.5%;
-    } */
-
-    // Affichage des images un peu étrange
-    /*img {
-        width: 95%;
-        height: 95%;
-    }*/
-
     .gallerie-img-etudiante {
         width: 75%;
+    }
+
+    a {
+        height: 75%;
     }
 }
 
