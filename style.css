@@ -1019,15 +1019,15 @@ body {
 }
 
 body {
-  background-image: url("./images/AccueilAlterSombre.jpg");
+  background-image: url("./images/AccueilCouleur1.jpg");
 }
 
 body.cheminement {
-  background-image: url("./images/GeneriqueAlterSombre.jpg");
+  background-image: url("./images/GeneriqueCouleur1.jpg");
 }
 
 body.la-vie-au-tim {
-  background-image: url("./images/CreationAlterSombre.jpg");
+  background-image: url("./images/CreationCouleur1.jpg");
 }
 
 /** 
@@ -1395,51 +1395,14 @@ nav.vEtudiante p {
     color: white;
 }
 */
-/*.entry-content{
-    height: 100%;
-    margin: 0;
-
-    h1{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    p{
-        margin: auto;
-        padding: 0;
-        max-width: 50%;
-        left: 25%;
-        text-align: justify;
-        color: orange;
-    }
-
-    #creation {
-        color: #F08080;
-    }
-
-    p:nth-child(4) {
-        color: orange;
-    }
-}
-
-entry-content{
-    #menu-ul{
-        color: yellow;
-        background-color: yellow;
-    }
-}*/
-/*@media screen and (max-width: 768px) {
-    .cheminement{
-        height: 100%;
-    }
-  }*/
 #requete-cours {
   display: none !important;
 }
 
 #titre-cours {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
@@ -1493,14 +1456,19 @@ entry-content{
   display: inline-block;
   cursor: pointer;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
-  transition: color 0.1s, border-color 0.1s;
+  transition: color 0.2s, border-color 0.2s;
   text-transform: uppercase;
 }
 
-.cheminement ul#choix-session > li:hover {
+.cheminement ul#choix-session > li:hover, .cheminement ul#choix-session > li.session-active {
   font-weight: 900;
   color: white;
   border-color: white;
+}
+
+.cheminement ul#choix-session > li.session-active {
+  color: #59f0eb;
+  border-color: #59f0eb;
 }
 
 .cheminement .grille {
@@ -1579,10 +1547,15 @@ entry-content{
   transition: color 0.1s, border-color 0.1s, background-color 0.1s;
 }
 
-.cheminement .grille ul#liste-cours > li:hover {
+.cheminement .grille ul#liste-cours > li:hover, .cheminement .grille ul#liste-cours > li.cours-actif {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   border-color: white;
+}
+
+.cheminement .grille ul#liste-cours > li.cours-actif {
+  color: #59f0eb;
+  border-color: #59f0eb;
 }
 
 .cheminement .grille .entry-content {
@@ -1997,37 +1970,33 @@ body {
 }
 
 /*fin media query*/
-#ve-evenements {
+#ve-evenements > .container {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: auto auto;
   margin: 40px auto;
+  padding: 0 40px;
 }
 
-#ve-evenements > h1:first-child {
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-#ve-evenements > div, #ve-evenements > a {
+#ve-evenements > .container > div, #ve-evenements > .container > a {
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
-#ve-evenements .evenement-premier {
+#ve-evenements > .container .evenement-premier {
   position: relative;
   color: white !important;
 }
 
-#ve-evenements .evenement-premier:hover {
+#ve-evenements > .container .evenement-premier:hover {
   color: white !important;
 }
 
-#ve-evenements .evenement-premier:hover .img-evenement {
+#ve-evenements > .container .evenement-premier:hover .img-evenement {
   filter: grayscale(0%) !important;
 }
 
-#ve-evenements .evenement-premier:hover:after {
+#ve-evenements > .container .evenement-premier:hover:after {
   z-index: 0;
   position: absolute;
   content: " ";
@@ -2038,7 +2007,7 @@ body {
   transform: translateY(-100%);
 }
 
-#ve-evenements .evenement-premier .parent-evenement {
+#ve-evenements > .container .evenement-premier .parent-evenement {
   border-radius: 7px 0 0 7px;
   position: relative;
   display: block;
@@ -2046,12 +2015,12 @@ body {
   height: 450px;
 }
 
-#ve-evenements .evenement-premier .parent-evenement .parent-image {
+#ve-evenements > .container .evenement-premier .parent-evenement .parent-image {
   height: 100%;
   overflow: hidden;
 }
 
-#ve-evenements .evenement-premier .parent-evenement .parent-image .img-evenement {
+#ve-evenements > .container .evenement-premier .parent-evenement .parent-image .img-evenement {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2062,7 +2031,7 @@ body {
   transition: filter 0.2s;
 }
 
-#ve-evenements .evenement-premier .parent-evenement h1 {
+#ve-evenements > .container .evenement-premier .parent-evenement h1 {
   width: 100%;
   position: absolute;
   display: block;
@@ -2070,28 +2039,32 @@ body {
   bottom: 0;
   background: #111111;
   padding: 15px;
-  font-size: calc(12px + 1vw);
+  font-size: calc(14px + 1.2vw);
   text-shadow: 1px 1px 5px black !important;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-#ve-evenements .autres-evenements {
+#ve-evenements > .container .autres-evenements {
   /*margin: 40px 0;*/
   display: flex;
   flex-direction: column;
 }
 
-#ve-evenements .autres-evenements a {
+#ve-evenements > .container .autres-evenements a {
   color: white !important;
 }
 
-#ve-evenements .autres-evenements a:hover {
+#ve-evenements > .container .autres-evenements a:hover {
   color: white !important;
 }
 
-#ve-evenements .autres-evenements > * {
+#ve-evenements > .container .autres-evenements > .premier-event-secondaire {
+  display: none;
+}
+
+#ve-evenements > .container .autres-evenements > * {
   position: relative;
   flex: 1 0 auto;
   display: flex;
@@ -2104,7 +2077,7 @@ body {
   box-sizing: border-box;
 }
 
-#ve-evenements .autres-evenements > *:after {
+#ve-evenements > .container .autres-evenements > *:after {
   z-index: 0;
   position: absolute;
   content: " ";
@@ -2116,11 +2089,11 @@ body {
   /*transform: translateX(-2px);*/
 }
 
-#ve-evenements .autres-evenements > *:hover:after {
+#ve-evenements > .container .autres-evenements > *:hover:after {
   border: 2px solid rgba(255, 255, 255, 0.75);
 }
 
-#ve-evenements .autres-evenements > * h2 {
+#ve-evenements > .container .autres-evenements > * h2 {
   z-index: 2;
   vertical-align: middle;
   margin: 20px;
@@ -2130,18 +2103,86 @@ body {
   text-overflow: ellipsis;
 }
 
+@media screen and (max-width: 960px) {
+  #ve-evenements > .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .parent-evenement {
+    display: none !important;
+    height: 350px !important;
+  }
+  .autres-evenements > .premier-event-secondaire {
+    display: flex !important;
+  }
+  .autres-evenements > * {
+    height: 200px;
+    margin: 5px 10px;
+    border: 3px solid white;
+  }
+  .autres-evenements > *:after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(170, 170, 170, 0.5)) !important;
+  }
+  .autres-evenements > * h2 {
+    display: block;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0 auto !important;
+    padding: 10px;
+    text-shadow: 1px 1px 10px black !important;
+  }
+  .autres-evenements > *:hover {
+    border-color: #CCC !important;
+  }
+  .autres-evenements > *:hover:after {
+    border: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ve-evenements > .container {
+    padding: 0;
+  }
+  .parent-evenement {
+    height: 275px !important;
+  }
+  .autres-evenements > * {
+    height: 120px;
+  }
+  .autres-evenements > * h2 {
+    font-size: 30px;
+    white-space: auto;
+  }
+}
+
 .vie-au-tim {
   overflow-x: hidden;
 }
 
 .vie-au-tim > div {
+  min-height: 100vh;
   max-width: 1280px;
   margin: 40px auto;
 }
 
 .vie-au-tim > div > h1 {
-  margin-left: 40px;
+  margin: 0 40px;
   font-size: 46px;
+  border-bottom: 4px solid white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.vie-au-tim > div > h1:before {
+  display: inline-block;
+  content: " ";
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 10px white;
 }
 
 #primary > .post {

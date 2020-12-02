@@ -7,7 +7,7 @@
     if(have_posts()){
         $i = 0;
 
-        echo "<h1>ÉVÉNEMENTS</h1>";
+        echo "<h1>ÉVÉNEMENTS</h1><div class='container'>";
         while ( have_posts() ) : the_post();
             $i++;
             if($i == 1){
@@ -23,6 +23,11 @@
                     echo "</span>";
                 echo "</a>";
                 echo "<div class='autres-evenements'>";
+                echo "<a href='".get_post_permalink()."' class='premier-event-secondaire' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
+                    echo "<h2>";
+                        the_title();
+                    echo "</h2>";
+                echo "</a>";
             } else {
                 echo "<a href='".get_post_permalink()."' style='background-image:url(\"".get_the_post_thumbnail_url(get_the_ID())."\");'>";
                     echo "<h2>";
@@ -31,7 +36,7 @@
                 echo "</a>";
             }
         endwhile;
-        echo "</div>";
+        echo "</div></div>";
     }
     wp_reset_query();
 ?>

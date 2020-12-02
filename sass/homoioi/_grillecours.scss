@@ -3,7 +3,9 @@
 }
 
 #titre-cours{
-    border-bottom: 2px solid rgba(#FFF, 0.5);
+    border-bottom: 2px solid white;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgba(#FFF, 0.5), rgba(#FFF, 0));
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
@@ -61,13 +63,18 @@
             cursor: pointer;
             border-bottom: 2px solid rgba(#FFF, 0);
 
-            transition: color 0.1s, border-color 0.1s;
+            transition: color 0.2s, border-color 0.2s;
             text-transform: uppercase;
             //letter-spacing: 0.5rem;
-            &:hover{
+            &:hover, &.session-active{
                 font-weight: 900;
                 color:white;
                 border-color: rgba(#FFF, 1);
+            }
+
+            &.session-active{
+                color:#59f0eb;
+                border-color: rgba(#59f0eb, 1);
             }
         }
     }
@@ -153,10 +160,15 @@
     
                 transition: color 0.1s, border-color 0.1s, background-color 0.1s;
     
-                &:hover{
+                &:hover, &.cours-actif{
                     background-color: rgba(#000, 0.3);
                     color: white;
                     border-color: rgba(#FFF, 1);
+                }
+
+                &.cours-actif{
+                    color:#59f0eb;
+                    border-color: rgba(#59f0eb, 1);
                 }
             }
         }
