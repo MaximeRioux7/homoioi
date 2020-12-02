@@ -9,7 +9,6 @@
     // Que faire avec la requête?
     if(have_posts()){                                                   // N'afficher la section que si des articles sont trouvés
         $i = 0;
-        $id = 0;
         echo "<h1>VIE ÉTUDIANTE</h1>";                                  // Titre de la section
         echo "<div class='container img-parent'>";                      // <div> avec le contenu de la section
         while ( have_posts() ) : the_post(); $i++;?>
