@@ -2152,6 +2152,7 @@ body {
 }
 
 .vie-au-tim > div {
+  min-height: 100vh;
   max-width: 1280px;
   margin: 40px auto;
 }
@@ -2162,6 +2163,18 @@ body {
   border-bottom: 4px solid white;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.vie-au-tim > div > h1:before {
+  display: inline-block;
+  content: " ";
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 10px white;
 }
 
 #primary > .post {
