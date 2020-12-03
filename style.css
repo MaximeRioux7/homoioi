@@ -1693,6 +1693,22 @@ nav.vEtudiante p {
   transform: scale(1.5);
 }
 
+.img-parent .projet-enfants {
+  flex: 0 1 150px;
+  margin: 5px;
+  overflow: hidden;
+  height: 500px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-parent .projet-enfants img {
+  transition: transform 0.5s ease;
+}
+
+.img-parent .projet-enfants img:hover {
+  transform: scale(1.5);
+}
+
 .img-parent .gallerie-img-etudiante {
   object-fit: none;
   height: 100%;

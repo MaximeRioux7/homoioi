@@ -40,6 +40,9 @@
 			<div id="ve-enseignants">
 				<?php include 'vie-etudiante/ve-enseignants.php'; ?>
 			</div>
+			<div id="ve-projet">
+				<?php include 'vie-etudiante/ve-projet.php'; ?>
+			</div>
 		</div>
 	</div><!-- .entry-content -->
 

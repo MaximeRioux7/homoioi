@@ -1,5 +1,5 @@
 
-.img-parent {
+.projet-parent {
     padding-top: 75px;
     display: flex;
     flex-wrap: wrap;
@@ -15,27 +15,7 @@
         }
     }
 
-    .img-enfants {
-        flex: 0 1 150px;
-        margin: 5px;
-        overflow: hidden;
-        height: 500px;
-
-        img {
-            transition: transform 0.5s ease;
-            &:hover{
-                transform: scale(1.5); 
-            }
-        }
-    }
-
     .projet-enfants {
-        flex: 0 1 150px;
-        margin: 5px;
-        overflow: hidden;
-        height: 500px;
-        -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
         img {
             transition: transform 0.5s ease;
