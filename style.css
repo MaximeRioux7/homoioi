@@ -1573,9 +1573,9 @@ nav.vEtudiante p {
 
 .cheminement .grille ul#liste-cours > li {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #CCC;
-  line-height: 1.5em;
+  line-height: 1.7em;
   flex: 0;
   cursor: pointer;
   user-select: none;
@@ -1715,23 +1715,12 @@ nav.vEtudiante p {
   }
 }
 
-/*********************** TERRITOIRE DE MONICA *************************/
-li .page_item {
-  display: hide;
-}
-
-/*p {
-	color: aqua;
-    display: grid;
-    place-items: center;
-}*/
 .img-parent {
   padding-top: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*********************** Vidéos YouTube ************************/
-  /*********************** Listes des stages ************************/
+  /******************** LIGHTBOX *************************/
 }
 
 .img-parent details summary {
@@ -1757,9 +1746,25 @@ li .page_item {
   transform: scale(1.5);
 }
 
+.img-parent .projet-enfants {
+  flex: 0 1 150px;
+  margin: 5px;
+  overflow: hidden;
+  height: 500px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-parent .projet-enfants img {
+  transition: transform 0.5s ease;
+}
+
+.img-parent .projet-enfants img:hover {
+  transform: scale(1.5);
+}
+
 .img-parent .gallerie-img-etudiante {
   object-fit: none;
-  height: 50%;
+  height: 100%;
   filter: grayscale(100%);
 }
 
@@ -1771,26 +1776,7 @@ li .page_item {
   filter: grayscale(100%);
 }
 
-.img-parent #playlist-projet iframe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.img-parent #details-stage {
-  padding-bottom: 40px;
-}
-
-.img-parent #details-stage p,
-.img-parent #details-stage h2 {
-  margin-top: 10px;
-  flex: 0 1 150px;
-  display: flex;
-  justify-content: center;
-}
-
-/******************** LIGHTBOX *************************/
-.lightbox {
+.img-parent .lightbox {
   /** Default lightbox to hidden */
   opacity: 0;
   z-index: -100;
@@ -1805,9 +1791,25 @@ li .page_item {
   backdrop-filter: blur(5px);
 }
 
-.lightbox:target {
+.img-parent .lightbox:target {
   opacity: 1;
   z-index: 999;
+}
+
+.img-parent .lightbox:target img {
+  animation: move1 1s;
+}
+
+/******************** Animation *************************/
+@keyframes move1 {
+  0% {
+    transform: scale(0);
+    backdrop-filter: blur(20px);
+  }
+  100% {
+    transform: scale(1);
+    backdrop-filter: blur(0px);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2223,11 +2225,7 @@ body {
 }
 
 .vie-au-tim > div {
-<<<<<<< HEAD
-  min-height: 100vh;
-=======
   min-height: 100vh !important;
->>>>>>> pascal
   max-width: 1280px;
   margin: 40px auto;
 }

@@ -1,15 +1,4 @@
 
-/*********************** TERRITOIRE DE MONICA *************************/
-li .page_item {
-	display: hide;
-  }
-
-/*p {
-	color: aqua;
-    display: grid;
-    place-items: center;
-}*/
-
 .img-parent {
     padding-top: 75px;
     display: flex;
@@ -40,16 +29,25 @@ li .page_item {
         }
     }
 
+    .projet-enfants {
+        flex: 0 1 150px;
+        margin: 5px;
+        overflow: hidden;
+        height: 500px;
+        -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+        img {
+            transition: transform 0.5s ease;
+            &:hover{
+                transform: scale(1.5); 
+            }
+        }
+    }
+
     .gallerie-img-etudiante {
         object-fit: none;
-        height: 50%;
-        //clip-path: inset(10px 100px);
-        //mask-size: cover;
-        //border-radius: 100%;
-        //-moz-border-radius: 100%;
-        //-webkit-border-radius: 100%;
-        //-o-border-radius: 100%;
-        //clip-path: circle(140px at center);
+        height: 100%;
         filter: grayscale(100%);
 
         &:hover {
@@ -60,45 +58,43 @@ li .page_item {
             filter: grayscale(100%);
         }
     }
-/*********************** Vidéos YouTube ************************/
-    #playlist-projet iframe {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+
+    /******************** LIGHTBOX *************************/
+    .lightbox {
+        /** Default lightbox to hidden */
+        opacity: 0;
+        z-index: -100;
+        display: grid;
+        place-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(44, 1, 35, 0.4);
+        backdrop-filter: blur(5px);
     }
-    /*********************** Listes des stages ************************/
-    #details-stage {
-        padding-bottom: 40px;
-        p,
-        h2{
-            margin-top: 10px;
-            flex: 0 1 150px;
-            display: flex;
-            justify-content: center;
-        }
-    } 
+    
+    .lightbox:target {
+        opacity: 1;
+        z-index: 999;
+        img {
+            animation: move1 1s;
+        }   
+    }
 }
 
-  /******************** LIGHTBOX *************************/
- 
-.lightbox {
-    /** Default lightbox to hidden */
-    opacity: 0;
-    z-index: -100;
-    display: grid;
-    place-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(44, 1, 35, 0.4);
-    backdrop-filter: blur(5px);
-}
-  
-.lightbox:target {
-    opacity: 1;
-    z-index: 999;
+/******************** Animation *************************/
+@keyframes move1 {
+    0% {
+      transform: scale(0); 
+      backdrop-filter: blur(20px);
+    }
+
+    100% {
+      transform: scale(1);
+      backdrop-filter: blur(0px);
+    }
 }
 
 @media screen and (max-width: 768px) {

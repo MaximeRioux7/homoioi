@@ -67,4 +67,9 @@
             afficherProfs();
         });
     }
+
+    document.querySelector(".gallerie-img-etudiante").addEventListener("click", () => {
+        console.log(`Impossible d'afficher la liste des enseignants`);
+    });
+
 })();
