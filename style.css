@@ -468,7 +468,6 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul,
 ol {
   margin: 0 0 1.5em 3em;
 }
@@ -1060,10 +1059,8 @@ body.la-vie-au-tim {
 #menu-toggle input {
   display: block;
   position: absolute;
-  width: 40px;
-  height: 32px;
-  top: -7px;
-  left: -5px;
+  width: 48px;
+  height: 51px;
   opacity: 0;
   z-index: 101;
   cursor: pointer;
@@ -1078,7 +1075,7 @@ body.la-vie-au-tim {
   height: 10px;
   margin-bottom: 7px;
   position: relative;
-  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  background: linear-gradient(to left, #0f78b4 0%, #61b8ff 100%);
   z-index: 100;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -1098,7 +1095,7 @@ body.la-vie-au-tim {
 #menu-toggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -2px);
-  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  background: linear-gradient(to left, #0f78b4 0%, #61b8ff 100%);
 }
 
 #menu-toggle input:checked ~ span:nth-last-child(3) {
@@ -1114,23 +1111,28 @@ body.la-vie-au-tim {
 * Style des items du menu
 */
 #menu-ul {
-  /* margin: -71px 0 0 -20px;*/
   position: fixed;
-  width: 370px;
+  width: 350px;
   height: 100vh;
-  /*margin: -100px 0 0 -50px;*/
   overflow-y: auto;
-  /*margin: 0;*/
   margin: -71px 0 0 -20px;
   padding-left: 5px;
   padding-top: 125px;
-  background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
+  background: linear-gradient(to bottom right, #222127 0%, #404040 100%);
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   /**
     * Style du texte dans le menu
     */
+}
+
+#menu-ul #primary-menu {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #menu-ul a {
@@ -1155,16 +1157,21 @@ body.la-vie-au-tim {
 }
 
 #menu-ul p {
-  padding-left: 85px;
+  position: absolute;
+  bottom: 140px;
+  font-size: 20px;
   color: #E6E6E6;
   text-shadow: 0px 0px 3px #E6E6E6;
   transition: all 0.2s ease-in;
 }
 
 #menu-ul #M9 {
-  padding-left: 85px;
+  color: #61b8ff;
+  position: absolute;
+  bottom: 100px;
+  font-size: 22px;
   text-transform: none;
-  text-shadow: 0px 0px 3px #E6E6E6;
+  text-shadow: 0px 0px 8px #61b8ff;
 }
 
 #menu-ul #M9:visited {
@@ -1173,14 +1180,18 @@ body.la-vie-au-tim {
 
 #menu-ul #M9:h1 {
   color: #ffffff;
-  text-shadow: 0px 0px 10px #ffffff;
+  text-shadow: 0px 0px 15px #61b8ff;
   transition: all 0.2s ease-in;
 }
 
 #menu-ul li {
   padding: 15px 0;
-  font-size: 18px;
+  font-size: 22px;
   list-style-type: none;
+}
+
+#menu-ul hr {
+  color: #E6E6E6;
 }
 
 /**
@@ -1194,13 +1205,13 @@ body.la-vie-au-tim {
 * Icons
 */
 #icon {
-  padding-top: 45%;
-  padding-left: 70px;
+  position: absolute;
+  bottom: 40px;
 }
 
 #icon img {
   height: 30px;
-  padding-left: 15px;
+  padding-right: 20px;
   transition: transform .5s;
 }
 
@@ -1225,22 +1236,31 @@ body.la-vie-au-tim {
     height: 100vh;
     width: 100vw;
     padding-left: 5px;
-    padding-top: 110px;
+    padding-top: 80px;
     /**
     * Modification du style du texte dans le menu
     */
   }
   #menu-ul li.page_item {
-    font-size: 18px;
+    font-size: 19px;
+  }
+  #menu-ul li {
+    font-size: 19px;
   }
   #menu-ul p {
-    font-size: 14px;
+    font-size: 18px;
+    bottom: 130px;
+  }
+  #menu-ul #M9 {
+    font-weight: 900;
+    bottom: 90px;
   }
   /**
   * Modification des icons
   */
   #icon {
     padding-top: 35%;
+    bottom: 30px;
   }
   #icon img {
     height: 25px;
