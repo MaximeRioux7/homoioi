@@ -99,13 +99,4 @@
 		}
 	}
 	*/
-
-			let NavMenu = document.getElementById('menu-ul');
-
-			window.onclick = function(event) {
-				if (event.target == NavMenu) {
-					NavMenu.style.display = "none";
-				}
-			}
-		
 }() );

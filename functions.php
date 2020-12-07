@@ -185,19 +185,19 @@ function theme_homioi_script_grille() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_homioi_script_grille' );
 
-function theme_homioi_gallerie() {
+function theme_homioi_galerie() {
 	if(is_page_template('templates/vie-tim.php')){
-		wp_enqueue_script( 'gallerie', get_template_directory_uri() . '/js/gallerie.js', array(), '1.0', true);
+		wp_enqueue_script( 'gallerie', get_template_directory_uri() . '/js/galerie.js', array(), '1.0', true);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'theme_homioi_gallerie' );
+add_action( 'wp_enqueue_scripts', 'theme_homioi_galerie' );
 
-function theme_homioi_ensignants() {
-	if(is_page_template('templates/enseignants.php')){
+function theme_homioi_enseignants() {
+	if(is_page_template('templates/vie-tim.php')){
 		wp_enqueue_script( 'enseignants', get_template_directory_uri() . '/js/enseignants.js', array(), '', false);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'theme_homioi_ensignants' );
+add_action( 'wp_enqueue_scripts', 'theme_homioi_enseignants' );
 
 function collectiveray_load_js_script() {
     if( is_front_page() ) {

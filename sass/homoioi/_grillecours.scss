@@ -36,6 +36,7 @@
     }
 
     ul#choix-session{
+        position: relative;
         height: 100%;
         padding: 0;
         margin: 0 0 10px 0;
@@ -45,12 +46,19 @@
         border-bottom: 2px solid white;
         border-image-slice: 1;
         border-image-source: linear-gradient(to left, rgba(#FFF, 0), rgba(#FFF, 0.5), rgba(#FFF, 0));
-    
-        padding-top: 10px !important;
         background: linear-gradient(to right, rgba(#000, 0), rgba(#000, 0.5), rgba(#000, 0));
 
+        > h2.titre-sessions{
+            display: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: default;
+            font-weight: bold;
+            transform: translateY(15%);
+        }
         
         > li{
+            //transform: translateY(2px);
             font-family: "Yantramanav";
             letter-spacing: 2px;
             text-shadow: 0 0 5px rgba(#FFF, 0.5);
@@ -58,7 +66,7 @@
             text-align: center;
             //font-size: 18px;
 
-            padding: 10px;
+            padding: 24px 10px 6px 10px;
             display: inline-block;
             cursor: pointer;
             border-bottom: 2px solid rgba(#FFF, 0);
@@ -69,12 +77,13 @@
             &:hover, &.session-active{
                 font-weight: 900;
                 color:white;
-                border-color: rgba(#FFF, 1);
+                background-color: rgba(#FFF, 0.25);
+                border-color:#44ebeb;
             }
 
             &.session-active{
-                color:#59f0eb;
-                border-color: rgba(#59f0eb, 1);
+                //background: linear-gradient(to top, #12b9b9, rgba(#008080, 0));
+                background-color: #12b9b9;
             }
         }
     }
@@ -82,7 +91,6 @@
     .grille{
         flex-grow:1;
         background-color: rgba(#000, 0.4);
-        text-shadow: 0 0 5px black;
         
         display: flex;
     
@@ -97,6 +105,8 @@
             max-width: 1280px;
             margin: 0 auto;
             flex-grow: 1;
+
+            text-shadow: 0 0 5px rgba(#000, 0.5);
             
             p{
                 font-size: 19px;
@@ -117,6 +127,7 @@
             }
 
             #desc-cours > *{
+                overflow-y: auto;
                 line-height: 1.75;
                 margin: 10px 0;
             }
@@ -125,7 +136,7 @@
         ul#liste-cours{
             position: relative;
             margin: 0 !important;
-            padding: 0 !important;
+            padding: 3% 0 0 0 !important; // calc(3% - 20px)
             flex-shrink: 1;
             list-style: none;
             border-collapse: collapse;
@@ -138,37 +149,47 @@
             border-right: 2px solid white;
             border-image-slice: 1;
             border-image-source: linear-gradient(to bottom, rgba(#FFF, 0), rgba(#FFF, 0.5), rgba(#FFF, 0));
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            //height: calc(100vh - 176px);
     
             > li{
                 text-align: center;
-                font-size: 16px;
+                font-size: 1.4em;
                 color: #CCC;
+                line-height: 1.7em;
+
+                flex: 0;
     
                 cursor: pointer;
                 user-select: none;
 
-                margin: 10px 0;
-                padding: 5px;
+                z-index: 1;
+                margin: 20px 0;
 
-                border-left: 2px solid rgba(#FFF, 0);
-    
-                line-height: 24px;
+                border-right: 2px solid rgba(#FFF, 0);
+                //transform: translateX(2px);
+                
+                //line-height: 24px;
                 /*min-height: 48px;*/
                 max-width: 315px !important;
                 box-sizing: content-box;
-                padding: 10px;
+                padding: 20px 10px;
     
                 transition: color 0.1s, border-color 0.1s, background-color 0.1s;
     
                 &:hover, &.cours-actif{
-                    background-color: rgba(#000, 0.3);
+                    background-color: rgba(#FFF, 0.25);
                     color: white;
-                    border-color: rgba(#FFF, 1);
+                    border-color: #44ebeb;
                 }
 
                 &.cours-actif{
-                    color:#59f0eb;
-                    border-color: rgba(#59f0eb, 1);
+                    //background: linear-gradient(to right, #12b9b9, rgba(#008080, 0));
+                    background-color: #12b9b9;
                 }
             }
         }
@@ -228,6 +249,21 @@
     }
 }
 
+@media screen and (max-width: 960px) {
+    .cheminement ul#choix-session > h2.titre-sessions{
+        margin: 0 15px;
+        transform: translateY(20%);
+        display: block;
+    }
+
+    .cheminement ul#choix-session > li {
+        flex-grow: 1;
+        margin: 0;
+        padding: 18px 36px 4px 36px !important;
+        font-size: 22px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /*html {
         font-size: 100%;
@@ -235,26 +271,24 @@
         background-size: auto;
     }*/
 
-    .cheminement > h1 {
-        font-weight: normal;
-        // margin-top: 25%;
-        padding-top: 15%;
-        padding-bottom: 0;
-        letter-spacing: 0;
-    }
-    
-    .cheminement ul#choix-session > li:first-child {
-        padding-left: 2.5%;
+    .cheminement ul#choix-session > h2.titre-sessions{
+        transform: translateY(18%);
+        display: block;
+        margin: 0 5px;
     }
 
-    .cheminement ul#choix-session > li:last-child {
-        padding-right: 2.5%;
+    .cheminement > h1 {
+        font-weight: normal;
+        padding: 80px 5px 0 5px;
+        letter-spacing: 0;
+        margin-bottom: 5%;
     }
 
     .cheminement ul#choix-session > li {
+        flex-grow: 1;
         margin: 0;
-        padding: 0;
-        font-size: 65%;
+        padding: 18px 4vw 4px 4vw !important;
+        font-size: 18px;
     }
 
     .grille div.desc-cours #titre-cours{
@@ -278,6 +312,10 @@
         font-size: 16px;
     }
 
+    .cheminement .grille div.desc-cours p{
+        line-height: 1.5 !important;
+    }
+
     #titre-cours {
         font-weight: bolder;
         font-size: 110%;
@@ -292,9 +330,4 @@
         width: 50%;
         color: purple;
     }
-
-    /*#desc-cours{
-        color: red;
-        font-size: 250%;
-    }*/
 }

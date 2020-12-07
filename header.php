@@ -22,7 +22,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(array($pagename)); ?>>
+<body <?php body_class(array($pagename)); ?> >
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'homoioi' ); ?></a>
@@ -66,22 +66,30 @@
 							)
 						);
 					?>
-					<div id="icon">
-						<a href="https://www.facebook.com/maisonneuvetim/" target="_blank">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/f_logo_RGB-White_58.png" alt="Facebook">
-						</a>
-						<a href="https://www.youtube.com/user/TIMaisonneuve" target="_blank">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/yt_logo_mono_light.png" alt="Youtube">	
-						</a>
-						<a href="https://www.instagram.com/maisonneuvetim/" target="_blank">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/glyph-logo_May2016-Light.png" alt="Instagram">
-						</a>
-						<a href=" https://discord.gg/53vFvr9" target="_blank">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/Discord-Logo-Light.png" alt="Discord">
-						</a>					
-					</div>					
-					<p>Technique d'Intégration Multimédia <br></p>
-					<a id="M9" href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
+					<ul id="primary-menu">
+						<li><a href="#details-projet">Galerie des Projets</a></li>
+						<li><a href="#details-stage">Stages</a></li>
+						<li><a href="#ve-evenements">Événements</a></li>
+						<li><a href="#ve-enseignants">Enseignants</a></li>						
+						<div id="TIM">
+							<p>Techniques d'Intégration Multimédia</p>
+							<a id="M9" href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
+						</div>
+						<div id="icon">
+							<a href="https://www.facebook.com/maisonneuvetim/" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/f_logo_RGB-White_58.png" alt="Facebook">
+							</a>
+							<a href="https://www.youtube.com/user/TIMaisonneuve" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/yt_logo_mono_light.png" alt="Youtube">	
+							</a>
+							<a href="https://www.instagram.com/maisonneuvetim/" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/glyph-logo_May2016-Light.png" alt="Instagram">
+							</a>
+							<a href=" https://discord.gg/53vFvr9" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/Discord-Logo-Light.png" alt="Discord">
+							</a>					
+						</div>
+					</ul>																		
 				</ul>																
 			</div>
 		</nav><!-- #site-navigation -->

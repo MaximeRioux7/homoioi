@@ -468,7 +468,6 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul,
 ol {
   margin: 0 0 1.5em 3em;
 }
@@ -1060,10 +1059,8 @@ body.la-vie-au-tim {
 #menu-toggle input {
   display: block;
   position: absolute;
-  width: 40px;
-  height: 32px;
-  top: -7px;
-  left: -5px;
+  width: 48px;
+  height: 51px;
   opacity: 0;
   z-index: 101;
   cursor: pointer;
@@ -1078,7 +1075,7 @@ body.la-vie-au-tim {
   height: 10px;
   margin-bottom: 7px;
   position: relative;
-  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  background: linear-gradient(to left, #0f78b4 0%, #61b8ff 100%);
   z-index: 100;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -1098,7 +1095,7 @@ body.la-vie-au-tim {
 #menu-toggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -2px);
-  background: linear-gradient(to left, #008080 0%, #12b9b9 100%);
+  background: linear-gradient(to left, #0f78b4 0%, #61b8ff 100%);
 }
 
 #menu-toggle input:checked ~ span:nth-last-child(3) {
@@ -1114,23 +1111,28 @@ body.la-vie-au-tim {
 * Style des items du menu
 */
 #menu-ul {
-  /* margin: -71px 0 0 -20px;*/
   position: fixed;
-  width: 370px;
+  width: 350px;
   height: 100vh;
-  /*margin: -100px 0 0 -50px;*/
   overflow-y: auto;
-  /*margin: 0;*/
   margin: -71px 0 0 -20px;
   padding-left: 5px;
   padding-top: 125px;
-  background: linear-gradient(to bottom right, #222127 0%, #131316 100%);
+  background: linear-gradient(to bottom right, #222127 0%, #404040 100%);
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   /**
     * Style du texte dans le menu
     */
+}
+
+#menu-ul #primary-menu {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #menu-ul a {
@@ -1155,16 +1157,21 @@ body.la-vie-au-tim {
 }
 
 #menu-ul p {
-  padding-left: 85px;
+  position: absolute;
+  bottom: 140px;
+  font-size: 20px;
   color: #E6E6E6;
   text-shadow: 0px 0px 3px #E6E6E6;
   transition: all 0.2s ease-in;
 }
 
 #menu-ul #M9 {
-  padding-left: 85px;
+  color: #61b8ff;
+  position: absolute;
+  bottom: 100px;
+  font-size: 22px;
   text-transform: none;
-  text-shadow: 0px 0px 3px #E6E6E6;
+  text-shadow: 0px 0px 8px #61b8ff;
 }
 
 #menu-ul #M9:visited {
@@ -1173,14 +1180,18 @@ body.la-vie-au-tim {
 
 #menu-ul #M9:h1 {
   color: #ffffff;
-  text-shadow: 0px 0px 10px #ffffff;
+  text-shadow: 0px 0px 15px #61b8ff;
   transition: all 0.2s ease-in;
 }
 
 #menu-ul li {
   padding: 15px 0;
-  font-size: 18px;
+  font-size: 22px;
   list-style-type: none;
+}
+
+#menu-ul hr {
+  color: #E6E6E6;
 }
 
 /**
@@ -1194,13 +1205,13 @@ body.la-vie-au-tim {
 * Icons
 */
 #icon {
-  padding-top: 45%;
-  padding-left: 70px;
+  position: absolute;
+  bottom: 40px;
 }
 
 #icon img {
   height: 30px;
-  padding-left: 15px;
+  padding-right: 20px;
   transition: transform .5s;
 }
 
@@ -1225,22 +1236,31 @@ body.la-vie-au-tim {
     height: 100vh;
     width: 100vw;
     padding-left: 5px;
-    padding-top: 110px;
+    padding-top: 80px;
     /**
     * Modification du style du texte dans le menu
     */
   }
   #menu-ul li.page_item {
-    font-size: 18px;
+    font-size: 19px;
+  }
+  #menu-ul li {
+    font-size: 19px;
   }
   #menu-ul p {
-    font-size: 14px;
+    font-size: 18px;
+    bottom: 130px;
+  }
+  #menu-ul #M9 {
+    font-weight: 900;
+    bottom: 90px;
   }
   /**
   * Modification des icons
   */
   #icon {
     padding-top: 35%;
+    bottom: 30px;
   }
   #icon img {
     height: 25px;
@@ -1248,6 +1268,14 @@ body.la-vie-au-tim {
   }
 }
 
+/*#site-navigation{
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  //background-color: rgba(#000, 0.5);
+  z-index: 2;
+  //pointer-events: none;
+}*/
 .entry-content {
   /*padding-top: 0;*/
   box-sizing: border-box;
@@ -1433,6 +1461,7 @@ nav.vEtudiante p {
 }
 
 .cheminement ul#choix-session {
+  position: relative;
   height: 100%;
   padding: 0;
   margin: 0 0 10px 0;
@@ -1442,8 +1471,16 @@ nav.vEtudiante p {
   border-bottom: 2px solid white;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-  padding-top: 10px !important;
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.cheminement ul#choix-session > h2.titre-sessions {
+  display: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: default;
+  font-weight: bold;
+  transform: translateY(15%);
 }
 
 .cheminement ul#choix-session > li {
@@ -1452,7 +1489,7 @@ nav.vEtudiante p {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   font-weight: 400;
   text-align: center;
-  padding: 10px;
+  padding: 24px 10px 6px 10px;
   display: inline-block;
   cursor: pointer;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
@@ -1463,18 +1500,17 @@ nav.vEtudiante p {
 .cheminement ul#choix-session > li:hover, .cheminement ul#choix-session > li.session-active {
   font-weight: 900;
   color: white;
-  border-color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: #44ebeb;
 }
 
 .cheminement ul#choix-session > li.session-active {
-  color: #59f0eb;
-  border-color: #59f0eb;
+  background-color: #12b9b9;
 }
 
 .cheminement .grille {
   flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 5px black;
   display: flex;
 }
 
@@ -1489,6 +1525,7 @@ nav.vEtudiante p {
   max-width: 1280px;
   margin: 0 auto;
   flex-grow: 1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .cheminement .grille div.desc-cours p {
@@ -1510,6 +1547,7 @@ nav.vEtudiante p {
 }
 
 .cheminement .grille div.desc-cours #desc-cours > * {
+  overflow-y: auto;
   line-height: 1.75;
   margin: 10px 0;
 }
@@ -1517,7 +1555,7 @@ nav.vEtudiante p {
 .cheminement .grille ul#liste-cours {
   position: relative;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 3% 0 0 0 !important;
   flex-shrink: 1;
   list-style: none;
   border-collapse: collapse;
@@ -1528,34 +1566,37 @@ nav.vEtudiante p {
   border-right: 2px solid white;
   border-image-slice: 1;
   border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .cheminement .grille ul#liste-cours > li {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.4em;
   color: #CCC;
+  line-height: 1.7em;
+  flex: 0;
   cursor: pointer;
   user-select: none;
-  margin: 10px 0;
-  padding: 5px;
-  border-left: 2px solid rgba(255, 255, 255, 0);
-  line-height: 24px;
+  z-index: 1;
+  margin: 20px 0;
+  border-right: 2px solid rgba(255, 255, 255, 0);
   /*min-height: 48px;*/
   max-width: 315px !important;
   box-sizing: content-box;
-  padding: 10px;
+  padding: 20px 10px;
   transition: color 0.1s, border-color 0.1s, background-color 0.1s;
 }
 
 .cheminement .grille ul#liste-cours > li:hover, .cheminement .grille ul#liste-cours > li.cours-actif {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.25);
   color: white;
-  border-color: white;
+  border-color: #44ebeb;
 }
 
 .cheminement .grille ul#liste-cours > li.cours-actif {
-  color: #59f0eb;
-  border-color: #59f0eb;
+  background-color: #12b9b9;
 }
 
 .cheminement .grille .entry-content {
@@ -1604,28 +1645,42 @@ nav.vEtudiante p {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .cheminement ul#choix-session > h2.titre-sessions {
+    margin: 0 15px;
+    transform: translateY(20%);
+    display: block;
+  }
+  .cheminement ul#choix-session > li {
+    flex-grow: 1;
+    margin: 0;
+    padding: 18px 36px 4px 36px !important;
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   /*html {
         font-size: 100%;
         height: 100%;
         background-size: auto;
     }*/
+  .cheminement ul#choix-session > h2.titre-sessions {
+    transform: translateY(18%);
+    display: block;
+    margin: 0 5px;
+  }
   .cheminement > h1 {
     font-weight: normal;
-    padding-top: 15%;
-    padding-bottom: 0;
+    padding: 80px 5px 0 5px;
     letter-spacing: 0;
-  }
-  .cheminement ul#choix-session > li:first-child {
-    padding-left: 2.5%;
-  }
-  .cheminement ul#choix-session > li:last-child {
-    padding-right: 2.5%;
+    margin-bottom: 5%;
   }
   .cheminement ul#choix-session > li {
+    flex-grow: 1;
     margin: 0;
-    padding: 0;
-    font-size: 65%;
+    padding: 18px 4vw 4px 4vw !important;
+    font-size: 18px;
   }
   .grille div.desc-cours #titre-cours {
     text-align: left;
@@ -1644,6 +1699,9 @@ nav.vEtudiante p {
   .cheminement .grille div.desc-cours p {
     font-size: 16px;
   }
+  .cheminement .grille div.desc-cours p {
+    line-height: 1.5 !important;
+  }
   #titre-cours {
     font-weight: bolder;
     font-size: 110%;
@@ -1655,29 +1713,14 @@ nav.vEtudiante p {
     width: 50%;
     color: purple;
   }
-  /*#desc-cours{
-        color: red;
-        font-size: 250%;
-    }*/
 }
 
-/*********************** TERRITOIRE DE MONICA *************************/
-li .page_item {
-  display: hide;
-}
-
-/*p {
-	color: aqua;
-    display: grid;
-    place-items: center;
-}*/
 .img-parent {
   padding-top: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*********************** Vidéos YouTube ************************/
-  /*********************** Listes des stages ************************/
+  /******************** LIGHTBOX *************************/
 }
 
 .img-parent details summary {
@@ -1703,9 +1746,25 @@ li .page_item {
   transform: scale(1.5);
 }
 
+.img-parent .projet-enfants {
+  flex: 0 1 150px;
+  margin: 5px;
+  overflow: hidden;
+  height: 500px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-parent .projet-enfants img {
+  transition: transform 0.5s ease;
+}
+
+.img-parent .projet-enfants img:hover {
+  transform: scale(1.5);
+}
+
 .img-parent .gallerie-img-etudiante {
   object-fit: none;
-  height: 50%;
+  height: 100%;
   filter: grayscale(100%);
 }
 
@@ -1717,26 +1776,7 @@ li .page_item {
   filter: grayscale(100%);
 }
 
-.img-parent #playlist-projet iframe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.img-parent #details-stage {
-  padding-bottom: 40px;
-}
-
-.img-parent #details-stage p,
-.img-parent #details-stage h2 {
-  margin-top: 10px;
-  flex: 0 1 150px;
-  display: flex;
-  justify-content: center;
-}
-
-/******************** LIGHTBOX *************************/
-.lightbox {
+.img-parent .lightbox {
   /** Default lightbox to hidden */
   opacity: 0;
   z-index: -100;
@@ -1751,9 +1791,25 @@ li .page_item {
   backdrop-filter: blur(5px);
 }
 
-.lightbox:target {
+.img-parent .lightbox:target {
   opacity: 1;
   z-index: 999;
+}
+
+.img-parent .lightbox:target img {
+  animation: move1 1s;
+}
+
+/******************** Animation *************************/
+@keyframes move1 {
+  0% {
+    transform: scale(0);
+    backdrop-filter: blur(20px);
+  }
+  100% {
+    transform: scale(1);
+    backdrop-filter: blur(0px);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1818,15 +1874,20 @@ body {
   font-size: 16px;
 }
 
+#requete-enseignants {
+  display: none;
+}
+
 #ve-enseignants .conteneur-grid {
+  padding-top: 3em;
   width: 60vw;
   margin: auto;
   display: grid;
-  grid-template-areas: 'title title title title' 'flecheG prof1 prof1 flecheD' 'flecheG prof2 prof2 flecheD';
+  grid-template-areas: 'flecheG prof1 prof1 flecheD' 'flecheG prof2 prof2 flecheD';
 }
 
 #ve-enseignants .conteneur-grid .infoProf > h1, #ve-enseignants .conteneur-grid h2, #ve-enseignants .conteneur-grid h3 {
-  color: #8080ff;
+  color: #fff;
   font-family: 'Yantramanav', sans-serif;
   font-size: 36px;
   font-weight: 900;
@@ -1835,7 +1896,7 @@ body {
 }
 
 #ve-enseignants .conteneur-grid .infoProf > h2, #ve-enseignants .conteneur-grid h3 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 #ve-enseignants .conteneur-grid .infoProf > h3 {
@@ -1843,11 +1904,7 @@ body {
 }
 
 #ve-enseignants .conteneur-grid .vtTitre {
-  grid-area: "title";
   margin: auto;
-  grid-row: 1;
-  grid-column-start: 1;
-  grid-column-end: 5;
   padding-bottom: 5vh;
   width: 80vw;
   text-align: center;
@@ -1867,18 +1924,18 @@ body {
 
 #ve-enseignants .conteneur-grid .prof1 {
   grid-area: "prof1";
-  grid-row: 2;
+  grid-row: 1;
 }
 
 #ve-enseignants .conteneur-grid .prof2 {
   grid-area: "prof2";
-  grid-row: 3;
+  grid-row: 2;
 }
 
 #ve-enseignants .conteneur-grid .imgProf {
   margin: auto;
   grid-column: 1;
-  width: 300px !important;
+  width: 20vw;
 }
 
 #ve-enseignants .conteneur-grid .imgProf > figure > img {
@@ -1891,51 +1948,50 @@ body {
   grid-column-start: 2;
   grid-column-end: 4;
   margin: auto auto auto 0;
-  width: auto !important;
+  width: 30vw;
+  min-height: 1em;
+  text-align: left;
 }
 
 #ve-enseignants .conteneur-grid #flecheG, #ve-enseignants .conteneur-grid #flecheD {
   width: 5vw;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
   margin: auto;
 }
 
 #ve-enseignants .conteneur-grid #flecheD {
   grid-area: "flecheD";
-  grid-column: 4 !important;
-  transform: rotate(180deg);
+  grid-column: 4;
+  transform: scaleX(-1);
 }
 
 #ve-enseignants .conteneur-grid #flecheG {
   grid-area: "flecheG";
-  grid-column: 1 !important;
+  grid-column: 1;
 }
 
 #ve-enseignants .conteneur-grid #flecheD > img, #ve-enseignants .conteneur-grid #flecheG > img {
-  height: 3.5rem;
+  height: 3.5em;
 }
 
 /* Début style mobile*/
-@media screen and (max-width: 768px) {
-  /*body{
-		font-size: 1.5rem;
-	}*/
-  #ve-Enseignants .conteneur-grid {
+@media screen and (max-width: 960px) {
+  #ve-enseignants .conteneur-grid {
     width: 80vw;
-    grid-template-areas: 'title title' 'prof1 prof1' 'prof2 prof2' 'flecheG flecheD';
+    grid-template-areas: 'prof1 prof1' 'prof1 prof1' 'prof2 prof2' 'prof2 prof2' 'flecheG flecheD';
     grid-auto-rows: minmax(min-content, max-content);
   }
-  #ve-Enseignants .conteneur-grid .vtTitre {
+  #ve-enseignants .conteneur-grid .vtTitre {
     margin: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
     font-size: 36px;
     letter-spacing: 0.3rem;
   }
-  #ve-Enseignants .conteneur-grid .divProf {
+  #ve-enseignants .conteneur-grid .infoProf > h2, #ve-enseignants .conteneur-grid h3 {
+    font-size: 28px;
+  }
+  #ve-enseignants .conteneur-grid .divProf {
     width: 80vw;
-    max-width: 300px;
     box-sizing: border-box;
     margin: auto;
     height: fit-content !important;
@@ -1943,46 +1999,47 @@ body {
     grid-row-gap: 0;
     height: 35vh;
     grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
+    grid-column-end: 3;
+  }
+  #ve-enseignants .conteneur-grid .prof1 {
+    grid-row-start: 1;
     grid-row-end: 3;
   }
-  #ve-Enseignants .conteneur-grid .imgProf {
+  #ve-enseignants .conteneur-grid .prof2 {
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  #ve-enseignants .conteneur-grid .imgProf {
     width: 300px;
-    box-sizing: border-box;
-    margin-left: 0 !important;
-    margin-top: 0;
-    margin: 0 !important;
+    margin-left: auto;
     grid-row: 1;
     grid-column: 1;
-    min-height: fit-content;
-    max-height: fit-content;
   }
-  #ve-Enseignants .conteneur-grid .imgProf > figure > img {
+  #ve-enseignants .conteneur-grid .imgProf > figure > img {
     width: 300px !important;
     height: auto !important;
   }
-  #ve-Enseignants .conteneur-grid .infoProf {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin: 0;
-    grid-row: 2;
-    grid-column: 1;
-  }
-  #ve-Enseignants .conteneur-grid .flecheG, #ve-Enseignants .conteneur-grid .flecheD {
-    width: 50vw;
-    grid-row: 4;
+  #ve-enseignants .conteneur-grid .infoProf {
     grid-column: 1;
     margin: auto;
+    grid-row: 2;
+    text-align: center;
+    width: 80vw;
+    min-height: 6em;
   }
-  #ve-Enseignants .conteneur-grid .flecheD {
-    grid-area: "flecheD";
+  #ve-enseignants .conteneur-grid #flecheG, #ve-enseignants .conteneur-grid #flecheD {
+    width: 40vw;
+    grid-row: 5;
+    grid-column: 1;
+    margin: 0 !important;
+  }
+  #ve-enseignants .conteneur-grid #flecheD {
     grid-column: 2;
-    transform: rotate(180deg);
   }
-  #ve-Enseignants .conteneur-grid .flecheD > img, #ve-Enseignants .conteneur-grid .flecheG > img {
-    height: 4rem !important;
+  #ve-enseignants .conteneur-grid #flecheD > img, #ve-enseignants .conteneur-grid #flecheG > img {
+    height: 4em;
     width: auto !important;
+    margin-left: 10vw;
   }
 }
 
@@ -2177,7 +2234,7 @@ body {
 }
 
 .vie-au-tim > div {
-  min-height: 100vh;
+  min-height: 100vh !important;
   max-width: 1280px;
   margin: 40px auto;
 }
