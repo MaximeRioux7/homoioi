@@ -3,6 +3,11 @@ body{
     font-family: 'Questrial', sans-serif;
     font-size: 16px;
 }
+
+#requete-enseignants{
+    display: none;
+}
+
 #ve-enseignants{
     .conteneur-grid{
 		padding-top: 3em;

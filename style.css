@@ -1869,6 +1869,10 @@ body {
   font-size: 16px;
 }
 
+#requete-enseignants {
+  display: none;
+}
+
 #ve-enseignants .conteneur-grid {
   padding-top: 3em;
   width: 60vw;
