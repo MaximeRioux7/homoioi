@@ -1775,6 +1775,11 @@ li .page_item {
   .img-parent .img-enfants img {
     margin: 0;
   }
+  details {
+    width: 90%;
+    margin: auto;
+    padding: auto;
+  }
   summary {
     margin-left: 10%;
     font-size: 60%;
@@ -1782,7 +1787,7 @@ li .page_item {
         justify-content: space-around;*/
   }
   summary:first-child {
-    padding-bottom: 10%;
+    padding-bottom: 25%;
   }
   summary:last-child {
     margin-bottom: 0;

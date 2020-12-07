@@ -124,6 +124,12 @@ li .page_item {
         }
     }
     
+    details {
+        width: 90%;
+        margin: auto;
+        padding: auto;
+    }
+
     summary {
         margin-left: 10%;
         font-size: 60%;
@@ -133,7 +139,7 @@ li .page_item {
     }
 
     summary:first-child {
-        padding-bottom: 10%;
+        padding-bottom: 25%;
     }
 
     summary:last-child {
