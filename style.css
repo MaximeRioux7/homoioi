@@ -1117,7 +1117,7 @@ body.la-vie-au-tim {
   overflow-y: auto;
   margin: -71px 0 0 -20px;
   padding-left: 5px;
-  padding-top: 125px;
+  padding-top: 100px;
   background: linear-gradient(to bottom right, #222127 0%, #404040 100%);
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -1186,7 +1186,7 @@ body.la-vie-au-tim {
 
 #menu-ul li {
   padding: 15px 0;
-  font-size: 22px;
+  font-size: 20px;
   list-style-type: none;
 }
 
@@ -1242,7 +1242,7 @@ body.la-vie-au-tim {
     */
   }
   #menu-ul li.page_item {
-    font-size: 19px;
+    font-size: 18px;
   }
   #menu-ul li {
     font-size: 19px;
