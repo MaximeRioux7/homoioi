@@ -1111,6 +1111,7 @@ body.la-vie-au-tim {
 * Style des items du menu
 */
 #menu-ul {
+  display: block;
   position: fixed;
   width: 350px;
   height: 100vh;

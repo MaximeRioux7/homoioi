@@ -52,7 +52,7 @@
 		-->
 		<nav id="site-navigation">				
 			<div id="menu-toggle" > 				
-				<input type="checkbox"/>
+				<input id="btn-menu" type="checkbox"/>
 				<span></span>
 				<span></span>
 				<span></span>
