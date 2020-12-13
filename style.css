@@ -1092,18 +1092,18 @@ body.la-vie-au-tim {
 /**
 * Transformation des niveaux du burger
 */
-#menu-toggle:focus-within input:checked ~ span {
+#menu-toggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -2px);
   background: linear-gradient(to left, #0f78b4 0%, #61b8ff 100%);
 }
 
-#menu-toggle:focus-within input:checked ~ span:nth-last-child(3) {
+#menu-toggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menu-toggle:focus-within input:checked ~ span:nth-last-child(2) {
+#menu-toggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(6px, -5px);
 }
 
@@ -1197,7 +1197,7 @@ body.la-vie-au-tim {
 /**
 * Basculer à partir de la gauche
 */
-#menu-toggle:focus-within input:checked ~ ul {
+#menu-toggle input:checked ~ ul {
   transform: none;
 }
 
@@ -1220,12 +1220,6 @@ body.la-vie-au-tim {
   cursor: pointer;
 }
 
-/*@media screen and (max-width: 768px) {
-  #menu-ul{
-    height: 100%;
-    background-color: yellow;
-  }
-}*/
 /************************************************************* Version Mobile ***********************************************************/
 @media screen and (max-width: 768px) {
   /**

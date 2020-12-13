@@ -1,4 +1,4 @@
-/** 
+//** 
 ( function() {
 	document.addEventListener("click", function(){
 		let NavMenu = document.getElementById("menu-ul");
@@ -16,8 +16,7 @@
 					NavMenu.style.transform = "translate(-100%, 0)";
 					BtnMenu.checked = false;									
 				}
-			}
-						
+			}						
 		}	
 	});
 }() );
