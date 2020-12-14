@@ -8,13 +8,15 @@
         height: 0;
     }
     img.logo-site {
-        width: 300px;
+        width: calc(250px + 5vw);
         height: auto;
+        max-width: 512px;
+        max-height: 512px;
 
         position: absolute;
         padding: 0;
         top: 50vh;
-        left: 50vw;
+        left: 48vw;
         
         opacity: 0.9;
     }
@@ -23,7 +25,7 @@
         width: 100%;
         position: absolute;
         top: 50vh;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         text-shadow: 1px 1px darkslateblue;
         padding-top: 0;
         transform: translateY(-50%);
@@ -56,7 +58,7 @@
     }
 
     
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 960px) {
         section #lesChoix {
             flex-direction: row;
         }
@@ -64,7 +66,9 @@
         img.logo-site{
             width: 55%;
             height: auto;
-            transform: rotate(30deg);
+            max-width: 400px;
+            max-height: 400px;
+            transform: rotate(25deg);
         }
 
         span.choix {
@@ -72,13 +76,13 @@
             a {
                 text-transform: uppercase !important;
                 margin: 0 !important;
-                //font-size: 1.5rem;
+                font-size: 1.6rem;
                 
                 &.gauche {
                     position: absolute;
                     top: 20vh;
-                    left: 50 !important;
-                    transform: translateX(50%);
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             
                 &.droite {
@@ -92,64 +96,3 @@
         }
     }
 }
-
-/*
-div {
-    width: 60px;
-    height: 12px;
-    background-color: cadetblue;
-    margin: 6px 0;
-    margin-left: 2.5%;
-}
-
-nav.logic {
-    margin: auto;
-    width: 50%;
-    text-align: justify;
-}
-
-nav.logic h1 {
-    color: cyan;
-    text-shadow: 1.5px 1.5px darkslateblue;
-    text-align: center;
-}
-
-nav.logic p {
-    color: white;
-}
-
-nav.creation {
-    margin: auto;
-    width: 50%;
-    padding-top: 20%;
-    text-align: justify;
-}
-
-nav.creation h1 {
-    color: magenta;
-    text-shadow: 1.5px 1.5px darkslateblue;
-    text-align: center;
-}
-
-nav.creation p {
-    color: white;
-}
-
-
-
-nav.vEtudiante {
-    margin: auto;
-    width: 50%;
-    text-align: justify;
-}
-
-nav.vEtudiante h1 {
-    color: magenta;
-    text-shadow: 1.5px 1.5px darkslateblue;
-    text-align: center;
-}
-
-nav.vEtudiante p {
-    color: white;
-}
-*/

@@ -1288,12 +1288,14 @@ body.la-vie-au-tim {
 }
 
 .entry-content img.logo-site {
-  width: 300px;
+  width: calc(250px + 5vw);
   height: auto;
+  max-width: 512px;
+  max-height: 512px;
   position: absolute;
   padding: 0;
   top: 50vh;
-  left: 50vw;
+  left: 48vw;
   opacity: 0.9;
 }
 
@@ -1301,7 +1303,7 @@ body.la-vie-au-tim {
   width: 100%;
   position: absolute;
   top: 50vh;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-shadow: 1px 1px darkslateblue;
   padding-top: 0;
   transform: translateY(-50%);
@@ -1332,14 +1334,16 @@ body.la-vie-au-tim {
   transition: all 0.2s ease-in;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .entry-content section #lesChoix {
     flex-direction: row;
   }
   .entry-content img.logo-site {
     width: 55%;
     height: auto;
-    transform: rotate(30deg);
+    max-width: 400px;
+    max-height: 400px;
+    transform: rotate(25deg);
   }
   .entry-content span.choix {
     top: 0;
@@ -1347,12 +1351,13 @@ body.la-vie-au-tim {
   .entry-content span.choix a {
     text-transform: uppercase !important;
     margin: 0 !important;
+    font-size: 1.6rem;
   }
   .entry-content span.choix a.gauche {
     position: absolute;
     top: 20vh;
-    left: 50 !important;
-    transform: translateX(50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
   .entry-content span.choix a.droite {
     position: absolute;
@@ -1363,66 +1368,6 @@ body.la-vie-au-tim {
   }
 }
 
-/*
-div {
-    width: 60px;
-    height: 12px;
-    background-color: cadetblue;
-    margin: 6px 0;
-    margin-left: 2.5%;
-}
-
-nav.logic {
-    margin: auto;
-    width: 50%;
-    text-align: justify;
-}
-
-nav.logic h1 {
-    color: cyan;
-    text-shadow: 1.5px 1.5px darkslateblue;
-    text-align: center;
-}
-
-nav.logic p {
-    color: white;
-}
-
-nav.creation {
-    margin: auto;
-    width: 50%;
-    padding-top: 20%;
-    text-align: justify;
-}
-
-nav.creation h1 {
-    color: magenta;
-    text-shadow: 1.5px 1.5px darkslateblue;
-    text-align: center;
-}
-
-nav.creation p {
-    color: white;
-}
-
-
-
-nav.vEtudiante {
-    margin: auto;
-    width: 50%;
-    text-align: justify;
-}
-
-nav.vEtudiante h1 {
-    color: magenta;
-    text-shadow: 1.5px 1.5px darkslateblue;
-    text-align: center;
-}
-
-nav.vEtudiante p {
-    color: white;
-}
-*/
 #requete-cours {
   display: none !important;
 }
@@ -1831,30 +1776,30 @@ nav.vEtudiante p {
   .img-parent .img-enfants img {
     margin: 0;
   }
-  summary {
+  .img-parent summary {
     margin-left: 10%;
     font-size: 60%;
     /*display: flex;
-        justify-content: space-around;*/
+            justify-content: space-around;*/
   }
-  summary:first-child {
+  .img-parent summary:first-child {
     padding-bottom: 10%;
   }
-  summary:last-child {
+  .img-parent summary:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  #ve-evenements h1 {
+  .img-parent #ve-evenements h1 {
     margin: 0;
     padding: 0;
   }
-  .img-evenement {
+  .img-parent .img-evenement {
     position: relative;
   }
-  .gallerie-img-etudiante {
+  .img-parent .gallerie-img-etudiante {
     width: 75%;
   }
-  a {
+  .img-parent a {
     height: 75%;
   }
 }
