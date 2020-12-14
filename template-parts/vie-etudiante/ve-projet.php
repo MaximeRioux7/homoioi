@@ -21,7 +21,7 @@
             </a>
         </div>
         <a href="#_" class="lightbox" id="projet-lightb-<?php echo $i; ?>">
-            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
+            <img src="<?php the_content(); ?>" alt="">
         </a>
         <?php endwhile;
         echo "</div>";                          // Fin de la section
