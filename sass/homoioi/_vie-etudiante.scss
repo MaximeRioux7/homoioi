@@ -118,43 +118,81 @@
                 margin: 0;
             }
         }
+    }
+    
+    details {
+        width: 90%;
+        margin: auto;
+        padding: auto;
+    }
 
-        summary {
-            margin-left: 10%;
-            font-size: 60%;
-            /*display: flex;
-            justify-content: space-around;*/
-            // width: 90%;
-        }
-    
-        summary:first-child {
-            padding-bottom: 10%;
-        }
-    
-        summary:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-    
-        #ve-evenements h1 {
-            margin: 0;
-            padding: 0;
-        }
-    
-        // Positionnement des éléments un par-dessus l'autre
-        .img-evenement {
-            position: relative;
-        }
-    
-        .gallerie-img-etudiante {
-            width: 75%;
-        }
-    
-        a {
-            height: 75%;
-        }
+    summary {
+        margin-left: 10%;
+        font-size: 60%;
+        /*display: flex;
+        justify-content: space-around;*/
+        // width: 90%;
+    }
+
+    summary:first-child {
+        padding-bottom: 25%;
+    }
+
+    summary:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #ve-evenements h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    // Positionnement des éléments un par-dessus l'autre
+    .img-evenement {
+        position: relative;
+    }
+
+    .gallerie-img-etudiante {
+        width: 75%;
+    }
+
+    summary {
+        margin-left: 10%;
+        font-size: 60%;
+        /*display: flex;
+        justify-content: space-around;*/
+        // width: 90%;
+    }
+
+    summary:first-child {
+        padding-bottom: 10%;
+    }
+
+    summary:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #ve-evenements h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    // Positionnement des éléments un par-dessus l'autre
+    .img-evenement {
+        position: relative;
+    }
+
+    .gallerie-img-etudiante {
+        width: 75%;
+    }
+
+    a {
+        height: 75%;
     }
 }
+
 
 #flecheG, #flecheD{
     img{

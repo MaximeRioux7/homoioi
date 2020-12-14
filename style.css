@@ -1770,30 +1770,58 @@ body.la-vie-au-tim {
   .img-parent .img-enfants img {
     margin: 0;
   }
-  .img-parent summary {
+  details {
+    width: 90%;
+    margin: auto;
+    padding: auto;
+  }
+  summary {
     margin-left: 10%;
     font-size: 60%;
     /*display: flex;
-            justify-content: space-around;*/
+        justify-content: space-around;*/
   }
-  .img-parent summary:first-child {
-    padding-bottom: 10%;
+  summary:first-child {
+    padding-bottom: 25%;
   }
-  .img-parent summary:last-child {
+  summary:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  .img-parent #ve-evenements h1 {
+  #ve-evenements h1 {
     margin: 0;
     padding: 0;
   }
-  .img-parent .img-evenement {
+  .img-evenement {
     position: relative;
   }
-  .img-parent .gallerie-img-etudiante {
+  .gallerie-img-etudiante {
     width: 75%;
   }
-  .img-parent a {
+  summary {
+    margin-left: 10%;
+    font-size: 60%;
+    /*display: flex;
+        justify-content: space-around;*/
+  }
+  summary:first-child {
+    padding-bottom: 10%;
+  }
+  summary:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #ve-evenements h1 {
+    margin: 0;
+    padding: 0;
+  }
+  .img-evenement {
+    position: relative;
+  }
+  .gallerie-img-etudiante {
+    width: 75%;
+  }
+  a {
     height: 75%;
   }
 }
