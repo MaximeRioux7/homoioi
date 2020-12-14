@@ -207,8 +207,6 @@ function collectiveray_load_js_script() {
 add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
 
 function script_navigation() {
-    if( is_front_page() ) {
-      wp_enqueue_script('navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '', false);
-    }
-  }
+    wp_enqueue_script('navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '', false);
+}
 add_action('wp_enqueue_scripts', 'script_navigation');

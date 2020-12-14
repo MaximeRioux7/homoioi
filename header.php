@@ -52,7 +52,7 @@
 		-->
 		<nav id="site-navigation">				
 			<div id="menu-toggle" > 				
-				<input type="checkbox"/>
+				<input id="btn-menu" type="checkbox"/>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -67,10 +67,10 @@
 						);
 					?>
 					<ul id="primary-menu">
-						<li><a href="#details-projet">Galerie des Projets</a></li>
-						<li><a href="#details-stage">Stages</a></li>
-						<li><a href="#ve-evenements">Événements</a></li>
-						<li><a href="#ve-enseignants">Enseignants</a></li>						
+						<li><a href="<?php echo get_site_url(); ?>/la-vie-au-tim/#details-projet">Galerie des Projets</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/la-vie-au-tim/#details-stage">Stages</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/la-vie-au-tim/#ve-evenements">Événements</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/la-vie-au-tim/#ve-enseignants">Enseignants</a></li>						
 						<div id="TIM">
 							<p>Techniques d'Intégration Multimédia</p>
 							<a id="M9" href="https://www.cmaisonneuve.qc.ca/" title="Collège de Maisonneuve">Collège de Maisonneuve</a>
