@@ -5,7 +5,6 @@
         'cat'            => get_category_by_slug('projet-ve')->term_id, // Prendre les articles dont la catégorie a le slug "evenement"
         'posts_per_page' => 4                                           // Maximum de posts qu'on veut afficher dans la page
     ));
-    $path = get_the_post_thumbnail_url(get_the_ID());
 
     // Que faire avec la requête?
     if(have_posts()){                           // N'afficher la section que si des articles sont trouvés
@@ -21,7 +20,7 @@
             </a>
         </div>
         <a href="#_" class="lightbox" id="projet-lightb-<?php echo $i; ?>">
-            <img src="<?php the_content(); ?>" alt="">
+            <?php the_content(); ?>
         </a>
         <?php endwhile;
         echo "</div>";                          // Fin de la section

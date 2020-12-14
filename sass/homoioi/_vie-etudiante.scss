@@ -30,12 +30,14 @@
     }
 
     .projet-enfants {
-        flex: 0 1 150px;
+        flex: 0 1 700px;
         margin: 5px;
         overflow: hidden;
-        height: 500px;
-        -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        -webkit-clip-path: inset(0% 0 50% 0);
+        clip-path: inset(0% 0 50% 0);
+        
+    bottom: 50%;
+    left: 50%;
 
         img {
             transition: transform 0.5s ease;
@@ -73,6 +75,11 @@
         left: 0;
         background: rgba(44, 1, 35, 0.4);
         backdrop-filter: blur(5px);
+        p{
+            top: 10%;
+            font-size: 1.5em;
+            color: white;
+        }
     }
     
     .lightbox:target {
@@ -161,3 +168,25 @@
         cursor: pointer;
     }
 }
+
+/******************** Les stages *************************/
+
+.contenant {
+    position: relative;
+    text-align: center;
+    img{
+        width: 630px;
+        height: 473px;
+        opacity: 0.5;
+        clip-path: inset(25% 0 25% 0);
+        backdrop-filter: blur(15px);
+        filter: grayscale(100%);
+    }
+  }
+
+  .texte-stages {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
