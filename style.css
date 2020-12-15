@@ -1686,11 +1686,12 @@ body.la-vie-au-tim {
 }
 
 .img-parent .projet-enfants {
-  flex: 0 1 150px;
+  flex: 0 1 700px;
   margin: 5px;
   overflow: hidden;
-  height: 500px;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: inset(0% 0 50% 0);
+  bottom: 50%;
+  left: 50%;
 }
 
 .img-parent .projet-enfants img {
@@ -1728,6 +1729,12 @@ body.la-vie-au-tim {
   left: 0;
   background: rgba(44, 1, 35, 0.4);
   backdrop-filter: blur(5px);
+}
+
+.img-parent .lightbox p {
+  top: 10%;
+  font-size: 1.5em;
+  color: white;
 }
 
 .img-parent .lightbox:target {
@@ -1828,6 +1835,28 @@ body.la-vie-au-tim {
 
 #flecheG img, #flecheD img {
   cursor: pointer;
+}
+
+/******************** Les stages *************************/
+.contenant {
+  position: relative;
+  text-align: center;
+}
+
+.contenant img {
+  width: 630px;
+  height: 473px;
+  opacity: 0.5;
+  clip-path: inset(25% 0 25% 0);
+  backdrop-filter: blur(15px);
+  filter: grayscale(100%);
+}
+
+.texte-stages {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 body {
