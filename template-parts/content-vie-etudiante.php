@@ -31,9 +31,6 @@
 			?>
 
 			<!-- Ajouter toutes les parties à la page de la vie étudiante -->
-			<div id="ve-vie-etudiante">
-				<?php include 'vie-etudiante/ve-vie-etudiante.php'; ?>
-			</div>
 			<div id="ve-evenements">
 				<?php include 'vie-etudiante/ve-evenements.php'; ?>
 			</div>
@@ -42,6 +39,9 @@
 			</div>
 			<div id="ve-projet">
 				<?php include 'vie-etudiante/ve-projet.php'; ?>
+			</div>
+			<div id="ve-vie-etudiante">
+				<?php include 'vie-etudiante/ve-vie-etudiante.php'; ?>
 			</div>
 			<div id="ve-stages">
 				<?php include 'vie-etudiante/ve-stages.php'; ?>

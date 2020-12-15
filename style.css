@@ -1240,6 +1240,7 @@ body.la-vie-au-tim {
   }
   #menu-ul li {
     font-size: 19px;
+    padding: 1.6vh;
   }
   #menu-ul p {
     font-size: 18px;
@@ -1253,7 +1254,6 @@ body.la-vie-au-tim {
   * Modification des icons
   */
   #icon {
-    padding-top: 35%;
     bottom: 30px;
   }
   #icon img {
@@ -1682,24 +1682,25 @@ body.la-vie-au-tim {
 }
 
 .img-parent .img-enfants img:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 
 .img-parent .projet-enfants {
   flex: 0 1 700px;
   margin: 5px;
   overflow: hidden;
-  clip-path: inset(0% 0 50% 0);
   bottom: 50%;
   left: 50%;
 }
 
 .img-parent .projet-enfants img {
   transition: transform 0.5s ease;
+  height: 200px !important;
+  width: 100% !important;
 }
 
 .img-parent .projet-enfants img:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 
 .img-parent .gallerie-img-etudiante {
@@ -1763,10 +1764,12 @@ body.la-vie-au-tim {
     position: relative;
     height: 90%;
     padding-top: 100px;
+    justify-content: space-around;
   }
   .img-parent a {
     display: block;
     width: 100%;
+    overflow: hidden;
   }
   .img-parent .img-enfants {
     position: relative;
@@ -1776,60 +1779,52 @@ body.la-vie-au-tim {
   }
   .img-parent .img-enfants img {
     margin: 0;
+    transform: translateY(-25%);
   }
-  details {
+  .img-parent details {
     width: 90%;
     margin: auto;
     padding: auto;
   }
-  summary {
+  .img-parent summary {
     margin-left: 10%;
     font-size: 60%;
     /*display: flex;
-        justify-content: space-around;*/
+            justify-content: space-around;*/
   }
-  summary:first-child {
+  .img-parent summary:first-child {
     padding-bottom: 25%;
   }
-  summary:last-child {
+  .img-parent summary:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  #ve-evenements h1 {
+  .img-parent #ve-evenements h1 {
     margin: 0;
     padding: 0;
   }
-  .img-evenement {
+  .img-parent .img-evenement {
     position: relative;
   }
-  .gallerie-img-etudiante {
-    width: 75%;
-  }
-  summary {
+  .img-parent summary {
     margin-left: 10%;
     font-size: 60%;
     /*display: flex;
-        justify-content: space-around;*/
+            justify-content: space-around;*/
   }
-  summary:first-child {
+  .img-parent summary:first-child {
     padding-bottom: 10%;
   }
-  summary:last-child {
+  .img-parent summary:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  #ve-evenements h1 {
+  .img-parent #ve-evenements h1 {
     margin: 0;
     padding: 0;
   }
-  .img-evenement {
+  .img-parent .img-evenement {
     position: relative;
-  }
-  .gallerie-img-etudiante {
-    width: 75%;
-  }
-  a {
-    height: 75%;
   }
 }
 
@@ -1839,24 +1834,42 @@ body.la-vie-au-tim {
 
 /******************** Les stages *************************/
 .contenant {
+  margin-top: 100px;
   position: relative;
   text-align: center;
 }
 
-.contenant img {
-  width: 630px;
-  height: 473px;
-  opacity: 0.5;
-  clip-path: inset(25% 0 25% 0);
-  backdrop-filter: blur(15px);
-  filter: grayscale(100%);
+.contenant .conteneur-image {
+  position: relative;
+  max-width: 1280px;
+  max-height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.texte-stages {
+.contenant .conteneur-image img {
+  width: 1280px;
+  height: auto;
+  opacity: 0.5;
+  /*clip-path: inset(25% 0 25% 0);
+            backdrop-filter: blur(15px);*/
+  filter: grayscale(100%);
+  transform: translateY(-40%);
+}
+
+.contenant .conteneur-image .texte-stages {
+  max-width: 75%;
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.contenant p {
+  padding: 20px;
+  margin: 80px auto 0 auto;
+  max-width: 960px;
+  font-size: 18px;
 }
 
 body {
@@ -2041,6 +2054,7 @@ body {
   grid-template-rows: auto auto;
   margin: 40px auto;
   padding: 0 40px;
+  padding-top: 100px;
 }
 
 #ve-evenements > .container > div, #ve-evenements > .container > a {
@@ -2212,7 +2226,7 @@ body {
     height: 275px !important;
   }
   .autres-evenements > * {
-    height: 120px;
+    height: 160px;
   }
   .autres-evenements > * h2 {
     font-size: 30px;
@@ -2236,18 +2250,17 @@ body {
   border-bottom: 4px solid white;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-}
-
-.vie-au-tim > div > h1:before {
-  display: inline-block;
-  content: " ";
-  margin-right: 10px;
-  vertical-align: middle;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 2px;
-  box-shadow: 0 0 10px white;
+  /*&:before{
+                display: inline-block;
+                content: " ";
+                margin-right: 10px;
+                vertical-align: middle;
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                border-radius: 2px;
+                box-shadow: 0 0 10px white;
+            }*/
 }
 
 #primary > .post {
@@ -2256,6 +2269,7 @@ body {
   max-width: 900px;
   margin: 0px auto;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #primary > .post .entry-meta, #primary > .post .entry-footer {
@@ -2308,9 +2322,20 @@ body {
 }
 
 #primary > .post .entry-content {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
   min-height: 300px;
   padding: 20px;
+}
+
+#primary > .post .entry-content a {
+  color: white;
+  text-shadow: 0px 0px 5px #E6E6E6;
+  transition: text-shadow 0.15s, color 0.15s;
+}
+
+#primary > .post .entry-content a:hover {
+  color: #0f78b4;
+  text-shadow: 0px 0px 5px #61b8ff;
 }
 
 #primary > .post .entry-content > * {

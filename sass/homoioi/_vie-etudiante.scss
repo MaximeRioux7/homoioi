@@ -24,7 +24,7 @@
         img {
             transition: transform 0.5s ease;
             &:hover{
-                transform: scale(1.5); 
+                transform: scale(1.4); 
             }
         }
     }
@@ -33,16 +33,17 @@
         flex: 0 1 700px;
         margin: 5px;
         overflow: hidden;
-        -webkit-clip-path: inset(0% 0 50% 0);
-        clip-path: inset(0% 0 50% 0);
-        
-    bottom: 50%;
-    left: 50%;
+        //-webkit-clip-path: inset(0% 0 50% 0);
+        //clip-path: inset(0% 0 50% 0);
+        bottom: 50%;
+        left: 50%;
 
         img {
             transition: transform 0.5s ease;
+            height: 200px !important;
+            width: 100% !important;
             &:hover{
-                transform: scale(1.5); 
+                transform: scale(1.4); 
             }
         }
     }
@@ -109,10 +110,12 @@
         position: relative;
         height: 90%;
         padding-top: 100px;
+        justify-content: space-around;
 
         a {
             display: block;
             width: 100%;
+            overflow: hidden;
         }
 
         .img-enfants {
@@ -123,80 +126,77 @@
 
             img {
                 margin: 0;
+                transform: translateY(-25%);
             }
         }
-    }
+
+        details {
+            width: 90%;
+            margin: auto;
+            padding: auto;
+        }
     
-    details {
-        width: 90%;
-        margin: auto;
-        padding: auto;
-    }
-
-    summary {
-        margin-left: 10%;
-        font-size: 60%;
-        /*display: flex;
-        justify-content: space-around;*/
-        // width: 90%;
-    }
-
-    summary:first-child {
-        padding-bottom: 25%;
-    }
-
-    summary:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    #ve-evenements h1 {
-        margin: 0;
-        padding: 0;
-    }
-
-    // Positionnement des éléments un par-dessus l'autre
-    .img-evenement {
-        position: relative;
-    }
-
-    .gallerie-img-etudiante {
-        width: 75%;
-    }
-
-    summary {
-        margin-left: 10%;
-        font-size: 60%;
-        /*display: flex;
-        justify-content: space-around;*/
-        // width: 90%;
-    }
-
-    summary:first-child {
-        padding-bottom: 10%;
-    }
-
-    summary:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    #ve-evenements h1 {
-        margin: 0;
-        padding: 0;
-    }
-
-    // Positionnement des éléments un par-dessus l'autre
-    .img-evenement {
-        position: relative;
-    }
-
-    .gallerie-img-etudiante {
-        width: 75%;
-    }
-
-    a {
-        height: 75%;
+        summary {
+            margin-left: 10%;
+            font-size: 60%;
+            /*display: flex;
+            justify-content: space-around;*/
+            // width: 90%;
+        }
+    
+        summary:first-child {
+            padding-bottom: 25%;
+        }
+    
+        summary:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    
+        #ve-evenements h1 {
+            margin: 0;
+            padding: 0;
+        }
+    
+        // Positionnement des éléments un par-dessus l'autre
+        .img-evenement {
+            position: relative;
+        }
+    
+        .gallerie-img-etudiante {
+            //width: 75%;
+        }
+    
+        summary {
+            margin-left: 10%;
+            font-size: 60%;
+            /*display: flex;
+            justify-content: space-around;*/
+            // width: 90%;
+        }
+    
+        summary:first-child {
+            padding-bottom: 10%;
+        }
+    
+        summary:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    
+        #ve-evenements h1 {
+            margin: 0;
+            padding: 0;
+        }
+    
+        // Positionnement des éléments un par-dessus l'autre
+        .img-evenement {
+            position: relative;
+        }
+    
+        .gallerie-img-etudiante {
+            //width: 75%;
+        }
     }
 }
 
@@ -210,21 +210,36 @@
 /******************** Les stages *************************/
 
 .contenant {
+    margin-top: 100px;
     position: relative;
     text-align: center;
-    img{
-        width: 630px;
-        height: 473px;
-        opacity: 0.5;
-        clip-path: inset(25% 0 25% 0);
-        backdrop-filter: blur(15px);
-        filter: grayscale(100%);
+    .conteneur-image{
+        position: relative;
+        max-width: 1280px;
+        max-height: 200px;
+        margin: 0 auto;
+        overflow: hidden;
+        img{
+            width: 1280px;
+            height: auto;
+            opacity: 0.5;
+            /*clip-path: inset(25% 0 25% 0);
+            backdrop-filter: blur(15px);*/
+            filter: grayscale(100%);
+            transform: translateY(-40%);
+        }
+        .texte-stages {
+            max-width: 75%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
-  }
-
-  .texte-stages {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    p{
+        padding: 20px;
+        margin: 80px auto 0 auto;
+        max-width: 960px;
+        font-size: 18px;
+    }
+}

@@ -1,10 +1,12 @@
 #ve-evenements{
     > .container{
+
         display: grid;
         grid-template-columns: 3fr 2fr;
         grid-template-rows: auto auto;
         margin: 40px auto;
         padding: 0 40px;
+        padding-top: 100px;
 
         > div, > a{
             grid-row-start: 2;
@@ -193,7 +195,7 @@
     }
 
     .autres-evenements > *{
-        height: 120px;
+        height: 160px;
         h2{
             font-size: 30px;
             white-space: auto;

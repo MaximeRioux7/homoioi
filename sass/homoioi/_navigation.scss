@@ -97,6 +97,7 @@
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   
+
     #primary-menu {
       margin: 0%;
       display: flex;
@@ -219,6 +220,7 @@
 
     li {
       font-size: 19px;
+      padding: 1.6vh;
     }
 
     p{
@@ -236,7 +238,7 @@
   * Modification des icons
   */
   #icon {
-    padding-top: 35%;
+    //padding-top: 35%;
     bottom: 30px;
 
     img {

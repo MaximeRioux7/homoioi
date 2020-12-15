@@ -8,15 +8,16 @@
 
     // Que faire avec la requête?
     if(have_posts()){
+        echo "<h1> </h1>";
         while ( have_posts() ) : the_post(); $i++; ?>                         
             <!-- HTML ici-->
             <div class="contenant">
-            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
-            <div class="texte-stages">
-            <h1>À propos des stages</h1>
+                <div class="conteneur-image">
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
+                    <h1 class="texte-stages">À propos des stages</h1>
+                </div>
+                <?php the_content(); ?>
             </div>
-            <?php the_content(); ?>
-        </div>
             <!-- Fin du HTML -->
         <?php endwhile;
     }

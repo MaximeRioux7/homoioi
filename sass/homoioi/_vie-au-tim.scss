@@ -1,6 +1,7 @@
 @import "vie-au-tim/evenements";
 
 .vie-au-tim{
+    //margin-top: 40px;
     overflow-x: hidden;
     > div {
         min-height: 100vh !important;
@@ -13,7 +14,7 @@
             border-image-slice: 1;
             border-image-source: linear-gradient(to right, rgba(#FFF, 0.5), rgba(#FFF, 0));
         
-            &:before{
+            /*&:before{
                 display: inline-block;
                 content: " ";
                 margin-right: 10px;
@@ -23,7 +24,7 @@
                 background-color: white;
                 border-radius: 2px;
                 box-shadow: 0 0 10px white;
-            }
+            }*/
         }
     }
 }
